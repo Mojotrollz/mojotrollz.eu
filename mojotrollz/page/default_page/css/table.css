@@ -1,0 +1,68 @@
+.title_row {
+    min-width: 50px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 11pt;
+    border-bottom: #CCC solid 2px;
+}
+
+.body_row{
+    
+    padding: 5px;
+    text-align: left; 
+    vertical-align: top;
+    font-size: 10pt;
+    border-bottom: #CCC solid 1px;
+}
+
+.signed{
+    background-color: lightgreen;
+}
+
+.row_head {
+    min-width: 160px;
+}
+
+.row_head p{
+    font-size: 10pt;
+}
+
+.row_location{
+    font-size: 10pt;
+}
+
+.row_signed{
+    font-size: 10pt;
+}
+
+.row_info{
+    max-width: 350px;
+    font-size: 10pt;
+}
+
+.user_signed_overall_table{
+    font-size: 10pt;
+}
+
+#sign_box{
+    padding: 1;
+    font-size: 8pt;
+}
+
+#sign_box {
+    transform: scale(1.5);
+    /* Webkit browsers*/
+    -webkit-transform: scale(1.5);
+}
+
+.row_cal{
+    max-width: 50px;
+}
+
+.row_auto {
+   max-width: 50px; 
+}
+
+.row_btn {
+    text-align: center;
+}
