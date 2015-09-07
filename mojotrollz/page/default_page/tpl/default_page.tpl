@@ -7,14 +7,15 @@
         <meta name="author" content="${meta_author}">
         ${css}
         ${js}
+        <style type="text/css">
+            @font-face {        
+                font-family: TrojanPro; 
+                src: url(./api.php?call=files&cat=content&id=TrajanPro-Regular.otf); 
+            }
+        </style>
     </head>
     <body>
-        <div class="container"> 
-            ${content_facebook}
-            ${content_header}
-            ${content_menu}
-            ${content}
-            ${content_footer}
-        </div>
+        ${content_navbar}
+        ${content_client}
     </body>
 </html>

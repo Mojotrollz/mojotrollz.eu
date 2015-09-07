@@ -1,0 +1,73 @@
+.navbar-inverse {
+  border-color: #080808;
+  transition: all 0.4s ease;
+}
+.navbar-default {
+  background-color: #606060;
+  border-color: #383838;
+  transition: all 0.4s ease;
+}
+.navbar {
+    width: 100%;
+    transition: all 0.4s ease;
+    background-color: #3E3E3B !important;
+    padding-left: 100px;
+    color: white !important;
+    padding-right: 10em;
+}
+.navbar-nav li a {
+    color: white;
+    transition: all 0.4s ease;
+}
+.navbar-nav li a:hover {
+    color: black !important;
+    background: white !important;
+    font-size: 110%;
+    transition: all 0.4s ease;
+}
+.nav-justified li a:active {
+    color: white;
+    line-height: 30px;
+    font-size: 110%;
+    transition: all 0.4s ease;
+}
+
+nav.navbar.shrink {
+  max-height: 35px !important;
+  min-height: 35px !important;
+  transition: all 0.4s ease;
+}
+
+nav.shrink a {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  font-size: 12px;
+  transition: all 0.4s ease;
+}
+
+nav.shrink .navbar-brand {
+  font-size: 25px;
+  transition: all 0.4s ease;
+}
+
+nav.shrink .navbar-toggle {
+  padding: 4px 5px;
+  margin: 8px 15px 8px 0;
+  transition: all 0.4s ease;
+}
+
+.mojotrollz_scroll {
+    text-align: center;
+    border-right: 1px solid slategray;
+    font-weight: bold;
+    color: white !important;
+    font-size: 110% !important;
+    min-width: 12vw;
+}
+.mojotrollz_scroll_last{
+    text-align: center;
+    font-weight: bold;
+    color: white !important;
+    font-size: 110% !important;
+    min-width: 12vw;
+}
