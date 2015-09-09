@@ -10,8 +10,8 @@
         <ul class="nav navbar-nav navbar-left">
             <li><a class="mojotrollz_scroll" href="#mojotrollz_client">MOJOTROLLZ</a></li>
             <li><a class="mojotrollz_scroll" href="#mojotrollz_server" onClick="">SERVERS</a></li>
-            <li><a class="mojotrollz_scroll" href="#mojotrollz_shirt" onClick="">T-SHIRTS</a></li>
-            <li><a class="mojotrollz_scroll" href="#mojotrollz_addon">ADDONS</a></li>
+            <li><a class="mojotrollz_scroll" href="#mojotrollz_tshirt" onClick="">T-SHIRTS</a></li>
+            <li><a class="mojotrollz_scroll" href="#mojotrollz_addons">ADDONS</a></li>
             <li><a class="mojotrollz_scroll mojotrollz_scroll_last" href="#mojotrollz_more" onClick="">MORE</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">

@@ -55,19 +55,3 @@ nav.shrink .navbar-toggle {
   margin: 8px 15px 8px 0;
   transition: all 0.4s ease;
 }
-
-.mojotrollz_scroll {
-    text-align: center;
-    border-right: 1px solid slategray;
-    font-weight: bold;
-    color: white !important;
-    font-size: 110% !important;
-    min-width: 12vw;
-}
-.mojotrollz_scroll_last{
-    text-align: center;
-    font-weight: bold;
-    color: white !important;
-    font-size: 110% !important;
-    min-width: 12vw;
-}

@@ -10,6 +10,4 @@ class page_mojotrollz extends \SYSTEM\API\api_default {
     
     public static function page_impressum(){
         return (new default_impressum())->html();}
-    
-    
 }

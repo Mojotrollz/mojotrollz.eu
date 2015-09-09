@@ -17,5 +17,9 @@
     <body>
         ${content_navbar}
         ${content_client}
+        ${content_server}
+        ${content_tshirt}
+        ${content_addons}
+        ${content_more}
     </body>
 </html>
