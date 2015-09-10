@@ -8,6 +8,13 @@
         </div>
         <div class="col-md-3 logo_hover"></div>
     </div>
+    <div class="flexslider">
+        <ul class="slides">
+            <li><img alt="slider_image_01.jpg" src="./api.php?call=files&cat=content&id=slider_image_01.jpg" width="100%"></li>
+            <li><img alt="slider_image_02.jpg" src="./api.php?call=files&cat=content&id=slider_image_02.jpg" width="100%"></li>
+            <li><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_03.jpg" width="100%"></li>
+        </ul>
+    </div>
     <div class="row cleafix"></div>
     <div id="content_client">
         <a href="#">WoW 1.12.1</a>
