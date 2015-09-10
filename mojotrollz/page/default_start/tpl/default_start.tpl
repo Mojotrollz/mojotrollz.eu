@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse" role="navigation">
+<nav class="navbar navbar-inverse" style="margin-top: 45px; margin-bottom: 0;padding-left: 0px; padding-right: 15px;" role="navigation" id="mojotrollz_nav">
     <div id="home_content" class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
           <span class="icon-bar"></span>
@@ -8,7 +8,7 @@
     </div>
     <div class="collapse navbar-collapse anchor">
         <ul class="nav navbar-nav navbar-left">
-            <li><a class="mojotrollz_scroll" href="#mojotrollz_client">MOJOTROLLZ</a></li>
+            <li class="active"><a class="mojotrollz_scroll" href="#mojotrollz_client">MOJOTROLLZ</a></li>
             <li><a class="mojotrollz_scroll" href="#mojotrollz_server" onClick="">SERVERS</a></li>
             <li><a class="mojotrollz_scroll" href="#mojotrollz_tshirt" onClick="">T-SHIRTS</a></li>
             <li><a class="mojotrollz_scroll" href="#mojotrollz_addons">ADDONS</a></li>
