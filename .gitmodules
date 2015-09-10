@@ -7,3 +7,6 @@
 [submodule "lib/font_awesome"]
 	path = lib/font_awesome
 	url = git@mojotrollz.eu:webcraft/lib_font_awesome.git
+[submodule "lib/flexslider"]
+	path = lib/flexslider
+	url = git@mojotrollz.eu:webcraft/host_flexslider.git
