@@ -12,7 +12,6 @@
             <li><a class="mojotrollz_scroll" href="#mojotrollz_server" onClick="">SERVERS</a></li>
             <li><a class="mojotrollz_scroll" href="#mojotrollz_tshirt" onClick="">T-SHIRTS</a></li>
             <li><a class="mojotrollz_scroll" href="#mojotrollz_addons">ADDONS</a></li>
-            <li><a class="mojotrollz_scroll mojotrollz_scroll_last" href="#mojotrollz_more" onClick="">MORE</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="https://www.facebook.com/pages/Mojo-WoW/204351992944865" target="_blank"><i class="fa fa-facebook fa-lg"></i></a></li>
@@ -21,8 +20,10 @@
         </ul>
     </div><!-- /.navbar-collapse -->
 </nav>
-${content_client}
-${content_server}
-${content_tshirt}
-${content_addons}
+<div style="padding-bottom: 15px; background-image: url(./api.php?call=files&cat=content&id=main_holder_middle.png);  background-size: contain; background-repeat: repeat-y;">
+    ${content_client}
+    ${content_server}
+    ${content_tshirt}
+    ${content_addons}
+</div>
 ${content_more}
