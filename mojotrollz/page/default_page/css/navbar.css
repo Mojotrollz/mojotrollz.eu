@@ -10,7 +10,7 @@
 .navbar {
     width: 100%;
     transition: all 0.4s ease;
-    background-color: #3E3E3B !important;
+    background-color: #000 !important;
     padding-left: 100px;
     color: white !important;
     padding-right: 10em;
@@ -22,13 +22,13 @@
 .navbar-nav li a:hover {
     color: black !important;
     background: white !important;
-    font-size: 110%;
+    font-size: 100%;
     transition: all 0.4s ease;
 }
 .nav-justified li a:active {
     color: white;
     line-height: 30px;
-    font-size: 110%;
+    font-size: 100%;
     transition: all 0.4s ease;
 }
 

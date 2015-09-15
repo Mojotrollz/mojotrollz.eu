@@ -18,3 +18,5 @@ html, body {
     margin-right: 0px; 
 
 }
+
+.flex-direction-nav a { display: none; }
