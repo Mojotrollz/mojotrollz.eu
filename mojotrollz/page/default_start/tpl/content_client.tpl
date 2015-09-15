@@ -3,11 +3,11 @@
         <div class="flexslider" style="">
             <ul class="slides">
                 <li><img alt="slider_image_01.jpg" src="./api.php?call=files&cat=content&id=slider_image_01.jpg" width="100%"></li>
-                <li><img alt="slider_image_02.jpg" src="./api.php?call=files&cat=content&id=slider_image_02.jpg" width="100%"></li>
-                <li><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_03.jpg" width="100%"></li>
+                <li style="display: none"><img alt="slider_image_02.jpg" src="./api.php?call=files&cat=content&id=slider_image_02.jpg" width="100%"></li>
+                <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_03.jpg" width="100%"></li>
             </ul>
         </div>
-        <div id="content_client" style="padding-left: 29px; padding-right: 29px; background: url(./api.php?call=files&cat=content&id=tapete.gif);">
+        <div id="content_client" style="padding-left: 29px; padding-right: 29px;">
             <div style="background-image: url(./api.php?call=files&cat=content&id=download_client.png); background-repeat: no-repeat; background-size: cover; float: left; width: 250px; height: 80px;">
                 <a href="${magnet_classic}">
                 <div style="padding-top:20px; padding-left: 75px; font-size: 16px;">
@@ -44,6 +44,7 @@
                     </div>
                 </a>
             </div>
+                        <h4 style="padding-top: 95px; text-align: center;">Players on ts3:mojotrollz.eu: <span class="label label-success">${ts_players}</span></h4>
         </div>
     </div>
 </div>
