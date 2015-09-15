@@ -12,6 +12,10 @@ class default_start extends \SYSTEM\PAGE\Page {
         $vars['content_addons'] = \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_start/tpl/content_addons.tpl'));
         $vars['content_more'] = \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_start/tpl/content_more.tpl'));
         
+        $vars['magnet_classic'] = 'magnet:?xt=urn:btih:m5dkc7lnrryhleqpugzspoyurwsaykyg&dn=WoW%201.12.1&xl=5387778663&fc=38';
+        $vars['magnet_bc'] = 'magnet:?xt=urn:btih:akirevdngf3djcti35gnk4l2z6ffoyw2&dn=WoW%202.4.3&xl=9537364669&fc=305';
+        $vars['magnet_wotlk'] = 'magnet:?xt=urn:btih:3u442mbojtl46ywlspou2d4ai5qo2i7r&dn=WoW%203.3.5a&xl=17897255192&fc=172';
+        
         $vars['server_list'] = '';
         $res = \SQL\MOJOTROLLZ_SERVER_LIST::QQ();
         while($row = $res->next()){
