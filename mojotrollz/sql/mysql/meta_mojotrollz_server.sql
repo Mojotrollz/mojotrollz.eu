@@ -1,0 +1,10 @@
+CREATE TABLE `mojotrollz_server` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`name` CHAR(50) NULL DEFAULT NULL,
+	`url` CHAR(50) NOT NULL,
+	`version` INT(11) NULL DEFAULT NULL,
+	`visible` INT(11) NULL DEFAULT NULL,
+	PRIMARY KEY (`id`)
+)
+ENGINE=InnoDB
+;

@@ -18,8 +18,8 @@
                     <input class="form-control text_width"
                            type="text"
                            id="input_contact_name"
-                           placeholder="New Server"
-                           required data-validation-required-message="Please tell us the Server's Name ;-).">
+                           placeholder="Address of the new Server "
+                           required data-validation-required-message="Please tell us the Server's Address ;-).">
                 </div>&nbsp;
                 <button type="submit" class="btn-sm btn btn-success"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;Submit for Evaluation!</button>
             </div>
