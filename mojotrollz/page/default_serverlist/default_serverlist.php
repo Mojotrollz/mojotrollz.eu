@@ -26,11 +26,11 @@ class default_serverlist extends \SYSTEM\PAGE\Page {
     
     private static function version_icon($version){
         switch($version){
-            case 0:
-                return '1.12.1';
             case 1:
-                return '2.4.3';
+                return '1.12.1';
             case 2:
+                return '2.4.3';
+            case 3:
                 return '3.3.5a';
             default:
                 return '';

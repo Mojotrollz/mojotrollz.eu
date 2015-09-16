@@ -7,7 +7,55 @@ html, body {
     width: 100%;
     margin: 0; 
     padding: 0;
+    color: #7A7A7A;
 }
+
+/*.btn-success { 
+  color: #ffffff; 
+  background-color: #333333; 
+  border-color: #130269; 
+} 
+ 
+.btn-success:hover, 
+.btn-success:focus, 
+.btn-success:active, 
+.btn-success.active, 
+.open .dropdown-toggle.btn-success { 
+  color: #ffffff; 
+  background-color: #49247A; 
+  border-color: #130269; 
+} 
+ 
+.btn-success:active, 
+.btn-success.active, 
+.open .dropdown-toggle.btn-success { 
+  background-image: none; 
+} 
+ 
+.btn-success.disabled, 
+.btn-success[disabled], 
+fieldset[disabled] .btn-success, 
+.btn-success.disabled:hover, 
+.btn-success[disabled]:hover, 
+fieldset[disabled] .btn-success:hover, 
+.btn-success.disabled:focus, 
+.btn-success[disabled]:focus, 
+fieldset[disabled] .btn-success:focus, 
+.btn-success.disabled:active, 
+.btn-success[disabled]:active, 
+fieldset[disabled] .btn-success:active, 
+.btn-success.disabled.active, 
+.btn-success[disabled].active, 
+fieldset[disabled] .btn-success.active { 
+  background-color: #333333; 
+  border-color: #130269; 
+} 
+ 
+.btn-success .badge { 
+  color: #333333; 
+  background-color: #ffffff; 
+}*/
+
 #home_content {
     margin-top: 50px;
 }
@@ -29,3 +77,141 @@ table.mojotrollz_table tr:nth-child(odd) {
 table.mojotrollz_table tr:hover {
  background-color: #1f1f1f;
 }
+
+/*.btn-success { 
+  color: #ffffff; 
+  background-color: #333333; 
+  border-color: #111; 
+} 
+ 
+.btn-success:hover, 
+.btn-success:focus, 
+.btn-success:active, 
+.btn-success.active, 
+.open .dropdown-toggle.btn-success { 
+  color: #ffffff; 
+  background-color: #4CAE4C; 
+  border-color: #111; 
+} 
+ 
+.btn-success:active, 
+.btn-success.active, 
+.open .dropdown-toggle.btn-success { 
+  background-image: none; 
+} 
+ 
+.btn-success.disabled, 
+.btn-success[disabled], 
+fieldset[disabled] .btn-success, 
+.btn-success.disabled:hover, 
+.btn-success[disabled]:hover, 
+fieldset[disabled] .btn-success:hover, 
+.btn-success.disabled:focus, 
+.btn-success[disabled]:focus, 
+fieldset[disabled] .btn-success:focus, 
+.btn-success.disabled:active, 
+.btn-success[disabled]:active, 
+fieldset[disabled] .btn-success:active, 
+.btn-success.disabled.active, 
+.btn-success[disabled].active, 
+fieldset[disabled] .btn-success.active { 
+  background-color: #333333; 
+  border-color: #111; 
+} 
+ 
+.btn-success .badge { 
+  color: #333333; 
+  background-color: #ffffff; 
+}
+
+.btn-primary { 
+  color: #ffffff; 
+  background-color: #333333; 
+  border-color: #111111; 
+} 
+ 
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.open .dropdown-toggle.btn-primary { 
+  color: #ffffff; 
+  background-color: #337AB7; 
+  border-color: #111111; 
+} 
+ 
+.btn-primary:active, 
+.btn-primary.active, 
+.open .dropdown-toggle.btn-primary { 
+  background-image: none; 
+} 
+ 
+.btn-primary.disabled, 
+.btn-primary[disabled], 
+fieldset[disabled] .btn-primary, 
+.btn-primary.disabled:hover, 
+.btn-primary[disabled]:hover, 
+fieldset[disabled] .btn-primary:hover, 
+.btn-primary.disabled:focus, 
+.btn-primary[disabled]:focus, 
+fieldset[disabled] .btn-primary:focus, 
+.btn-primary.disabled:active, 
+.btn-primary[disabled]:active, 
+fieldset[disabled] .btn-primary:active, 
+.btn-primary.disabled.active, 
+.btn-primary[disabled].active, 
+fieldset[disabled] .btn-primary.active { 
+  background-color: #333333; 
+  border-color: #111111; 
+} 
+ 
+.btn-primary .badge { 
+  color: #333333; 
+  background-color: #ffffff; 
+}
+
+.btn-warning { 
+  color: #ffffff; 
+  background-color: #333333; 
+  border-color: #111111; 
+} 
+ 
+.btn-warning:hover, 
+.btn-warning:focus, 
+.btn-warning:active, 
+.btn-warning.active, 
+.open .dropdown-toggle.btn-warning { 
+  color: #ffffff; 
+  background-color: #f0ad4e; 
+  border-color: #111111; 
+} 
+ 
+.btn-warning:active, 
+.btn-warning.active, 
+.open .dropdown-toggle.btn-warning { 
+  background-image: none; 
+} 
+ 
+.btn-warning.disabled, 
+.btn-warning[disabled], 
+fieldset[disabled] .btn-warning, 
+.btn-warning.disabled:hover, 
+.btn-warning[disabled]:hover, 
+fieldset[disabled] .btn-warning:hover, 
+.btn-warning.disabled:focus, 
+.btn-warning[disabled]:focus, 
+fieldset[disabled] .btn-warning:focus, 
+.btn-warning.disabled:active, 
+.btn-warning[disabled]:active, 
+fieldset[disabled] .btn-warning:active, 
+.btn-warning.disabled.active, 
+.btn-warning[disabled].active, 
+fieldset[disabled] .btn-warning.active { 
+  background-color: #333333; 
+  border-color: #111111; 
+} 
+ 
+.btn-warning .badge { 
+  color: #333333; 
+  background-color: #ffffff; 
+}*/

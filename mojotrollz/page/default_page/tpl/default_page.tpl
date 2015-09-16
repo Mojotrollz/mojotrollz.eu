@@ -41,7 +41,7 @@
             </nav>
             <div class="row-fluid row_centered clearfix" id="mojotrollz_client_row" style="padding-bottom: 10px; background-image: url(./api.php?call=files&cat=content&id=main_holder_middle.png);  background-size: contain; background-repeat: repeat-y;">
                 <div class="col-md-12 row_centered mojotrollz_client" style="padding-left: 29px; padding-right: 29px;">
-                    <h1 id="mojotrollz_title" class="fadeInDown animated lead" style="width: 100%; z-index: 2; color: crimson; font-size: 90px; text-align: center; top: 15px; position: absolute; visibility: visible; animation-delay: 0.9s; animation-name: fadeInDown; -webkit-animation-name: fadeInDown;">MOJOTROLLZ.EU</h1>
+                    <h1 id="mojotrollz_title" class="fadeInDown animated lead" style="width: 100%; z-index: 2;color: #B7B7B7; font-size: 90px; text-align: center; top: 15px; position: absolute; visibility: visible; animation-delay: 0.9s; animation-name: fadeInDown; -webkit-animation-name: fadeInDown;">MOJOTROLLZ.EU</h1>
                     <div class="flexslider">
                         <ul class="slides">
                             <li><img alt="slider_image_01.jpg" src="./api.php?call=files&cat=content&id=slider_image_01.jpg" width="100%"></li>

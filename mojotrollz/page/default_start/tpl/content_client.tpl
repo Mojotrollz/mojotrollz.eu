@@ -39,7 +39,7 @@
             </div>
             <h3 style="padding-top: 95px; text-align: center;">
                 Players online: <b>${ts_players}</b><br><br>
-                <button type="submit" class="btn-sm btn btn-success" onClick="location.href='ts3server://mojotrollz.eu'">
+                <button type="submit" class="btn-lg btn btn-success" onClick="location.href='ts3server://mojotrollz.eu'">
                     <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
                     &nbsp;&nbsp;Connect
                 </button>
