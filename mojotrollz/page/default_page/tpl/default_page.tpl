@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="${meta_description}">
         <meta name="author" content="${meta_author}">
+        <link rel="icon" href="./api.php?call=files&cat=content&id=favicon.ico" type="image/x-icon"/>
         ${css}
         ${js}
         <style type="text/css">
