@@ -10,7 +10,6 @@ class default_start extends \SYSTEM\PAGE\Page {
         $vars['content_server'] = \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_start/tpl/content_server.tpl'));
         $vars['content_tshirt'] = \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_start/tpl/content_tshirt.tpl'));
         $vars['content_addons'] = \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_start/tpl/content_addons.tpl'));
-        $vars['content_more'] = \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_start/tpl/content_more.tpl'));
         
         $vars['magnet_classic'] = 'magnet:?xt=urn:btih:m5dkc7lnrryhleqpugzspoyurwsaykyg&dn=WoW%201.12.1&xl=5387778663&fc=38';
         $vars['magnet_bc'] = 'magnet:?xt=urn:btih:akirevdngf3djcti35gnk4l2z6ffoyw2&dn=WoW%202.4.3&xl=9537364669&fc=305';

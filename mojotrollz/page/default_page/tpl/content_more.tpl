@@ -11,13 +11,13 @@
             <!--<a href="#!login(register)">REGISTER</a><br><br>
             <a href="#!guild">GUILD PAGES</a><br><br>
             <a href="#!gshirt">GUILD SHIRTS</a><br><br>-->
+            <a href="https://www.facebook.com/pages/Mojo-WoW/204351992944865" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>&nbsp;&nbsp;
+            <a href="https://www.youtube.com/user/Mojotrolltribe/videos" target="_blank"><i class="fa fa-youtube fa-lg"></i></a>
         </div>
         <div class="col-md-4">
             <a href="#!impressum">IMPRESSUM</a><br><br>
             <a href="http://www.webcraft-media.de" target="_blank">WEBCRAFT-MEDIA</a><br><br>
             <a href="http://www.slingit.org" target="_blank">SLINGIT</a><br><br>
-            <a href="https://www.facebook.com/pages/Mojo-WoW/204351992944865" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>&nbsp;&nbsp;
-            <a href="https://www.youtube.com/user/Mojotrolltribe/videos" target="_blank"><i class="fa fa-youtube fa-lg"></i></a>
         </div>
     </div>
 </div>

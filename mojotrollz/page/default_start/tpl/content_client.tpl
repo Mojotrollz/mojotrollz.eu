@@ -1,12 +1,5 @@
 <div class="row-fluid row_centered clearfix" id="mojotrollz_client_row">
     <div class="col-md-12 row_centered mojotrollz_client" style="padding-left: 29px; padding-right: 29px;">
-        <div class="flexslider" style="">
-            <ul class="slides">
-                <li><img alt="slider_image_01.jpg" src="./api.php?call=files&cat=content&id=slider_image_01.jpg" width="100%"></li>
-                <li style="display: none"><img alt="slider_image_02.jpg" src="./api.php?call=files&cat=content&id=slider_image_02.jpg" width="100%"></li>
-                <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_03.jpg" width="100%"></li>
-            </ul>
-        </div>
         <div id="content_client" style="padding-left: 29px; padding-right: 29px;">
             <div style="background-image: url(./api.php?call=files&cat=content&id=download_client.png); background-repeat: no-repeat; background-size: cover; float: left; width: 250px; height: 80px;">
                 <a href="${magnet_classic}">

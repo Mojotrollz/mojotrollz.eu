@@ -28,6 +28,7 @@ class default_page extends \SYSTEM\PAGE\Page {
         if(!$_escaped_fragment_){
             $vars['js'] = $this->js();}
         $vars['css'] = $this->css();
+        $vars['content_more'] = \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_page/tpl/content_more.tpl'));
         $vars = array_merge($vars, \SYSTEM\PAGE\text::tag('meta'));
         return \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_page/tpl/default_page.tpl'), $vars);
     }
