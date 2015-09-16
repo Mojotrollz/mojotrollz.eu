@@ -1,0 +1,14 @@
+<tr>
+    <td>${name}</td>
+    <td>${version}</td>
+    <td>${description}</td>
+    <td>
+        ${download_1_12_1}
+    </td>
+    <td>
+        ${download_2_4_3}
+    </td>
+    <td>
+        ${download_3_3_5a}
+    </td>
+</tr>
