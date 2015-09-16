@@ -1,6 +1,6 @@
 <hr>
 <h3>SERVERS</h3>
-<table style="width: 100%;" class="sai_table">
+<table style="width: 100%;" class="mojotrollz_table">
     <tr>
         <th>Name</th>
         <th>Version</th>
@@ -10,7 +10,6 @@
     </tr>
     ${server_list}
 </table>
-<h4>ADD SERVER</h4>
 <form class="textbox trojan" style="padding:10px" id="newserver_form">
     <div class="control-group">
         <div class="controls" style="float: left; width: 300px;">
