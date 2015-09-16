@@ -5,7 +5,7 @@
                 <a href="${magnet_classic}">
                 <div style="padding-top:20px; padding-left: 75px; font-size: 16px;">
                     <img style="float:right; margin-right:20px;" data-pyroimage="true" src="./api.php?call=files&cat=content&id=wow_normal.png" alt="Windows" height="48" width="48">
-                    <div><a href="${magnet_clssic}">WoW 1.12.1</a></div>
+                    <div><a href="${magnet_classic}">WoW 1.12.1</a></div>
                     <div style="font-size: 10px;">Download this file with <a href="http://www.qbittorrent.org/download.php" target="blank">qBittorrent</a></div>
                 </div>
                 </a>
@@ -33,11 +33,17 @@
                     <div style="padding-top:20px; padding-left: 75px; font-size: 16px;">
                         <img style="float:right; margin-right:20px;" data-pyroimage="true" src="./api.php?call=files&cat=content&id=ts.png" alt="Windows" height="48" width="48">
                         <div><a href="http://www.teamspeak.com/downloads" target="blank">Teamspeak 3</a></div>
-                        <div style="font-size: 10px;">Connect to <a href="">ts3:mojotrollz.eu</a></div>
+                        <div style="font-size: 10px;">Connect to <a href="ts3server://mojotrollz.eu">ts3:mojotrollz.eu</a></div>
                     </div>
                 </a>
             </div>
-                        <h4 style="padding-top: 95px; text-align: center;">Players on ts3:mojotrollz.eu: <span class="label label-success">${ts_players}</span></h4>
+            <h4 style="padding-top: 95px; text-align: center;">
+                Players on ts3:mojotrollz.eu: ${ts_players}&nbsp;&nbsp;
+                <button type="submit" class="btn-sm btn btn-success" onClick="location.href='ts3server://mojotrollz.eu'">
+                    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                    &nbsp;&nbsp;Connect
+                </button>
+            </h4>
         </div>
     </div>
 </div>

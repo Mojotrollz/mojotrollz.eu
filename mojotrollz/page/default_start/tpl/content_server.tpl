@@ -21,7 +21,7 @@
                            placeholder="Address of the new Server "
                            required data-validation-required-message="Please tell us the Server's Address ;-).">
                 </div>&nbsp;
-                <button type="submit" class="btn-sm btn btn-success"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;Submit for Evaluation!</button>
+                <button type="submit" class="btn-sm btn btn-success"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;&nbsp;Submit for Evaluation!</button>
             </div>
         </form>
     </div>
