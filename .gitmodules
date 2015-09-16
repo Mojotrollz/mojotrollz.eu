@@ -10,3 +10,6 @@
 [submodule "lib/flexslider"]
 	path = lib/flexslider
 	url = git@mojotrollz.eu:webcraft/host_flexslider.git
+[submodule "lib/ts3"]
+	path = lib/ts3
+	url = git@mojotrollz.eu:webcraft/lib_ts3.git

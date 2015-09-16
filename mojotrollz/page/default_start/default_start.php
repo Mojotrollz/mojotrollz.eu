@@ -20,6 +20,14 @@ class default_start extends \SYSTEM\PAGE\Page {
         while($row = $res->next()){
             $row['version'] = self::version_icon($row['version']);
             $vars['server_list'] .= \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_start/tpl/serverlist_tr.tpl'),$row);}
+            
+        \LIB\lib_ts3::php();
+        // connect to local server, authenticate and spawn an object for the virtual server on port 9987
+        $ts3 = TeamSpeak3::factory("serverquery://mojotrollztsquery:9aYllYkG@127.0.0.1:10011/");
+        // query clientlist from virtual server
+        $clients = $ts3->serverGetByPort(9987)->clientCount();
+        $vars['ts_players'] = $clients;
+            
         $vars = array_merge($vars, \SYSTEM\PAGE\text::tag('basic'));
         return \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_start/tpl/default_start.tpl'), $vars);
     }
