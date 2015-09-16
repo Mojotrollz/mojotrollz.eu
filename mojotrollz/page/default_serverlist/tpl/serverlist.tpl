@@ -1,9 +1,10 @@
 <hr>
 <h3>SERVERS</h3>
-<table style="width: 100%;">
+<table style="width: 100%;" class="sai_table">
     <tr>
         <th>Name</th>
         <th>Version</th>
+        <th>Description</th>
         <th>Score</th>
         <th>Vote</th>
     </tr>

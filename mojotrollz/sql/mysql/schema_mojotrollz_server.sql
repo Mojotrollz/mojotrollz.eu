@@ -3,11 +3,12 @@ CREATE TABLE `mojotrollz_server` (
 	`name` CHAR(50) NULL DEFAULT NULL,
 	`url` CHAR(50) NOT NULL,
 	`version` INT(11) NULL DEFAULT NULL,
+	`description` TEXT NULL,
 	`visible` INT(11) NULL DEFAULT NULL,
 	`score` INT(11) NOT NULL DEFAULT '0',
 	PRIMARY KEY (`id`)
 )
 COLLATE='utf8_general_ci'
 ENGINE=InnoDB
-AUTO_INCREMENT=2
+AUTO_INCREMENT=9
 ;

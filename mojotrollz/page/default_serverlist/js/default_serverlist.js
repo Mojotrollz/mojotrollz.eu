@@ -20,4 +20,14 @@ function init_serverlist(){
             event.preventDefault();
         }
     });
+    
+    $(".btn_vote").click(function(){
+        $.getJSON('./api.php?call=mojo&action=vote&server='+$(this).attr('server'), function (data) {
+                if(data.status){
+                    location.reload();
+                } else {
+                    alert("An Error occurred. Could not vote for Server. You can only vote once per day!");
+                }
+            });
+    });
 }

@@ -5,4 +5,9 @@ class api_mojotrollz extends \SYSTEM\API\api_system {
                 \SYSTEM\LOG\JsonResult::ok() :
                 \SYSTEM\LOG\JsonResult::fail();
     }
+    public static function call_mojo_action_vote($server){
+        return  \SQL\MOJOTROLLZ_VOTE_INSERT::QI(array($server,$_SERVER['REMOTE_ADDR'])) ?
+                \SYSTEM\LOG\JsonResult::ok() :
+                \SYSTEM\LOG\JsonResult::fail();
+    }
 }
