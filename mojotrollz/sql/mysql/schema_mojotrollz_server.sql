@@ -4,7 +4,10 @@ CREATE TABLE `mojotrollz_server` (
 	`url` CHAR(50) NOT NULL,
 	`version` INT(11) NULL DEFAULT NULL,
 	`visible` INT(11) NULL DEFAULT NULL,
+	`score` INT(11) NOT NULL DEFAULT '0',
 	PRIMARY KEY (`id`)
 )
+COLLATE='utf8_general_ci'
 ENGINE=InnoDB
+AUTO_INCREMENT=2
 ;

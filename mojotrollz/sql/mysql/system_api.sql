@@ -1,0 +1,1 @@
+INSERT INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (200, 0, 2, 11, 'newserver', 'address', 'STRING');
