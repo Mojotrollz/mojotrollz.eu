@@ -1,6 +1,6 @@
-<div class="row-fluid row_centered clearfix" id="mojotrollz_server_row">
-    <div class="col-md-12 row_centered mojotrollz_server" style="padding-left: 50px; padding-right: 50px;">
+<div class="row-fluid">
+    <div id="content_tshirts" class="col-md-12 mojotrollz_col">
         <hr>
-        <h3>T-SHIRTS</h3>
+        <h3>${mojotrollz_tshirts}</h3>
     </div>
 </div>

@@ -1,7 +1,7 @@
-<div class="row-fluid row_centered clearfix" id="mojotrollz_server_row">
-    <div class="col-md-12 row_centered mojotrollz_server" style="padding-left: 50px; padding-right: 50px;">
+<div class="row-fluid">
+    <div id="content_addons" class="col-md-12 mojotrollz_col">
         <hr>
-        <h3>ADDONS</h3>
+        <h3>${mojotrollz_addons}</h3>
         <table style="width: 100%;" class="mojotrollz_table">
             <tr>
                 <th class="col-md-2" style="padding: 0;">Name</th>

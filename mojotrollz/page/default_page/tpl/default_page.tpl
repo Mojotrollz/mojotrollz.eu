@@ -5,20 +5,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="${meta_description}">
         <meta name="author" content="${meta_author}">
+        <title>${meta_title}</title>
         <link rel="icon" href="./api.php?call=files&cat=content&id=favicon.ico" type="image/x-icon"/>
-        ${css}
-        ${js}
         <style type="text/css">
             @font-face {        
                 font-family: TrojanPro; 
                 src: url(./api.php?call=files&cat=content&id=TrajanPro-Regular.otf); 
             }
+            body{
+                background: url(./api.php?call=files&cat=content&id=bg_brown_sun.jpg) no-repeat;
+                background-size: cover;
+            }
+            .mojotrollz_nav{
+                background: url(./api.php?call=files&cat=content&id=main_holder_middle.png) repeat-y;
+                background-size: contain;
+            }
+            .mojotrollz_col{
+                background: url(./api.php?call=files&cat=content&id=main_holder_middle.png) repeat-y;
+                background-size: contain;
+            }
+            .mojotrollz_download_text{
+                background: url(./api.php?call=files&cat=content&id=download_client.png) no-repeat;
+                background-size: cover;
+            }
         </style>
+        ${css}
+        ${js}
     </head>
-    <body style="background: url(./api.php?call=files&cat=content&id=bg_brown_sun.jpg)fixed repeat;">
+    <body>
         <div class="container">
-            <nav class="navbar navbar-inverse" style="border: 0; background-color: rgba(255,0,0,0) !important; background-image: url(./api.php?call=files&cat=content&id=main_holder_middle.png);  background-size: contain; background-repeat: repeat-y; margin-top: 45px; margin-bottom: 0; padding-left: 14px; padding-right: 14px; " role="navigation" id="mojotrollz_nav">
-                <div id="home_content" class="navbar-header">
+            <!-- Navbar -->
+            <nav class="navbar navbar-inverse mojotrollz_nav" role="navigation">
+                <div id="content_home" class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
@@ -27,22 +45,23 @@
                 </div>
                 <div class="collapse navbar-collapse anchor">
                     <ul class="nav navbar-nav navbar-left">
-                        <li class="active"><a class="mojotrollz_scroll" href="#mojotrollz_client">MOJOTROLLZ</a></li>
-                        <li><a class="mojotrollz_scroll" href="#mojotrollz_server" onClick="">SERVERS</a></li>
-                        <li><a class="mojotrollz_scroll" href="#mojotrollz_tshirt" onClick="">T-SHIRTS</a></li>
-                        <li><a class="mojotrollz_scroll" href="#mojotrollz_addons">ADDONS</a></li>
+                        <li class="active"><a href="#content_home">${mojotrollz_mojotrollz}</a></li>
+                        <li><a href="#content_server" onClick="">${mojotrollz_servers}</a></li>
+                        <li><a href="#content_tshirts" onClick="">${mojotrollz_tshirts}</a></li>
+                        <!--<li><a href="#content_addons">${mojotrollz_addons}</a></li>-->
                     </ul>
-                    <ul class="nav navbar-nav navbar-right" style="padding-right: 15px;">
-                        <li><a href="https://www.facebook.com/pages/Mojo-WoW/204351992944865" target="_blank"><i class="fa fa-facebook fa-lg"></i></a></li>
-                        <li><a href="https://www.youtube.com/user/Mojotrolltribe/videos" target="_blank"><i class="fa fa-youtube fa-lg"></i></a></li>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="${link_facebook}" target="_blank"><i class="fa fa-facebook fa-lg"></i></a></li>
+                        <li><a href="${link_youtube}" target="_blank"><i class="fa fa-youtube fa-lg"></i></a></li>
                         <li><a href="#!login"><i class="glyphicon glyphicon-user"></i></a></li>
                     </ul>
-                </div><!-- /.navbar-collapse -->
+                </div>
             </nav>
-            <div class="row-fluid row_centered clearfix" id="mojotrollz_client_row" style="padding-bottom: 10px; background-image: url(./api.php?call=files&cat=content&id=main_holder_middle.png);  background-size: contain; background-repeat: repeat-y;">
-                <div class="col-md-12 row_centered mojotrollz_client" style="padding-left: 29px; padding-right: 29px;">
-                    <h1 id="mojotrollz_title" class="fadeInDown animated lead" style="width: 100%; z-index: 2;color: #B7B7B7; font-size: 90px; text-align: center; top: 15px; position: absolute; visibility: visible; animation-delay: 0.9s; animation-name: fadeInDown; -webkit-animation-name: fadeInDown;">MOJOTROLLZ.EU</h1>
-                    <div class="flexslider">
+            <!-- Flexslider -->
+            <div class="row-fluid">
+                <div class="col-md-12 mojotrollz_col">
+                    <h1 class="fadeInDown animated lead mojotrollz_heading">${mojotrollz_heading}</h1>
+                    <div class="flexslider mojotrollz_flexslider">
                         <ul class="slides">
                             <li><img alt="slider_image_01.jpg" src="./api.php?call=files&cat=content&id=slider_image_01.jpg" width="100%"></li>
                             <li style="display: none"><img alt="slider_image_02.jpg" src="./api.php?call=files&cat=content&id=slider_image_02.jpg" width="100%"></li>
@@ -51,8 +70,32 @@
                     </div>
                 </div>
             </div>
-            <div id="content" style="padding-bottom: 20px; background-image: url(./api.php?call=files&cat=content&id=main_holder_middle.png);  background-size: contain; background-repeat: repeat-y;"></div>
-            ${content_more}
+            <!-- Content -->
+            <div id="content"></div>
+            <!-- Content More -->
+            <div class="row-fluid">
+                <div id="content_more" class="col-md-12">
+                    <div class="col-md-4">
+                        <a href="#content_home">${mojotrollz_mojotrollz}</a><br><br>
+                        <a href="#content_server">${mojotrollz_servers}</a><br><br>
+                        <a href="#content_tshirt">${mojotrollz_tshirts}</a><br><br>
+                        <!--<a href="#content_addons">${mojotrollz_addons}</a><br><br>-->
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#!login">${mojotrollz_login}</a><br><br>
+                        <!--<a href="#!login(register)">REGISTER</a><br><br>
+                        <a href="#!guild">GUILD PAGES</a><br><br>
+                        <a href="#!gshirt">GUILD SHIRTS</a><br><br>-->
+                        <a href="${link_facebook}" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>&nbsp;&nbsp;
+                        <a href="${link_youtube}" target="_blank"><i class="fa fa-youtube fa-lg"></i></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#!impressum">${mojotrollz_impressum}</a><br><br>
+                        <a href="${link_webcraft}" target="_blank">${mojotrollz_webcraft}</a><br><br>
+                        <a href="${link_slingit}" target="_blank">${mojotrollz_slingit}</a><br><br>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

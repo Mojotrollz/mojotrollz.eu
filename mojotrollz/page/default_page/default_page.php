@@ -4,9 +4,6 @@ class default_page extends \SYSTEM\PAGE\Page {
         return  \SYSTEM\HTML\html::script(\LIB\lib_jquery::js()).
                 \SYSTEM\HTML\html::script(\LIB\lib_bootstrap::js()).
                 \SYSTEM\HTML\html::script(\LIB\lib_system::js()).
-                \SYSTEM\HTML\html::script(\LIB\lib_textillate::js()).
-                \SYSTEM\HTML\html::script(\LIB\lib_lettering::js()).
-                \SYSTEM\HTML\html::script(\LIB\lib_unslider::js()).
                 \SYSTEM\HTML\html::script(\LIB\lib_jqbootstrapvalidation::js()).
                 \SYSTEM\HTML\html::script(\LIB\lib_flexslider::js()).
                 \SYSTEM\HTML\html::script(\SYSTEM\WEBPATH(new PPAGE(),'default_page/js/default_page.js'));
@@ -19,7 +16,11 @@ class default_page extends \SYSTEM\PAGE\Page {
                 \SYSTEM\HTML\html::link(\LIB\lib_system::css()).
                 \SYSTEM\HTML\html::link(\LIB\lib_flexslider::css()).
                 \SYSTEM\HTML\html::link(\SYSTEM\WEBPATH(new PPAGE(),'default_page/css/default_page.css')).
-                \SYSTEM\HTML\html::link(\SYSTEM\WEBPATH(new PPAGE(),'default_page/css/navbar.css'));
+                \SYSTEM\HTML\html::link(\SYSTEM\WEBPATH(new PPAGE(),'default_page/css/btn-success.css')).
+                \SYSTEM\HTML\html::link(\SYSTEM\WEBPATH(new PPAGE(),'default_page/css/btn-primary.css')).
+                \SYSTEM\HTML\html::link(\SYSTEM\WEBPATH(new PPAGE(),'default_page/css/btn-warning.css')).
+                \SYSTEM\HTML\html::link(\SYSTEM\WEBPATH(new PPAGE(),'default_page/css/flexslider.css')).
+                \SYSTEM\HTML\html::link(\SYSTEM\WEBPATH(new PPAGE(),'default_page/css/table.css'));
     }
     
     public function html($_escaped_fragment_ = NULL){
@@ -28,8 +29,7 @@ class default_page extends \SYSTEM\PAGE\Page {
         if(!$_escaped_fragment_){
             $vars['js'] = $this->js();}
         $vars['css'] = $this->css();
-        $vars['content_more'] = \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_page/tpl/content_more.tpl'));
-        $vars = array_merge($vars, \SYSTEM\PAGE\text::tag('meta'));
+        $vars = array_merge($vars, \SYSTEM\PAGE\text::tag('mojotrollz'));
         return \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_page/tpl/default_page.tpl'), $vars);
     }
 }

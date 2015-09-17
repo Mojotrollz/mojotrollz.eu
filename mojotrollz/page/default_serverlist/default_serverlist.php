@@ -11,6 +11,7 @@ class default_serverlist extends \SYSTEM\PAGE\Page {
         $res = \SQL\MOJOTROLLZ_SERVER_LIST::QQ();
         while($row = $res->next()){
             $row['version'] = self::version_icon($row['version']);
+            $row['version_url'] = \str_replace('.', '_', $row['version']);
             $row['btn_vote_color'] = 'btn-warning';
             $row['glyphicon_vote'] = 'glyphicon-hand-up';
             if(!$vote_server){
@@ -21,6 +22,7 @@ class default_serverlist extends \SYSTEM\PAGE\Page {
             }
             $row['score'] += $row['votes'];
             $vars['server_list'] .= \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_serverlist/tpl/serverlist_tr.tpl'),$row);}
+        $vars = array_merge($vars, \SYSTEM\PAGE\text::tag('mojotrollz'));
         return \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_serverlist/tpl/serverlist.tpl'), $vars);
     }
     

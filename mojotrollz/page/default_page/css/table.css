@@ -1,0 +1,8 @@
+table.mojotrollz_table tr:nth-child(even) {
+}
+table.mojotrollz_table tr:nth-child(odd) {
+ background-color: #1a1a1a;
+}
+table.mojotrollz_table tr:hover {
+ background-color: #1f1f1f;
+}

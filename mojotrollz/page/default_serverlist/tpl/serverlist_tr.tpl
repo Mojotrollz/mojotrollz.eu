@@ -1,8 +1,8 @@
 <tr>
     <td><a href="${url}" target="blank">${name}</a></td>
     <td>
-        <a href="${magnet_${version}">
-            <img style="" data-pyroimage="true" src="./api.php?call=files&cat=content&id=wow_${version}.png" alt="WoW" height="24" width="24">
+        <a href="${link_wow_${version_url}}">
+            <img style="" data-pyroimage="true" src="./api.php?call=files&cat=content&id=wow_${version_url}.png" alt="WoW" height="24" width="24">
             &nbsp;&nbsp;${version}
         </a>
     </td>
@@ -11,19 +11,19 @@
     <td>
         <button type="submit" class="btn_vote btn-sm btn ${btn_vote_color}" server="${id}" style="width: 95%;">
             <span class="glyphicon ${glyphicon_vote}" aria-hidden="true"></span>
-            &nbsp;&nbsp;Vote
+            &nbsp;&nbsp;${basic_vote}
         </button>
     </td>
     <td>
         <button type="submit" class="btn-sm btn btn-primary" onClick="location.href='${url}'" style="width: 95%;">
             <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
-            &nbsp;&nbsp;Visit
+            &nbsp;&nbsp;${basic_visit}
         </button>
     </td>
     <td>
-        <button type="submit" class="btn-sm btn btn-primary" onClick="location.href='${magnet_${version}}'" style="width: 95%;">
+        <button type="submit" class="btn-sm btn btn-primary" onClick="location.href='${link_wow_${version_url}}'" style="width: 100%;">
             <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
-            &nbsp;&nbsp;Download
+            &nbsp;&nbsp;${basic_download}
         </button>
     </td>
 </tr>

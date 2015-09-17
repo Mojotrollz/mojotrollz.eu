@@ -1,10 +1,4 @@
 function init_serverlist(){
-    $("#mojotrollz_nav a").click(function(){
-        $('#mojotrollz_nav li').each(function(){
-            $(this).removeClass('active');});
-        $(this).parent().addClass('active');
-    });
-    
     $("#newserver_form input").not("[type=submit]").jqBootstrapValidation({
         autoAdd: {helpBlocks: false},
         preventSubmit: true,
