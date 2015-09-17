@@ -5,6 +5,7 @@ class DATA_MOJOTROLLZ extends \SYSTEM\DB\QI {
     public static function files_mysql(){
         return array(   \SYSTEM\SERVERPATH(new \PSQL(),'/mysql/system_page.sql'),
                         \SYSTEM\SERVERPATH(new \PSQL(),'/mysql/system_api.sql'),
+                        \SYSTEM\SERVERPATH(new \PSQL(),'/mysql/system_text.sql'),
                         \SYSTEM\SERVERPATH(new \PSQL(),'/mysql/schema_mojotrollz_server.sql'),
                         \SYSTEM\SERVERPATH(new \PSQL(),'/mysql/schema_mojotrollz_vote.sql'),
                         \SYSTEM\SERVERPATH(new \PSQL(),'/mysql/schema_mojotrollz_addon.sql'));
