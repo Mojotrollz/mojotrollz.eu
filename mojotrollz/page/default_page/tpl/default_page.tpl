@@ -17,7 +17,7 @@
     </head>
     <body style="background: url(./api.php?call=files&cat=content&id=bg_brown_sun.jpg)fixed repeat;">
         <div class="container">
-            <nav class="navbar navbar-inverse" style="margin-top: 45px; margin-bottom: 0;padding-left: 0px; padding-right: 15px;" role="navigation" id="mojotrollz_nav">
+            <nav class="navbar navbar-inverse" style="border: 0; background-color: rgba(255,0,0,0) !important; background-image: url(./api.php?call=files&cat=content&id=main_holder_middle.png);  background-size: contain; background-repeat: repeat-y; margin-top: 45px; margin-bottom: 0; padding-left: 14px; padding-right: 14px; " role="navigation" id="mojotrollz_nav">
                 <div id="home_content" class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
                       <span class="icon-bar"></span>
@@ -32,7 +32,7 @@
                         <li><a class="mojotrollz_scroll" href="#mojotrollz_tshirt" onClick="">T-SHIRTS</a></li>
                         <li><a class="mojotrollz_scroll" href="#mojotrollz_addons">ADDONS</a></li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right" style="padding-right: 15px;">
                         <li><a href="https://www.facebook.com/pages/Mojo-WoW/204351992944865" target="_blank"><i class="fa fa-facebook fa-lg"></i></a></li>
                         <li><a href="https://www.youtube.com/user/Mojotrolltribe/videos" target="_blank"><i class="fa fa-youtube fa-lg"></i></a></li>
                         <li><a href="#!login"><i class="glyphicon glyphicon-user"></i></a></li>
