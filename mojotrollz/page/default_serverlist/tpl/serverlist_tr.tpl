@@ -9,15 +9,19 @@
     <td>${description}</td>
     <td>${score}</td>
     <td>
-        <button type="submit" class="btn_vote btn-sm btn ${btn_vote_color}" server="${id}">
+        <button type="submit" class="btn_vote btn-sm btn ${btn_vote_color}" server="${id}" style="width: 95%;">
             <span class="glyphicon ${glyphicon_vote}" aria-hidden="true"></span>
             &nbsp;&nbsp;Vote
         </button>
-        <button type="submit" class="btn-sm btn btn-primary" onClick="location.href='${url}'">
+    </td>
+    <td>
+        <button type="submit" class="btn-sm btn btn-primary" onClick="location.href='${url}'" style="width: 95%;">
             <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
             &nbsp;&nbsp;Visit
         </button>
-        <button type="submit" class="btn-sm btn btn-primary" onClick="location.href='${magnet_${version}}'">
+    </td>
+    <td>
+        <button type="submit" class="btn-sm btn btn-primary" onClick="location.href='${magnet_${version}}'" style="width: 95%;">
             <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
             &nbsp;&nbsp;Download
         </button>
