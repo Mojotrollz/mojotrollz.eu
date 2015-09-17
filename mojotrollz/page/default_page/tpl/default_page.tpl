@@ -46,7 +46,7 @@
                 <div class="collapse navbar-collapse anchor">
                     <ul class="nav navbar-nav navbar-left">
                         <li class="active"><a href="#content_home">${mojotrollz_mojotrollz}</a></li>
-                        <li><a href="#content_server" onClick="">${mojotrollz_servers}</a></li>
+                        <li><a href="#content_servers" onClick="">${mojotrollz_servers}</a></li>
                         <li><a href="#content_tshirts" onClick="">${mojotrollz_tshirts}</a></li>
                         <!--<li><a href="#content_addons">${mojotrollz_addons}</a></li>-->
                     </ul>
@@ -77,8 +77,8 @@
                 <div id="content_more" class="col-md-12">
                     <div class="col-md-4">
                         <a href="#content_home">${mojotrollz_mojotrollz}</a><br><br>
-                        <a href="#content_server">${mojotrollz_servers}</a><br><br>
-                        <a href="#content_tshirt">${mojotrollz_tshirts}</a><br><br>
+                        <a href="#content_servers">${mojotrollz_servers}</a><br><br>
+                        <a href="#content_tshirts">${mojotrollz_tshirts}</a><br><br>
                         <!--<a href="#content_addons">${mojotrollz_addons}</a><br><br>-->
                     </div>
                     <div class="col-md-4">
