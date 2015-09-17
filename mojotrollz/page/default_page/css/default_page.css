@@ -59,9 +59,6 @@ html, body {
     font-size: 10px;
 }
 
-#content_addons{
-    padding-bottom: 20px;
-}
 #content_more{
     margin-top: 15px;
     padding-left: 40px;
@@ -73,6 +70,8 @@ html, body {
     text-align: center;
 }
 
-#content_servers, #content_tshirts, #content_addons{
-    padding-left: 50px; padding-right: 50px;
+#content_servers, #content_tshirts, #content_addons, #content_impressum, #content_login{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 15px;
 }

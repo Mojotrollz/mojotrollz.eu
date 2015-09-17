@@ -1,3 +1,6 @@
-<div style="width: 750px; margin: auto; margin-bottom: 50px;">
-    ${impressum}
+<div class="row-fluid">
+    <div id="content_impressum" class="col-md-12 mojotrollz_col">
+        <h1>Impressum</h1>
+        ${impressum}
+    </div>
 </div>

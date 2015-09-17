@@ -13,7 +13,7 @@
                 src: url(./api.php?call=files&cat=content&id=TrajanPro-Regular.otf); 
             }
             body{
-                background: url(./api.php?call=files&cat=content&id=bg_brown_sun.jpg) no-repeat;
+                background: url(./api.php?call=files&cat=content&id=bg_brown_sun.jpg)fixed no-repeat;
                 background-size: cover;
             }
             .mojotrollz_nav{
