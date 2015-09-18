@@ -89,3 +89,5 @@ INSERT INTO `system_text_tag` (`id`, `tag`) VALUES ('webcraft_impressum', 'mojot
 INSERT INTO `system_text_tag` (`id`, `tag`) VALUES ('webcraft_impressum', 'webcraft');
 
 INSERT INTO `system_text_tag` (`id`, `tag`) VALUES ('basic_login', 'mojotrollz');
+INSERT INTO `system_text_tag` (`id`, `tag`) VALUES ('basic_placeholder_username', 'mojotrollz');
+INSERT INTO `system_text_tag` (`id`, `tag`) VALUES ('basic_placeholder_password', 'mojotrollz');
