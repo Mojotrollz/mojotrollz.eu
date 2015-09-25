@@ -1,9 +1,9 @@
-<h4>${sai_cron_title}</h4>
+<h4>Mojotrollz Servers</h4>
 <hr>
-Last Visit: ${last_visit}<br/>
+Cron Last Visit: ${last_visit}<br/>
 <a href="./sai.php?call=cron" target="_blank">Start Cron</a>
-<div id="cron_content">
-    <table class="table table-hover table-condensed sai_table tablesorter" id="sai_mod_cron_table" style="overflow: auto;">
+<div id="servers_content">
+    <table class="table table-hover table-condensed sai_table tablesorter" id="servers_table" style="overflow: auto;">
         <thead>
             <tr>
                 <th>id</th>
@@ -23,15 +23,15 @@ Last Visit: ${last_visit}<br/>
         </tbody>    
         <tr>
             <td>ID</td>
-            <td><input class="form-control" type="text" id="input_cron_min" placeholder="name" value="0" style="width: 40px;"></td>
-            <td><input class="form-control" type="text" id="input_cron_hour" placeholder="url" value="0" style="width: 40px;"></td>
-            <td><input class="form-control" type="text" id="input_cron_day" placeholder="version" value="0" style="width: 40px;"></td>
-            <td><input class="form-control" type="text" id="input_cron_day_week" placeholder="description" value="0" style="width: 40px;"></td>
-            <td>VISIBLE</td>
+            <td><input class="form-control" type="text" id="input_name" placeholder="name" style="width: 100%;"></td>
+            <td><input class="form-control" type="text" id="input_url" placeholder="url" style="width: 100%;"></td>
+            <td><input class="form-control" type="text" id="input_version" placeholder="version" style="width: 100%;"></td>
+            <td><input class="form-control" type="text" id="input_description" placeholder="description" style="width: 100%;"></td>
             <td></td>
             <td></td>
             <td></td>
-            <td><button type="button" class="btn-sm btn btn-success" id="btn_servers_add"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ${basic_edit}</button></td>
+            <td></td>
+            <td><button type="button" class="btn-sm btn btn-success" id="btn_server_save"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ${basic_edit}</button></td>
         </tr> 
     </table>
 </div>
