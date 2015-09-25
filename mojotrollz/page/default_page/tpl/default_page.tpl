@@ -63,14 +63,14 @@
                     <h1 class="fadeInDown animated lead mojotrollz_heading">${mojotrollz_heading}</h1>
                     <div class="flexslider mojotrollz_flexslider">
                         <ul class="slides">
-                            <li><img alt="slider_image_01.jpg" src="./api.php?call=files&cat=content&id=slider_image_01.jpg" width="100%"></li>
-                            <li style="display: none"><img alt="slider_image_02.jpg" src="./api.php?call=files&cat=content&id=slider_image_02.jpg" width="100%"></li>
+                            <li><img alt="slider_image_01.jpg" src="./api.php?call=files&cat=content&id=banner_mojotrollz_1.gif" width="100%"></li>
+                            <li style="display: none"><img alt="slider_image_02.jpg" src="./api.php?call=files&cat=content&id=banner_mojotrollz_2.gif" width="100%"></li>
                             <!--<li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_03.jpg" width="100%"></li>-->
-                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_04.png" width="100%"></li>
-                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_05.png" width="100%"></li>
-                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_06.jpg" width="100%"></li>
+                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=banner_mojotrollz_3.gif" width="100%"></li>
+                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=banner_mojotrollz_4.gif" width="100%"></li>
+                            <!--<li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_06.jpg" width="100%"></li>
                             <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_07.jpg" width="100%"></li>
-                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_08.png" width="100%"></li>
+                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_08.png" width="100%"></li>-->
                         </ul>
                     </div>
                 </div>
