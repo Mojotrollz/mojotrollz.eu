@@ -4,11 +4,11 @@
     <tr>
         <th class="col-md-2" style="padding: 0;">${basic_name}</th>
         <th class="col-md-2" style="padding: 0;">${basic_version}</th>
-        <th class="col-md-4" style="padding: 0;">${basic_description}</th>
-        <th class="col-md-1" style="padding: 0;">${basic_score}</th>
+        <th class="col-md-5" style="padding: 0;">${basic_description}</th>
+        <th class="col-md-2" style="padding: 0;">${basic_score}</th>
         <th class="col-md-1" style="padding: 0;">${basic_vote}</th>
-        <th class="col-md-1"></th>
-        <th class="col-md-1"></th>
+        <th class="col-md-1" style="padding: 0;">${basic_visit}</th>
+        <th class="col-md-1" style="padding: 0;">${basic_download}</th>
     </tr>
     ${server_list}
 </table>

@@ -43,6 +43,10 @@ html, body {
     width: 270px;
 }
 
+mojotrollz_download_first{
+    width: 270px;
+}
+
 .mojotrollz_download_text{
     padding-top:20px;
     padding-left: 75px;
@@ -67,7 +71,6 @@ html, body {
 #content_home{}
 
 #content_teamspeak{
-    text-align: center;
 }
 
 #content_servers, #content_tshirts, #content_addons, #content_impressum, #content_login{

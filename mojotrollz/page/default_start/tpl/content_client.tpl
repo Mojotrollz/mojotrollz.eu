@@ -1,6 +1,6 @@
 <div class="row-fluid">
     <div id="content_client" class="col-md-12 mojotrollz_col">
-        <div class="col-md-3">
+        <div class="col-md-3 mojotrollz_download_first">
             <a href="${link_wow_1_12_1}">
                 <div class="mojotrollz_download_text">
                     <img class="mojotrollz_download_img" data-pyroimage="true" src="./api.php?call=files&cat=content&id=wow_1_12_1.png" alt="Windows" height="44" width="44">
@@ -38,7 +38,7 @@
         </div>
     </div>
     <div id="content_teamspeak" class="col-md-12 mojotrollz_col">
-        <div id="content_teamspeak" style="padding-top: 25px;" class="col-md-9">
+        <div id="content_teamspeak" style="padding-left: 35px; padding-top: 25px;" class="col-md-9">
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <!-- mojotrollz -->
             <ins class="adsbygoogle"
@@ -51,7 +51,7 @@
         </div>
         <div id="content_teamspeak" class="col-md-3">
             <h3>
-                ${mojotrollz_players_online} <b>${ts_players}</b>
+                <b>${ts_players}</b> ${mojotrollz_players_online}
                 <br><br>
                 <button type="submit" class="btn-lg btn btn-success" onClick="location.href='ts3server://mojotrollz.eu'">
                     <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
