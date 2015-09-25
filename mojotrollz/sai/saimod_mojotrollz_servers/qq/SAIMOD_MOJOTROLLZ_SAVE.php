@@ -1,0 +1,9 @@
+<?php
+namespace SQL;
+class SAIMOD_MOJOTROLLZ_SAVE extends \SYSTEM\DB\QP {
+    public static function get_class(){return \get_class();}
+    public static function mysql(){return 
+'UPDATE mojotrollz_server SET name = ?, url = ?, version = ?, description = ?'.
+' WHERE id = ?;';
+    }
+}

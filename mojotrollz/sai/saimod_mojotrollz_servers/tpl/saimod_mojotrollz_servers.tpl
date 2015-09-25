@@ -22,7 +22,7 @@ Cron Last Visit: ${last_visit}<br/>
             ${content}
         </tbody>    
         <tr>
-            <td>ID</td>
+            <td id="input_id">ID</td>
             <td><input class="form-control" type="text" id="input_name" placeholder="name" style="width: 100%;"></td>
             <td><input class="form-control" type="text" id="input_url" placeholder="url" style="width: 100%;"></td>
             <td><input class="form-control" type="text" id="input_version" placeholder="version" style="width: 100%;"></td>
@@ -31,7 +31,7 @@ Cron Last Visit: ${last_visit}<br/>
             <td></td>
             <td></td>
             <td></td>
-            <td><button type="button" class="btn-sm btn btn-success" id="btn_server_save"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ${basic_edit}</button></td>
+            <td><button type="button" class="btn-sm btn btn-success" id="btn_server_save"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ${basic_save}</button></td>
         </tr> 
     </table>
 </div>
