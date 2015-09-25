@@ -38,13 +38,26 @@
         </div>
     </div>
     <div id="content_teamspeak" class="col-md-12 mojotrollz_col">
-        <h3>
-            ${mojotrollz_players_online} <b>${ts_players}</b>
-            <br><br>
-            <button type="submit" class="btn-lg btn btn-success" onClick="location.href='ts3server://mojotrollz.eu'">
-                <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
-                &nbsp;&nbsp;${basic_connect}
-            </button>
-        </h3>
+        <div id="content_teamspeak" style="padding-top: 25px;" class="col-md-9">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- mojotrollz -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-3504070649672819"
+                 data-ad-slot="2848666885"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <div id="content_teamspeak" class="col-md-3">
+            <h3>
+                ${mojotrollz_players_online} <b>${ts_players}</b>
+                <br><br>
+                <button type="submit" class="btn-lg btn btn-success" onClick="location.href='ts3server://mojotrollz.eu'">
+                    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                    &nbsp;&nbsp;${basic_connect}
+                </button>
+            </h3>
+        </div>
     </div>
 </div>

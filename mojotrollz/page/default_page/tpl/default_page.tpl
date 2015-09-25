@@ -47,7 +47,7 @@
                     <ul class="nav navbar-nav navbar-left">
                         <li class="active"><a href="#content_home">${mojotrollz_mojotrollz}</a></li>
                         <li><a href="#content_servers" onClick="">${mojotrollz_servers}</a></li>
-                        <li><a href="#content_tshirts" onClick="">${mojotrollz_tshirts}</a></li>
+                        <!--<li><a href="#content_tshirts" onClick="">${mojotrollz_tshirts}</a></li>-->
                         <!--<li><a href="#content_addons">${mojotrollz_addons}</a></li>-->
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -65,7 +65,12 @@
                         <ul class="slides">
                             <li><img alt="slider_image_01.jpg" src="./api.php?call=files&cat=content&id=slider_image_01.jpg" width="100%"></li>
                             <li style="display: none"><img alt="slider_image_02.jpg" src="./api.php?call=files&cat=content&id=slider_image_02.jpg" width="100%"></li>
-                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_03.jpg" width="100%"></li>
+                            <!--<li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_03.jpg" width="100%"></li>-->
+                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_04.png" width="100%"></li>
+                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_05.png" width="100%"></li>
+                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_06.jpg" width="100%"></li>
+                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_07.jpg" width="100%"></li>
+                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_08.png" width="100%"></li>
                         </ul>
                     </div>
                 </div>
@@ -78,7 +83,7 @@
                     <div class="col-md-4">
                         <a href="#content_home">${mojotrollz_mojotrollz}</a><br><br>
                         <a href="#content_servers">${mojotrollz_servers}</a><br><br>
-                        <a href="#content_tshirts">${mojotrollz_tshirts}</a><br><br>
+                        <!--<a href="#content_tshirts">${mojotrollz_tshirts}</a><br><br>-->
                         <!--<a href="#content_addons">${mojotrollz_addons}</a><br><br>-->
                     </div>
                     <div class="col-md-4">
