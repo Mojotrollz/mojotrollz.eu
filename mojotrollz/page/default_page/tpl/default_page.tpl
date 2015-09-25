@@ -60,7 +60,7 @@
             <!-- Flexslider -->
             <div class="row-fluid">
                 <div class="col-md-12 mojotrollz_col">
-                    <h1 class="fadeInDown animated lead mojotrollz_heading">${mojotrollz_heading}</h1>
+                    <h1 class="fadeInDown animated lead mojotrollz_heading"><img alt="${mojotrollz_heading}" src="./api.php?call=files&cat=content&id=mojotrollz_logo.png" width="650"></h1>
                     <div class="flexslider mojotrollz_flexslider">
                         <ul class="slides">
                             <li><img alt="slider_image_01.jpg" src="./api.php?call=files&cat=content&id=banner_mojotrollz_1.gif" width="100%"></li>
