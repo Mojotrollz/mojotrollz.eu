@@ -6,4 +6,4 @@ INSERT INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`,
 INSERT INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (20, 1, 'login', 'login', -1, 0, 0, '#content', './?page=login', 'init_login', 'default_login');
 
 -- Saimod
-INSERT INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (500, 42, 0, 0, '_SYSTEM_SAI_saimod_sys_config', 'action', NULL);
+INSERT INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (500, 42, 'mojotrollz_servers', 'mojotrollz_servers', -1, 0, 0, '#content', './sai.php?sai_mod=.SAI.saimod_mojotrollz_servers', 'init_saimod_mojotrollz_servers', '\\SAI\\saimod_mojotrollz_servers');
