@@ -2,7 +2,7 @@
     <td><a href="${url}" target="blank">${name}</a></td>
     <td>
         <a href="${link_wow_${version_url}}">
-            <img style="" data-pyroimage="true" src="./api.php?call=files&cat=content&id=wow_${version_url}.png" alt="WoW" height="24" width="24">
+            <img style="" data-pyroimage="true" src="./api.php?call=files&amp;cat=content&amp;id=wow_${version_url}.png" alt="WoW" height="24" width="24">
             &nbsp;&nbsp;${version}
         </a>
     </td>

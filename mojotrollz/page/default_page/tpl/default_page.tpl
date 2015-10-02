@@ -6,7 +6,7 @@
         <meta name="description" content="${meta_description}">
         <meta name="author" content="${meta_author}">
         <title>${meta_title}</title>
-        <link rel="icon" href="./api.php?call=files&cat=content&id=favicon.ico" type="image/x-icon"/>
+        <link rel="icon" href="./api.php?call=files&amp;cat=content&amp;id=favicon.ico" type="image/x-icon"/>
         <style type="text/css">
             @font-face {        
                 font-family: TrojanPro; 
@@ -35,7 +35,7 @@
     <body>
         <div class="container">
             <!-- Navbar -->
-            <nav class="navbar navbar-inverse mojotrollz_nav" role="navigation">
+            <div class="navbar navbar-inverse mojotrollz_nav" role="navigation">
                 <div id="content_home" class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
                       <span class="icon-bar"></span>
@@ -56,21 +56,21 @@
                         <li style="z-index: 3;"><a href="#!login"><i class="glyphicon glyphicon-user"></i></a></li>
                     </ul>
                 </div>
-            </nav>
+            </div>
             <!-- Flexslider -->
             <div class="row-fluid">
                 <div class="col-md-12 mojotrollz_col">
-                    <h1 class="fadeInDown animated lead mojotrollz_heading"><img alt="${mojotrollz_heading}" src="./api.php?call=files&cat=content&id=mojotrollz_logo.png" width="650"></h1>
+                    <h1 class="fadeInDown animated lead mojotrollz_heading"><img alt="${mojotrollz_heading}" src="./api.php?call=files&amp;cat=content&amp;id=mojotrollz_logo.png" width="650"></h1>
                     <div class="flexslider mojotrollz_flexslider">
                         <ul class="slides">
-                            <li><img alt="slider_image_01.jpg" src="./api.php?call=files&cat=content&id=banner_mojotrollz_1.gif" width="100%"></li>
-                            <li style="display: none"><img alt="slider_image_02.jpg" src="./api.php?call=files&cat=content&id=banner_mojotrollz_2.gif" width="100%"></li>
-                            <!--<li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_03.jpg" width="100%"></li>-->
-                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=banner_mojotrollz_3.gif" width="100%"></li>
-                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=banner_mojotrollz_4.gif" width="100%"></li>
-                            <!--<li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_06.jpg" width="100%"></li>
-                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_07.jpg" width="100%"></li>
-                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&cat=content&id=slider_image_08.png" width="100%"></li>-->
+                            <li><img alt="slider_image_01.jpg" src="./api.php?call=files&amp;cat=content&amp;id=banner_mojotrollz_1.gif" width="100%"></li>
+                            <li style="display: none"><img alt="slider_image_02.jpg" src="./api.php?call=files&amp;cat=content&amp;id=banner_mojotrollz_2.gif" width="100%"></li>
+                            <!--<li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&amp;cat=content&amp;id=slider_image_03.jpg" width="100%"></li>-->
+                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&amp;cat=content&amp;id=banner_mojotrollz_3.gif" width="100%"></li>
+                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&amp;cat=content&amp;id=banner_mojotrollz_4.gif" width="100%"></li>
+                            <!--<li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&amp;cat=content&amp;id=slider_image_06.jpg" width="100%"></li>
+                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&amp;cat=content&amp;id=slider_image_07.jpg" width="100%"></li>
+                            <li style="display: none"><img alt="slider_image_03.jpg" src="./api.php?call=files&amp;cat=content&amp;id=slider_image_08.png" width="100%"></li>-->
                         </ul>
                     </div>
                 </div>
