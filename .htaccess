@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\.mojotrollz\.eu [NC]
+RewriteRule ^(.*)$ http://www.mojotrollz.eu/$1 [R=301,L]
