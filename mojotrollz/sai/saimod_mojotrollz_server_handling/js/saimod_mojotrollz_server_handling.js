@@ -39,8 +39,240 @@ function init_saimod_mojotrollz_server(){
             });
         });
     }
-    {
+    
+    $('#btn_clear').click(function(){
+        $('#output_log').html('');
+        $('#table_changes').html('');
+    });
+    
+    register_classic();
+    register_tbc();
+}
 
+function register_classic(){
+    {
+        $('#btn_classic_realm_start').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'run_classic_realm_start'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+        $('#btn_classic_realm_stop').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'run_classic_realm_stop'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+        $('#btn_classic_realm_status').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'run_classic_realm_status'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+    }
+    {
+        $('#btn_classic_world_start').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'run_classic_world_start'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+        $('#btn_classic_world_stop').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'run_classic_world_stop'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+        $('#btn_classic_world_status').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'run_classic_world_status'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+    }
+    {
+        $('#btn_classic_world_test_start').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'run_classic_world_test_start'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+        $('#btn_classic_world_test_stop').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'run_classic_world_test_stop'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+        $('#btn_classic_world_test_status').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'run_classic_world_test_status'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+    }
+    {
+        $('#btn_compile_classic_live').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'compile_classic_live'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+        $('#btn_compile_classic_test').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'compile_classic_test'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+    }
+    {
+        $('#btn_db_classic_realm_live').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'db_classic_realm_live'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+        $('#btn_db_classic_chars_live').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'db_classic_chars_live'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+        $('#btn_db_classic_chars_test').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'db_classic_chars_test'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+        $('#btn_db_classic_world_live').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'db_classic_world_live'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+        $('#btn_db_classic_world_test').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'db_classic_world_test'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+        
+    }
+}
+
+function register_tbc(){
+    {
         $('#btn_tbc_realm_start').click(function(){
             growl_start('Doing ... please wait')
             $.ajax({    type :'GET',
@@ -191,14 +423,74 @@ function init_saimod_mojotrollz_server(){
             });
         });
     }
-    
-    
-    
-    
-    $('#btn_clear').click(function(){
-        $('#output_log').html('');
-        $('#table_changes').html('');
-    });
+    {
+        $('#btn_db_tbc_realm_live').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'db_tbc_realm_live'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+        $('#btn_db_tbc_chars_live').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'db_tbc_chars_live'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+        $('#btn_db_tbc_chars_test').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'db_tbc_chars_test'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+        $('#btn_db_tbc_world_live').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'db_tbc_world_live'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+        $('#btn_db_tbc_world_test').click(function(){
+            growl_start('Doing ... please wait')
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_handling',
+                                    action: 'db_tbc_world_test'},
+                        success : function(data) {
+                            $('#output_log').append(data);
+                            growl_end_success("Updated successfully!");
+                        }
+
+            });
+        });
+        
+    }
 }
 
 function revert_file(path,submodule){

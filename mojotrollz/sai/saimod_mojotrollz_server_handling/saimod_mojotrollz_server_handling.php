@@ -2,7 +2,10 @@
 namespace SAI;
 class saimod_mojotrollz_server_handling extends \SYSTEM\SAI\SaiModule {    
     public static function sai_mod__SAI_saimod_mojotrollz_server_handling(){
-        $vars = \SYSTEM\PAGE\text::tag('basic');
+        $vars = array();
+        $vars['classic_realm_status'] = self::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_realm_status();
+        $vars['classic_world_status'] = self::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_world_status();
+        $vars['classic_world_test_status'] = self::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_world_test_status();
         $vars['tbc_realm_status'] = self::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_realm_status();
         $vars['tbc_world_status'] = self::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_status();
         $vars['tbc_world_test_status'] = self::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_test_status();
@@ -129,10 +132,56 @@ class saimod_mojotrollz_server_handling extends \SYSTEM\SAI\SaiModule {
     private static function shell_compile($ver,$cmd){
         return str_replace("\n","\r\n",shell_exec('/home/mojotrolls/mojo/compile '.$ver.' '.$cmd.' 2>&1'));}
     
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_compile_classic_live(){
+        return htmlentities(self::shell_compile('classic', 'live'));}    
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_compile_classic_test(){
+        return htmlentities(self::shell_compile('classic', 'test'));}
+        
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_db_classic_realm_live(){
+        return htmlentities(self::shell_db('classic', 'realm', 'live'));}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_db_classic_chars_live(){
+        return htmlentities(self::shell_db('classic', 'chars', 'live'));}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_db_classic_chars_test(){
+        return htmlentities(self::shell_db('classic', 'chars', 'test'));}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_db_classic_world_live(){
+        return htmlentities(self::shell_db('classic', 'world', 'live'));}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_db_classic_world_test(){
+        return htmlentities(self::shell_db('classic', 'world', 'test'));}
+        
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_realm_start(){
+        return self::shell_run('classic', 'realm','start');}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_world_start(){
+        return self::shell_run('classic', 'world','start');}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_world_test_start(){
+        return self::shell_run('classic', 'world_test','start');}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_realm_stop(){
+        return self::shell_run('classic', 'realm','stop');}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_world_stop(){
+        return self::shell_run('classic', 'world','stop');}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_world_test_stop(){
+        return self::shell_run('classic', 'world_test','stop');}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_realm_status(){
+        return self::shell_run('classic', 'realm','status');}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_world_status(){
+        return self::shell_run('classic', 'world','status');}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_world_test_status(){
+        return self::shell_run('classic', 'world_test','status');}
+        
     public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_compile_tbc_live(){
         return htmlentities(self::shell_compile('tbc', 'live'));}    
     public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_compile_tbc_test(){
         return htmlentities(self::shell_compile('tbc', 'test'));}
+        
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_db_tbc_realm_live(){
+        return htmlentities(self::shell_db('tbc', 'realm', 'live'));}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_db_tbc_chars_live(){
+        return htmlentities(self::shell_db('tbc', 'chars', 'live'));}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_db_tbc_chars_test(){
+        return htmlentities(self::shell_db('tbc', 'chars', 'test'));}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_db_tbc_world_live(){
+        return htmlentities(self::shell_db('tbc', 'world', 'live'));}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_db_tbc_world_test(){
+        return htmlentities(self::shell_db('tbc', 'world', 'test'));}
         
     public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_realm_start(){
         return self::shell_run('tbc', 'realm','start');}

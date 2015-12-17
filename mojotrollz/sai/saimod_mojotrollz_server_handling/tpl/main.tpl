@@ -1,97 +1,98 @@
 <div class="panel panel-default">
     <div class="panel-heading"><h4>Mojotrollz Server</h4></div>
     <div class="panel-body">
-        <button id="btn_update" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> ${basic_update}</button>
-        <button id="btn_changes" class="btn-warning btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> ${basic_find_changes}</button>
+        <button id="btn_update" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Update</button>
+        <button id="btn_changes" class="btn-warning btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Find Changes</button>
     </div>
 </div>
 <div class="row">
     <div class="col-md-6">
         <div class="panel panel-default">
-            <div class="panel-heading"><h4>Classic</h4></div>
+            <div class="panel-heading"><h4>Classic - Status</h4></div>
             <div class="panel-body">
                 <table class="table">
                     <tr>
                         <th>realm</th>
-                        <td>status</td>
+                        <td>${classic_realm_status}</td>
                     </tr>
                     <tr>
                         <th>world</th>
-                        <td>status</td>
+                        <td>${classic_world_status}</td>
                     </tr>
                     <tr>
                         <th>world_test</th>
-                        <td>status</td>
+                        <td>${classic_world_test_status}</td>
                     </tr>
-                </table>
+                </table> 
             </div>
         </div>
         <div class="panel panel-default">
-            <div class="panel-heading"><h4>compile</h4></div>
+            <div class="panel-heading"><h4>Classic - Run</h4></div>
             <div class="panel-body">
                 <table class="table">
-                    <tr>
-                        <th>live</th>
-                        <td>compile</td>
-                    </tr>
-                    <tr>
-                        <th>test</th>
-                        <td>compile</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading"><h4>db</h4></div>
-            <div class="panel-body">
-                <table class="table">
-                    <tr>
-                        <th>world</th>
-                        <td>deploy live</td>
-                        <td>deploy test</td>
-                    </tr>
                     <tr>
                         <th>realm</th>
-                        <td>deploy live</td>
+                        <td style="text-align: right;"><button id="btn_classic_realm_start" class="btn-success btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> start</button></td>
+                        <td style="text-align: right;"><button id="btn_classic_realm_stop" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-stop" aria-hidden="true"></span> stop</button></td>
+                        <td style="text-align: right;"><button id="btn_classic_realm_status" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> status</button></td>
+                    </tr>
+                    <tr>
+                        <th>world</th>
+                        <td style="text-align: right;"><button id="btn_classic_world_start" class="btn-success btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> start</button></td>
+                        <td style="text-align: right;"><button id="btn_classic_world_stop" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-stop" aria-hidden="true"></span> stop</button></td>
+                        <td style="text-align: right;"><button id="btn_classic_world_status" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> status</button></td>
+                    </tr>
+                    <tr>
+                        <th>world_test</th>
+                        <td style="text-align: right;"><button id="btn_classic_world_test_start" class="btn-success btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> start</button></td>
+                        <td style="text-align: right;"><button id="btn_classic_world_test_stop" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-stop" aria-hidden="true"></span> stop</button></td>
+                        <td style="text-align: right;"><button id="btn_classic_world_test_status" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> status</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><h4>Classic - Database <font color="red" size="2">Stop the Server first!</font></h4></div>
+            <div class="panel-body">
+                <table class="table">
+                    <tr>
+                        <th>realm</th>
+                        <td style="text-align: right;"><button id="btn_db_classic_realm_live" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> deploy live</button></td>
                         <td></td>
                     </tr>
                     <tr>
                         <th>chars</th>
-                        <td>deploy live</td>
-                        <td>deploy test</td>
+                        <td style="text-align: right;"><button id="btn_db_classic_chars_live" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> deploy live</button></td>
+                        <td style="text-align: right;"><button id="btn_db_classic_chars_test" class="btn-warning btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> deploy test</button></td>
+                    </tr>
+                    <tr>
+                        <th>world</th>
+                        <td style="text-align: right;"><button id="btn_db_classic_world_live" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> deploy live</button></td>
+                        <td style="text-align: right;"><button id="btn_db_classic_world_test" class="btn-success btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> deploy test</button></td>
                     </tr>
                 </table>
             </div>
         </div>
         <div class="panel panel-default">
-            <div class="panel-heading"><h4>run</h4></div>
+            <div class="panel-heading"><h4>Classic - Compile <font color="red" size="2">Stop the Server first!</font></h4></div>
             <div class="panel-body">
                 <table class="table">
                     <tr>
-                        <th>world</th>
-                        <td>start</td>
-                        <td>stop</td>
-                        <td>status</td>
+                        <th>live</th>
+                        <td style="text-align: right;"><button id="btn_compile_classic_live" class="btn-warning btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> compile</button></td>
                     </tr>
                     <tr>
-                        <th>realm</th>
-                        <td>start</td>
-                        <td>stop</td>
-                        <td>status</td>
-                    </tr>
-                    <tr>
-                        <th>world_test</th>
-                        <td>start</td>
-                        <td>stop</td>
-                        <td>status</td>
+                        <th>test</th>
+                        <td style="text-align: right;"><button id="btn_compile_classic_test" class="btn-warning btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> compile</button></td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
+                    
     <div class="col-md-6">
         <div class="panel panel-default">
-            <div class="panel-heading"><h4>TBC</h4></div>
+            <div class="panel-heading"><h4>TBC - Status</h4></div>
             <div class="panel-body">
                 <table class="table">
                     <tr>
@@ -110,63 +111,63 @@
             </div>
         </div>
         <div class="panel panel-default">
-            <div class="panel-heading"><h4>compile</h4></div>
+            <div class="panel-heading"><h4>TBC - Run</h4></div>
             <div class="panel-body">
                 <table class="table">
                     <tr>
-                        <th>live</th>
-                        <td><button id="btn_compile_tbc_live" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> compile</button></td>
+                        <th>realm</th>
+                        <td style="text-align: right;"><button id="btn_tbc_realm_start" class="btn-success btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> start</button></td>
+                        <td style="text-align: right;"><button id="btn_tbc_realm_stop" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-stop" aria-hidden="true"></span> stop</button></td>
+                        <td style="text-align: right;"><button id="btn_tbc_realm_status" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> status</button></td>
                     </tr>
                     <tr>
-                        <th>test</th>
-                        <td><button id="btn_compile_tbc_test" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> compile</button></td>
+                        <th>world</th>
+                        <td style="text-align: right;"><button id="btn_tbc_world_start" class="btn-success btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> start</button></td>
+                        <td style="text-align: right;"><button id="btn_tbc_world_stop" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-stop" aria-hidden="true"></span> stop</button></td>
+                        <td style="text-align: right;"><button id="btn_tbc_world_status" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> status</button></td>
+                    </tr>
+                    <tr>
+                        <th>world_test</th>
+                        <td style="text-align: right;"><button id="btn_tbc_world_test_start" class="btn-success btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> start</button></td>
+                        <td style="text-align: right;"><button id="btn_tbc_world_test_stop" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-stop" aria-hidden="true"></span> stop</button></td>
+                        <td style="text-align: right;"><button id="btn_tbc_world_test_status" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> status</button></td>
                     </tr>
                 </table>
             </div>
         </div>
         <div class="panel panel-default">
-            <div class="panel-heading"><h4>db</h4></div>
+            <div class="panel-heading"><h4>TBC - Database <font color="red" size="2">Stop the Server first!</font></h4></div>
             <div class="panel-body">
                 <table class="table">
                     <tr>
-                        <th>world</th>
-                        <td>deploy live</td>
-                        <td>deploy test</td>
-                    </tr>
-                    <tr>
                         <th>realm</th>
-                        <td>deploy live</td>
+                        <td style="text-align: right;"><button id="btn_db_tbc_realm_live" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> deploy live</button></td>
                         <td></td>
                     </tr>
                     <tr>
                         <th>chars</th>
-                        <td>deploy live</td>
-                        <td>deploy test</td>
+                        <td style="text-align: right;"><button id="btn_db_tbc_chars_live" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> deploy live</button></td>
+                        <td style="text-align: right;"><button id="btn_db_tbc_chars_test" class="btn-warning btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> deploy test</button></td>
+                    </tr>
+                    <tr>
+                        <th>world</th>
+                        <td style="text-align: right;"><button id="btn_db_tbc_world_live" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> deploy live</button></td>
+                        <td style="text-align: right;"><button id="btn_db_tbc_world_test" class="btn-success btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> deploy test</button></td>
                     </tr>
                 </table>
             </div>
         </div>
         <div class="panel panel-default">
-            <div class="panel-heading"><h4>run</h4></div>
+            <div class="panel-heading"><h4>TBC - Compile <font color="red" size="2">Stop the Server first!</font></h4></div>
             <div class="panel-body">
                 <table class="table">
                     <tr>
-                        <th>realm</th>
-                        <td><button id="btn_tbc_realm_start" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> start</button></td>
-                        <td><button id="btn_tbc_realm_stop" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> stop</button></td>
-                        <td><button id="btn_tbc_realm_status" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> status</button></td>
+                        <th>live</th>
+                        <td style="text-align: right;"><button id="btn_compile_tbc_live" class="btn-warning btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> compile</button></td>
                     </tr>
                     <tr>
-                        <th>world</th>
-                        <td><button id="btn_tbc_world_start" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> start</button></td>
-                        <td><button id="btn_tbc_world_stop" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> stop</button></td>
-                        <td><button id="btn_tbc_world_status" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> status</button></td>
-                    </tr>
-                    <tr>
-                        <th>world_test</th>
-                        <td><button id="btn_tbc_world_test_start" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> start</button></td>
-                        <td><button id="btn_tbc_world_test_stop" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> stop</button></td>
-                        <td><button id="btn_tbc_world_test_status" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> status</button></td>
+                        <th>test</th>
+                        <td style="text-align: right;"><button id="btn_compile_tbc_test" class="btn-warning btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> compile</button></td>
                     </tr>
                 </table>
             </div>
@@ -179,15 +180,15 @@
         <table>
             <thead>
                 <tr>
-                    <th>${table_path}</th>
-                    <th>${table_submodule}</th>
-                    <th>${table_action}</th>
+                    <th>Path</th>
+                    <th>Submodule</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody id="table_changes">
             </tbody>
         </table>
         <textarea id="output_log" style="width: 100%; height: 350px;"></textarea>
-        <button id="btn_clear" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> ${basic_clear}</button>
+        <button id="btn_clear" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Clear</button>
     </div>
 </div>
