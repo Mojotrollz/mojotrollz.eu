@@ -10,7 +10,20 @@
         <div class="panel panel-default">
             <div class="panel-heading"><h4>Classic</h4></div>
             <div class="panel-body">
-                Status:
+                <table class="table">
+                    <tr>
+                        <th>realm</th>
+                        <td>status</td>
+                    </tr>
+                    <tr>
+                        <th>world</th>
+                        <td>status</td>
+                    </tr>
+                    <tr>
+                        <th>world_test</th>
+                        <td>status</td>
+                    </tr>
+                </table>
             </div>
         </div>
         <div class="panel panel-default">
@@ -80,7 +93,20 @@
         <div class="panel panel-default">
             <div class="panel-heading"><h4>TBC</h4></div>
             <div class="panel-body">
-                Status: 
+                <table class="table">
+                    <tr>
+                        <th>realm</th>
+                        <td>${tbc_realm_status}</td>
+                    </tr>
+                    <tr>
+                        <th>world</th>
+                        <td>${tbc_world_status}</td>
+                    </tr>
+                    <tr>
+                        <th>world_test</th>
+                        <td>${tbc_world_test_status}</td>
+                    </tr>
+                </table> 
             </div>
         </div>
         <div class="panel panel-default">
@@ -89,11 +115,11 @@
                 <table class="table">
                     <tr>
                         <th>live</th>
-                        <td>compile</td>
+                        <td><button id="btn_compile_tbc_live" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> compile</button></td>
                     </tr>
                     <tr>
                         <th>test</th>
-                        <td>compile</td>
+                        <td><button id="btn_compile_tbc_test" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> compile</button></td>
                     </tr>
                 </table>
             </div>
@@ -125,22 +151,22 @@
             <div class="panel-body">
                 <table class="table">
                     <tr>
-                        <th>world</th>
-                        <td>start</td>
-                        <td>stop</td>
-                        <td>status</td>
+                        <th>realm</th>
+                        <td><button id="btn_tbc_realm_start" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> start</button></td>
+                        <td><button id="btn_tbc_realm_stop" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> stop</button></td>
+                        <td><button id="btn_tbc_realm_status" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> status</button></td>
                     </tr>
                     <tr>
-                        <th>realm</th>
-                        <td>start</td>
-                        <td>stop</td>
-                        <td>status</td>
+                        <th>world</th>
+                        <td><button id="btn_tbc_world_start" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> start</button></td>
+                        <td><button id="btn_tbc_world_stop" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> stop</button></td>
+                        <td><button id="btn_tbc_world_status" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> status</button></td>
                     </tr>
                     <tr>
                         <th>world_test</th>
-                        <td>start</td>
-                        <td>stop</td>
-                        <td>status</td>
+                        <td><button id="btn_tbc_world_test_start" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> start</button></td>
+                        <td><button id="btn_tbc_world_test_stop" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> stop</button></td>
+                        <td><button id="btn_tbc_world_test_status" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> status</button></td>
                     </tr>
                 </table>
             </div>

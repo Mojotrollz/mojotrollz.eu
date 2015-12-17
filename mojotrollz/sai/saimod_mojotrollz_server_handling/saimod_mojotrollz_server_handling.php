@@ -3,8 +3,9 @@ namespace SAI;
 class saimod_mojotrollz_server_handling extends \SYSTEM\SAI\SaiModule {    
     public static function sai_mod__SAI_saimod_mojotrollz_server_handling(){
         $vars = \SYSTEM\PAGE\text::tag('basic');
-        //$vars['status_realm'] = self::sai_mod__SAI_saimod_mojotrollz_server_handling_action_realmstatus();
-        //$vars['status_world'] = self::sai_mod__SAI_saimod_mojotrollz_server_handling_action_worldstatus();
+        $vars['tbc_realm_status'] = self::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_realm_status();
+        $vars['tbc_world_status'] = self::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_status();
+        $vars['tbc_world_test_status'] = self::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_test_status();
         return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/main.tpl', $vars);}            
     public static function html_li_menu(){return '<li class=""><a data-toggle="tooltip" data-placement="left" title="Mojotrollz" href="#!mojotrollz_server"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;Mojotrollz Server</a></li>';}
     public static function right_public(){return false;}    
@@ -94,13 +95,61 @@ class saimod_mojotrollz_server_handling extends \SYSTEM\SAI\SaiModule {
         }
         return \SYSTEM\LOG\JsonResult::toString($result);
     }
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_remove($path,$submodule = ''){
+        if(!\unlink('/home/mojotrolls/mojo/'.$submodule.$path)){
+            throw new \SYSTEM\LOG\ERROR('Could not remove File: /home/mojotrolls/mojo/'.$submodule.$path);}
+        return \SYSTEM\LOG\JsonResult::ok();    
+    }
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_revert($path,$submodule = ''){
+        \LIB\lib_git::php();
+        $result = array('log' => '', 'revert' => array(), 'remove' => array(), 'submodules' => array(), 'revert_submodules' => array());
+        try {
+            $repo = \GIT\Git::open('/home/mojotrolls/mojo/'.$submodule);
+            //Find Changes
+            $log = $repo->run('checkout '.$path);
+            $result['log'] .= $log;
+        } catch (\Exception $e){
+            $result['log'] .= 'Error: '.$e->getMessage();
+        }
+        return \SYSTEM\LOG\JsonResult::toString($result);
+    }
     
     /* programms: run, db, update, compile
      * run classic/tbc world/realm/world_test start/stop/status
      * db classic/tbc realm live
      * db classic/tbc chars/world live/test
      * compile classic/tbc live/test
-     * update
-     * dif
      */
+    
+    
+    private static function shell_run($ver,$prog,$cmd){
+        return str_replace("\n","\r\n",shell_exec('/home/mojotrolls/mojo/run '.$ver.' '.$prog.' '.$cmd.' 2>&1'));}
+    private static function shell_db($ver,$db,$cmd){
+        return str_replace("\n","\r\n",shell_exec('/home/mojotrolls/mojo/db '.$ver.' '.$db.' '.$cmd.' 2>&1'));}
+    private static function shell_compile($ver,$cmd){
+        return str_replace("\n","\r\n",shell_exec('/home/mojotrolls/mojo/compile '.$ver.' '.$cmd.' 2>&1'));}
+    
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_compile_tbc_live(){
+        return htmlentities(self::shell_compile('tbc', 'live'));}    
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_compile_tbc_test(){
+        return htmlentities(self::shell_compile('tbc', 'test'));}
+        
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_realm_start(){
+        return self::shell_run('tbc', 'realm','start');}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_start(){
+        return self::shell_run('tbc', 'world','start');}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_test_start(){
+        return self::shell_run('tbc', 'world_test','start');}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_realm_stop(){
+        return self::shell_run('tbc', 'realm','stop');}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_stop(){
+        return self::shell_run('tbc', 'world','stop');}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_test_stop(){
+        return self::shell_run('tbc', 'world_test','stop');}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_realm_status(){
+        return self::shell_run('tbc', 'realm','status');}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_status(){
+        return self::shell_run('tbc', 'world','status');}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_test_status(){
+        return self::shell_run('tbc', 'world_test','status');}
 }
