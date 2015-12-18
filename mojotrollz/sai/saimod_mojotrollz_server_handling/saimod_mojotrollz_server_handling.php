@@ -6,9 +6,13 @@ class saimod_mojotrollz_server_handling extends \SYSTEM\SAI\SaiModule {
         $vars['classic_realm_status'] = self::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_realm_status();
         $vars['classic_world_status'] = self::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_world_status();
         $vars['classic_world_test_status'] = self::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_world_test_status();
+        $vars['classic_players_online'] = self::online_classic();
+        $vars['classic_test_players_online'] = self::online_classic_test();
         $vars['tbc_realm_status'] = self::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_realm_status();
         $vars['tbc_world_status'] = self::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_status();
         $vars['tbc_world_test_status'] = self::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_test_status();
+        $vars['tbc_players_online'] = self::online_tbc();
+        $vars['tbc_test_players_online'] = self::online_tbc_test();
         return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/main.tpl', $vars);}            
     public static function html_li_menu(){return '<li class=""><a data-toggle="tooltip" data-placement="left" title="Mojotrollz" href="#!mojotrollz_server"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;Mojotrollz Server</a></li>';}
     public static function right_public(){return false;}    
@@ -16,6 +20,14 @@ class saimod_mojotrollz_server_handling extends \SYSTEM\SAI\SaiModule {
     public static function js(){return array(
             \SYSTEM\WEBPATH(new \PSAI(),'saimod_mojotrollz_server_handling/js/saimod_mojotrollz_server_handling.js'));}
     //public static function css(){}
+    public static function online_classic(){
+        return \SQL\ONLINE_PLAYERS::Q1(new \SQL\mangos_zero_chars())['count'];}
+    public static function online_tbc(){
+        return \SQL\ONLINE_PLAYERS::Q1(new \SQL\mangos_one_chars())['count'];}
+    public static function online_classic_test(){
+        return 0;}//\SQL\ONLINE_PLAYERS::Q1(new \SQL\mangos_zero_chars_test())['count'];}
+    public static function online_tbc_test(){
+        return \SQL\ONLINE_PLAYERS::Q1(new \SQL\mangos_one_chars_test())['count'];}
     public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_update(){        
         \LIB\lib_git::php();
         $log = '';

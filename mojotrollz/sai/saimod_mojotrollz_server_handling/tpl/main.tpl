@@ -23,6 +23,14 @@
                         <th>world_test</th>
                         <td>${classic_world_test_status}</td>
                     </tr>
+                    <tr>
+                        <th>players live</th>
+                        <td>${classic_players_online}</td>
+                    </tr>
+                    <tr>
+                        <th>players test</th>
+                        <td>${classic_test_players_online}</td>
+                    </tr>
                 </table> 
             </div>
         </div>
@@ -106,6 +114,14 @@
                     <tr>
                         <th>world_test</th>
                         <td>${tbc_world_test_status}</td>
+                    </tr>
+                    <tr>
+                        <th>players live</th>
+                        <td>${tbc_players_online}</td>
+                    </tr>
+                    <tr>
+                        <th>players test</th>
+                        <td>${tbc_test_players_online}</td>
                     </tr>
                 </table> 
             </div>
