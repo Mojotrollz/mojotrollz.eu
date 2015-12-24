@@ -1,6 +1,6 @@
 [submodule "lib/system"]
 	path = lib/system
-	url = git@mojotrollz.eu:system.git
+	url = git@mojotrollz.eu:webcraft/system.git
 [submodule "lib/unslider"]
 	path = lib/unslider
 	url = git@mojotrollz.eu:webcraft/lib_unslider.git
