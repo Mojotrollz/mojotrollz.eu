@@ -3,6 +3,9 @@
     <div class="panel-body">
         <button id="btn_update" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Update</button>
         <button id="btn_changes" class="btn-warning btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Find Changes</button>
+        <br>
+        <br>
+        <div id="vis_ts"></div>
     </div>
 </div>
 <div class="row">
@@ -31,7 +34,8 @@
                         <th>players test</th>
                         <td>${classic_test_players_online}</td>
                     </tr>
-                </table> 
+                </table>
+                <div id="vis_classic"></div>
             </div>
         </div>
         <div class="panel panel-default">
@@ -172,7 +176,8 @@
                         <th>players test</th>
                         <td>${tbc_test_players_online}</td>
                     </tr>
-                </table> 
+                </table>
+                <div id="vis_tbc"></div>
             </div>
         </div>
         <div class="panel panel-default">

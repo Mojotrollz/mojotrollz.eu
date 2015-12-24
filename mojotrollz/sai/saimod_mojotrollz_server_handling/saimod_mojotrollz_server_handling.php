@@ -20,6 +20,14 @@ class saimod_mojotrollz_server_handling extends \SYSTEM\SAI\SaiModule {
     public static function js(){return array(
             \SYSTEM\WEBPATH(new \PSAI(),'saimod_mojotrollz_server_handling/js/saimod_mojotrollz_server_handling.js'));}
     //public static function css(){}
+    
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_stats_tbc($filter = 600){
+        return \SYSTEM\LOG\JsonResult::toString(\SQL\STATS_TBC::QA(array($filter)));}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_stats_classic($filter = 600){
+        return \SYSTEM\LOG\JsonResult::toString(\SQL\STATS_CLASSIC::QA(array($filter)));}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_stats_ts($filter = 600){
+        return \SYSTEM\LOG\JsonResult::toString(\SQL\STATS_TS::QA(array($filter)));}
+            
     public static function online_classic(){
         return \SQL\ONLINE_PLAYERS::Q1(new \SQL\mangos_zero_chars())['count'];}
     public static function online_tbc(){
