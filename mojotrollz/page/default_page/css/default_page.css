@@ -73,7 +73,7 @@ mojotrollz_download_first{
 #content_teamspeak{
 }
 
-#content_servers, #content_tshirts, #content_addons, #content_impressum, #content_login{
+.mojotrollz_col_content{
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 15px;

@@ -47,7 +47,8 @@
                 <div class="collapse navbar-collapse anchor">
                     <ul class="nav navbar-nav navbar-left">
                         <li class="active" style="z-index: 3;"><a href="#content_home">${mojotrollz_mojotrollz}</a></li>
-                        <li style="z-index: 3;"><a href="#content_servers" onClick="">${mojotrollz_servers}</a></li>
+                        <li style="z-index: 3;"><a href="#content_servers">${mojotrollz_servers}</a></li>
+                        <li style="z-index: 3;"><a href="#!beta">${mojotrollz_beta}</a></li>
                         <!--<li><a href="#content_tshirts" onClick="">${mojotrollz_tshirts}</a></li>-->
                         <!--<li><a href="#content_addons">${mojotrollz_addons}</a></li>-->
                     </ul>

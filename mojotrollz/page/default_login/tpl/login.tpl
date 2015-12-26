@@ -1,5 +1,5 @@
 <div class="row-fluid">
-    <div id="content_login" class="col-md-12 mojotrollz_col">
+    <div id="content_login" class="col-md-12 mojotrollz_col mojotrollz_col_content">
         <h1>${basic_login}</h1>
         <form class="textbox" style="padding:10px" id="login_form">
             <div class="control-group">
