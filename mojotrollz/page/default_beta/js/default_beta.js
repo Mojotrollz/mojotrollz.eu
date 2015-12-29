@@ -8,19 +8,26 @@ function init_beta(){
         preventSubmit: true,
         submitError: function (form, event, errors) {},
         submitSuccess: function($form, event){    
-                var username = document.getElementById('register_username').value;
-                var email    = document.getElementById('register_email').value;
-                var password = document.getElementById('user_register_password2').value;                              
-                
+                var username = $('#register_username').val();
+                var password = $('#user_register_password2').val();
+                var register_data = {
+                    call: 'mojo',
+                    action: 'register',
+                    username: username,
+                    password: $.sha1(password),
+                    email: $('#register_email').val(),
+                    wowpassword: $.sha1(username.toUpperCase()+':'+password.toUpperCase()),
+                    betakey: $('#beta_key').val()
+                }
                 $.ajax({
                     dataType: "json",
-                    url: './api.php?call=beta&action=register&username='+username+'&password='+$.sha1(password)+'&email='+email,
-                    data: null,
-                    success: function (dataCreate) {                        
-                        if(dataCreate === 1){ // reload -> user will be loged in
+                    url: './api.php',
+                    data: register_data,
+                    success: function (data) {
+                        if(data.status){ // reload -> user will be loged in
                             location.reload();
                         }else{  // show errors
-                            alert('Not successfull: '+dataCreate);
+                            $('.help-block').html(data.result.message);
                         }
                     }
                 });

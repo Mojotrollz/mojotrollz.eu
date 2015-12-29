@@ -78,3 +78,7 @@ mojotrollz_download_first{
     padding-right: 50px;
     padding-bottom: 15px;
 }
+
+.ontop{
+    z-index: 3;
+}

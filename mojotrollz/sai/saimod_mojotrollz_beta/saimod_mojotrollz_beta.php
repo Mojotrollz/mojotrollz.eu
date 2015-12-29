@@ -2,7 +2,7 @@
 namespace SAI;
 class saimod_mojotrollz_beta extends \SYSTEM\SAI\SaiModule {
     public static function code_check($code){
-        return \SQL\BETA_CHECK_CODE::Q1(array($code))['count'] >= 0 ? true : false;}
+        return \SQL\BETA_CHECK_CODE::Q1(array($code))['count'] > 0;}
     
     public static function code_use($code,$user_new){
         return \SQL\BETA_USE_CODE::QI(array($user_new,$code));}
