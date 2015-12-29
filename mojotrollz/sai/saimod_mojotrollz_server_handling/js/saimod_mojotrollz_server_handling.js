@@ -1,8 +1,18 @@
 function init_saimod_mojotrollz_server(){
     {
-        load_visualisation_mojotrollz_server('vis_tbc', 'stats_tbc', 'Players on WoW-TBC', 400,250);
-        load_visualisation_mojotrollz_server('vis_classic', 'stats_classic', 'Players on WoW-Classic', 400,250);
-        load_visualisation_mojotrollz_server('vis_ts', 'stats_ts', 'Players on Teamspeak', 900,400);
+        load_visualisation_mojotrollz_server('vis_ts', 'stats_ts', '#filter_vis_ts', 'Players on Teamspeak', 900,400);
+        load_visualisation_mojotrollz_server('vis_tbc', 'stats_tbc', '#filter_vis_tbc', 'Players on WoW-TBC', 400,250);
+        load_visualisation_mojotrollz_server('vis_classic', 'stats_classic', '#filter_vis_classic', 'Players on WoW-Classic', 400,250);
+        
+        $('#filter_vis_ts').on('change',function(){
+            load_visualisation_mojotrollz_server('vis_ts', 'stats_ts', '#filter_vis_ts', 'Players on Teamspeak', 900,400);
+        })
+        $('#filter_vis_tbc').on('change',function(){
+            load_visualisation_mojotrollz_server('vis_tbc', 'stats_tbc', '#filter_vis_tbc', 'Players on WoW-TBC', 400,250);
+        })
+        $('#filter_vis_classic').on('change',function(){
+            load_visualisation_mojotrollz_server('vis_classic', 'stats_classic', '#filter_vis_classic', 'Players on WoW-Classic', 400,250);
+        })
     }
     {
         $('#btn_update').click(function(){
@@ -1209,8 +1219,8 @@ function growl_end_error(message){
     });
 }
 
-function load_visualisation_mojotrollz_server(div, stats, name, width, height){
-    $.getJSON('./sai.php?sai_mod=.SAI.saimod_mojotrollz_server_handling&action='+stats,function(json){
+function load_visualisation_mojotrollz_server(div, stats, filter, name, width, height){
+    $.getJSON('./sai.php?sai_mod=.SAI.saimod_mojotrollz_server_handling&action='+stats+'&filter='+$(filter).val(),function(json){
         if(!json || json.status != true || !json.result){         
             return;}
         json = json.result;

@@ -1,4 +1,18 @@
-<div class="col-md-3">
-    You are part of the Beta! <br>
-    You are logged in as <b>${email}</b>
+<div class="panel panel-success">
+    <div class="panel-heading"><h4>You are part of the Beta!</h4></div>
+    <div class="panel-body">
+        You are logged in as <b>${email}</b><br>
+        Your Website Account-Name is: <b>${username}</b>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <form class="textbox" style="padding:10px" id="logout_form">
+            <div class="control-group">
+                <div class="help-block"></div>
+                <input type="hidden" />
+                <button class="btn-sm btn btn-primary" style="width: 95%;" type="submit" id="logout_submit"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> ${basic_logout}</button>
+            </div>
+        </form>
+    </div>
 </div>
