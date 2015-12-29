@@ -82,6 +82,7 @@
                     <div class="col-md-4">
                         <a href="#content_home">${mojotrollz_mojotrollz}</a><br><br>
                         <a href="#content_servers">${mojotrollz_servers}</a><br><br>
+                        <a href="#!beta">BETA !</a><br><br>
                         <!--<a href="#content_tshirts">${mojotrollz_tshirts}</a><br><br>-->
                         <!--<a href="#content_addons">${mojotrollz_addons}</a><br><br>-->
                     </div>
