@@ -1,5 +1,7 @@
 <div id="content_client">
-    ${mojotrollz_client_text}
+    <div class="mojotrollz_col_content" style="padding-bottom: 0px;">
+        ${mojotrollz_client_text}
+    </div>
     <div class="col-md-3 mojotrollz_download_first">
         <a href="${link_wow_1_12_1}">
             <div class="mojotrollz_download_text">
