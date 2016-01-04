@@ -49,7 +49,7 @@
                     <ul class="nav navbar-nav navbar-left">
                         <li class="active ontop"><a href="#content_home">${mojotrollz_mojotrollz}</a></li>
                         <li class="ontop"><a href="#content_servers">${mojotrollz_servers}</a></li>
-                        <li class="ontop"><a href="#!beta">BETA !</a></li>
+                        <li class="ontop"><a href="#!beta">${mojotrollz_beta}</a></li>
                         <!--<li><a href="#content_tshirts" onClick="">${mojotrollz_tshirts}</a></li>-->
                         <!--<li><a href="#content_addons">${mojotrollz_addons}</a></li>-->
                     </ul>
@@ -75,14 +75,17 @@
                 </div>
             </div>
             <!-- Content -->
-            <div id="content"></div>
+            <div class="row-fluid">
+                <div id="content" class="col-md-12 mojotrollz_col">
+                </div>
+            </div>
             <!-- Content More -->
             <div class="row-fluid">
                 <div id="content_more" class="col-md-12">
                     <div class="col-md-4">
                         <a href="#content_home">${mojotrollz_mojotrollz}</a><br><br>
                         <a href="#content_servers">${mojotrollz_servers}</a><br><br>
-                        <a href="#!beta">BETA !</a><br><br>
+                        <a href="#!beta">${mojotrollz_beta}</a><br><br>
                         <!--<a href="#content_tshirts">${mojotrollz_tshirts}</a><br><br>-->
                         <!--<a href="#content_addons">${mojotrollz_addons}</a><br><br>-->
                     </div>

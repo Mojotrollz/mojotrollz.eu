@@ -1,5 +1,5 @@
-<hr>
-<h3>${mojotrollz_servers}</h3>
+<hr style="width: 100%;">
+${mojotrollz_servers_text}
 <table class="mojotrollz_table">
     <tr>
         <th class="col-md-2" style="padding: 0;">${basic_name}</th>

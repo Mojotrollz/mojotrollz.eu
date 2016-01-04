@@ -70,13 +70,12 @@ mojotrollz_download_first{
 
 #content_home{}
 
-#content_teamspeak{
-}
+#content_teamspeak{}
 
 .mojotrollz_col_content{
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 25px;
 }
 
 .ontop{
