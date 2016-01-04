@@ -15,6 +15,7 @@ REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('basic_vote', 'mojotrollz')
 
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('basic_name', 'mojotrollz');
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('basic_login', 'mojotrollz');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('basic_logout', 'mojotrollz');
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('basic_placeholder_username', 'mojotrollz');
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('basic_placeholder_password', 'mojotrollz');
 
