@@ -1,0 +1,18 @@
+DELETE FROM host_mojotrollz_test.system_user;
+INSERT INTO host_mojotrollz_test.system_user SELECT * FROM host_mojotrollz_test_old.system_user;
+DELETE FROM host_mojotrollz_test.system_user_to_rights;
+INSERT INTO host_mojotrollz_test.system_user_to_rights SELECT * FROM host_mojotrollz_test_old.system_user_to_rights;
+DELETE FROM host_mojotrollz_test.system_log;
+INSERT INTO host_mojotrollz_test.system_log SELECT * FROM host_mojotrollz_test_old.system_log;
+DELETE FROM host_mojotrollz_test.system_todo;
+INSERT INTO host_mojotrollz_test.system_todo SELECT * FROM host_mojotrollz_test_old.system_todo;
+DELETE FROM host_mojotrollz_test.system_todo_assign;
+INSERT INTO host_mojotrollz_test.system_todo_assign SELECT * FROM host_mojotrollz_test_old.system_todo_assign;
+DELETE FROM host_mojotrollz_test.mojotrollz_addon;
+INSERT INTO host_mojotrollz_test.mojotrollz_addon SELECT * FROM host_mojotrollz_test_old.mojotrollz_addon;
+DELETE FROM host_mojotrollz_test.mojotrollz_beta;
+INSERT INTO host_mojotrollz_test.mojotrollz_beta SELECT * FROM host_mojotrollz_test_old.mojotrollz_beta;
+DELETE FROM host_mojotrollz_test.mojotrollz_server;
+INSERT INTO host_mojotrollz_test.mojotrollz_server SELECT * FROM host_mojotrollz_test_old.mojotrollz_server;
+DELETE FROM host_mojotrollz_test.mojotrollz_vote;
+INSERT INTO host_mojotrollz_test.mojotrollz_vote SELECT * FROM host_mojotrollz_test_old.mojotrollz_vote;

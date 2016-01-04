@@ -28,7 +28,7 @@ class saimod_mojotrollz_beta extends \SYSTEM\SAI\SaiModule {
         $vars = \array_merge($vars, \SYSTEM\PAGE\text::tag('time'));    
         return \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new \PSAI(),'saimod_mojotrollz_beta/tpl/beta.tpl'), $vars);}
     
-    public static function html_li_menu(){return '<li class=""><a data-toggle="tooltip" data-placement="left" title="Mojotrollz" href="#!mojotrollz_beta"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;Mojotrollz Beta</a></li>';}
+    public static function html_li_menu(){return '<li class=""><a data-toggle="tooltip" data-placement="left" title="Mojotrollz Beta Codes" href="#!mojotrollz_beta"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;Mojotrollz Beta</a></li>';}
     public static function right_public(){return false;}    
     public static function right_right(){return \SYSTEM\SECURITY\Security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
     public static function js(){return array(\SYSTEM\WEBPATH(new \PSAI(),'saimod_mojotrollz_beta/js/saimod_mojotrollz_beta.js'));}        

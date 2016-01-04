@@ -1,0 +1,1 @@
+INSERT INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5300, 42, 0, 0, '_SAI_saimod_mojotrollz_npc_vendor_template', 'action', NULL);
