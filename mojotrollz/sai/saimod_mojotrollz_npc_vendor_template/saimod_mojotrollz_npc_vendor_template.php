@@ -1,10 +1,75 @@
 <?php
 namespace SAI;
 class saimod_mojotrollz_npc_vendor_template extends \SYSTEM\SAI\SaiModule {
-    public static function sai_mod__SAI_saimod_mojotrollz_npc_vendor_template(){
+    public static function sai_mod__SAI_saimod_mojotrollz_npc_vendor_template_action_comment($entry,$comment){
+        \SQL\NPC_VENDOR_TEMPLATE_COMMENT::QI(array($entry,$comment));
+        return \JsonResult::ok();
+    }
+    public static function sai_mod__SAI_saimod_mojotrollz_npc_vendor_template_action_vendor($entry){
+        return 'test';
+    }
+    public static function sai_mod__SAI_saimod_mojotrollz_npc_vendor_template($search='{}',$page=0){
         $vars = array();
-        return \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new \PSAI(),'saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template.tpl'), $vars);}
-    
+        $vars['search_entry'] = $vars['search_items'] = $vars['search_comments'] = '';
+        $query =    'SELECT npc_vendor_template.entry, COUNT(*) as items, comments '.
+                    'FROM npc_vendor_template '.
+                    'LEFT JOIN '.\SYSTEM\CONFIG\config::get(\SYSTEM\CONFIG\config_ids::SYS_CONFIG_DB_DBNAME).'.mojotrollz_npc_vendor_template '.
+                    'ON npc_vendor_template.entry = mojotrollz_npc_vendor_template.entry';
+        $query_group = ' GROUP BY npc_vendor_template.entry';
+        $query_search = '';
+        $query_search_having = '';
+        $query_vars = array();
+        $search_ = \json_decode($search,true);
+        if(\is_array($search_)){
+            if(\array_key_exists('entry', $search_) && $search_['entry'] != ''){
+                $query_search .= ' AND npc_vendor_template.entry = ?';
+                $query_vars[] = $search_['entry'];
+                $vars['search_entry'] = $search_['entry'];
+            }
+            if(\array_key_exists('items', $search_) && $search_['items'] != ''){
+                $query_search_having .= ' AND items = ?';
+                $query_vars[] = $search_['items'];
+                $vars['search_items'] = $search_['items'];
+            }
+            if(\array_key_exists('comments', $search_) && $search_['comments'] != ''){
+                $query_search .= ' AND comments LIKE ?';
+                $query_vars[] = '%'.$search_['comments'].'%';
+                $vars['search_comments'] = $search_['comments'];
+            }
+        }
+        if($query_search){
+            $query = $query.' WHERE '.\substr($query_search, 4);}
+        $query .= $query_group;
+        if($query_search_having){
+            $query = $query.' HAVING '.\substr($query_search_having, 4);}
+        $query_count = 'SELECT COUNT(*) as count FROM ('.$query.') t1';
+        $con = new \SYSTEM\DB\Connection(new \SQL\mangos_one_world_test());
+        if(count($query_vars) > 0){
+            $count = $con->prepare('count_npc_vendor_template',$query_count,$query_vars)->next()['count'];
+            $res = $con->prepare('select_npc_vendor_template', $query, $query_vars);
+        } else {
+            $count = $con->query($query_count)->next()['count'];
+            $res = $con->query($query);}
+        
+        $vars['entries'] = '';
+        $count_filtered = 0;
+        $res->seek(100*$page);
+        while(($row = $res->next()) && ($count_filtered < 100)){           
+            $vars['entries'] .=  \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new \PSAI(),'saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template_entry.tpl'), $row);
+            $count_filtered++;
+        }
+        $vars['pagination'] = '';
+        $vars['page'] = $page;
+        $vars['page_last'] = ceil($count/100)-1;
+        for($i=0;$i < ceil($count/100);$i++){
+            $data = array('page' => $i,'search' => $search, 'active' => ($i == $page) ? 'active' : '');
+            $vars['pagination'] .= \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new \PSAI(),'saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template_pagination.tpl'), $data);
+        }
+        $vars['search'] = $search;
+        $vars['count'] = $count_filtered.'/'.$count;
+        $vars = array_merge($vars,  \SYSTEM\PAGE\text::tag('basic'));
+        return \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new \PSAI(),'saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template.tpl'), $vars);
+    }
     public static function html_li_menu(){return '<li role="separator" class="nav-divider"></li><li><a data-toggle="tooltip" data-placement="left" title="test server: npc_vendor_template" href="#!mojotrollz_npc_vendor_template"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>&nbsp;&nbsp;Vendor Template</a></li>';}
     public static function right_public(){return false;}    
     public static function right_right(){return \SYSTEM\SECURITY\Security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}

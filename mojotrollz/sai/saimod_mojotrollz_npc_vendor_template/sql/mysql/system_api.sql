@@ -1,1 +1,5 @@
 INSERT INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5300, 42, 0, 0, '_SAI_saimod_mojotrollz_npc_vendor_template', 'action', NULL);
+INSERT INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5301, 42, 3, 0, '_SAI_saimod_mojotrollz_npc_vendor_template', 'search', 'JSON');
+INSERT INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5302, 42, 3, 0, '_SAI_saimod_mojotrollz_npc_vendor_template', 'page', 'INT');
+INSERT INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5310, 42, 2, 5300, 'comment', 'entry', 'INT');
+INSERT INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5311, 42, 2, 5300, 'comment', 'comment', 'STRING');
