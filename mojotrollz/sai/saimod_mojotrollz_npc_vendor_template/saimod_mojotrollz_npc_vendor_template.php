@@ -5,8 +5,64 @@ class saimod_mojotrollz_npc_vendor_template extends \SYSTEM\SAI\SaiModule {
         \SQL\NPC_VENDOR_TEMPLATE_COMMENT::QI(array($entry,$comment));
         return \JsonResult::ok();
     }
-    public static function sai_mod__SAI_saimod_mojotrollz_npc_vendor_template_action_vendor($entry){
-        return 'test';
+    public static function sai_mod__SAI_saimod_mojotrollz_npc_vendor_template_action_vendor($entry,$search='{}',$page=0){
+        $vars = array();
+        $vars['search_item'] = $vars['search_maxcount'] = $vars['search_incrtime'] = $vars['search_extendedcost'] = $vars['search_condition_id'] = '';
+        $query =    'SELECT * '.
+                    'FROM npc_vendor_template WHERE entry = ?';
+        $query_vars = array($entry);
+        $search_ = \json_decode($search,true);
+        if(\is_array($search_)){
+            if(\array_key_exists('item', $search_) && $search_['item'] != ''){
+                $query .= ' AND item = ?';
+                $query_vars[] = $search_['item'];
+                $vars['search_item'] = $search_['item'];
+            }
+            if(\array_key_exists('maxcount', $search_) && $search_['maxcount'] != ''){
+                $query .= ' AND maxcount = ?';
+                $query_vars[] = $search_['maxcount'];
+                $vars['search_maxcount'] = $search_['maxcount'];
+            }
+            if(\array_key_exists('incrtime', $search_) && $search_['incrtime'] != ''){
+                $query .= ' AND incrtime = ?';
+                $query_vars[] = $search_['incrtime'];
+                $vars['search_incrtime'] = $search_['incrtime'];
+            }
+            if(\array_key_exists('extendedcost', $search_) && $search_['extendedcost'] != ''){
+                $query .= ' AND extendedcost = ?';
+                $query_vars[] = $search_['extendedcost'];
+                $vars['search_extendedcost'] = $search_['extendedcost'];
+            }
+            if(\array_key_exists('condition_id', $search_) && $search_['condition_id'] != ''){
+                $query .= ' AND condition_id = ?';
+                $query_vars[] = $search_['condition_id'];
+                $vars['search_condition_id'] = $search_['condition_id'];
+            }
+        }
+        $query_count = 'SELECT COUNT(*) as count FROM ('.$query.') t1';
+        $con = new \SYSTEM\DB\Connection(new \SQL\mangos_one_world_test());
+        $count = $con->prepare('count_npc_vendor_template_vendor',$query_count,$query_vars)->next()['count'];
+        $res = $con->prepare('select_npc_vendor_template_vendor', $query, $query_vars);
+        
+        $vars['entries'] = '';
+        $count_filtered = 0;
+        $res->seek(100*$page);
+        while(($row = $res->next()) && ($count_filtered < 100)){           
+            $vars['entries'] .=  \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new \PSAI(),'saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template_vendor_entry.tpl'), $row);
+            $count_filtered++;
+        }
+        $vars['pagination'] = '';
+        $vars['page'] = $page;
+        $vars['page_last'] = ceil($count/100)-1;
+        for($i=0;$i < ceil($count/100);$i++){
+            $data = array('entry' => $entry, 'page' => $i,'search' => $search, 'active' => ($i == $page) ? 'active' : '');
+            $vars['pagination'] .= \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new \PSAI(),'saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template_vendor_pagination.tpl'), $data);
+        }
+        $vars['search'] = htmlentities($search);
+        $vars['count'] = $count_filtered.'/'.$count;
+        $vars['entry'] = $entry;
+        $vars = array_merge($vars,  \SYSTEM\PAGE\text::tag('basic'));
+        return \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new \PSAI(),'saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template_vendor.tpl'), $vars);
     }
     public static function sai_mod__SAI_saimod_mojotrollz_npc_vendor_template($search='{}',$page=0){
         $vars = array();
@@ -65,7 +121,7 @@ class saimod_mojotrollz_npc_vendor_template extends \SYSTEM\SAI\SaiModule {
             $data = array('page' => $i,'search' => $search, 'active' => ($i == $page) ? 'active' : '');
             $vars['pagination'] .= \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new \PSAI(),'saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template_pagination.tpl'), $data);
         }
-        $vars['search'] = $search;
+        $vars['search'] = htmlentities($search);
         $vars['count'] = $count_filtered.'/'.$count;
         $vars = array_merge($vars,  \SYSTEM\PAGE\text::tag('basic'));
         return \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new \PSAI(),'saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template.tpl'), $vars);

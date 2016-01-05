@@ -21,3 +21,15 @@ function init_saimod_mojotrollz_npc_vendor_template(){
         system.load('mojotrollz_npc_vendor_template;search.'+JSON.stringify(search),true);
     });
 }
+
+function init_saimod_mojotrollz_npc_vendor_template_vendor(){
+    $('#btn_search').click(function(){
+        entry = $(this).attr('entry');
+        search = {  item: $('#input_search_item').val(),
+                    maxcount: $('#input_search_maxcount').val(),
+                    incrtime: $('#input_search_incrtime').val(),
+                    extendedcost: $('#input_search_extendedcost').val(),
+                    condition_id: $('#input_search_condition_id').val()}
+        system.load('mojotrollz_npc_vendor_template_vendor;entry.'+entry+';search.'+JSON.stringify(search),true);
+    });
+}
