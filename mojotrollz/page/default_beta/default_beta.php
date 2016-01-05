@@ -10,11 +10,11 @@ class default_beta extends \SYSTEM\PAGE\Page {
             $vars['beta_area'] =    \SYSTEM\SECURITY\Security::isLoggedIn() ?
                                     \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new PPAGE(),'default_beta/tpl/beta_loggedin.tpl'), array('email' => \SYSTEM\SECURITY\Security::getUser()->email,'username' => \SYSTEM\SECURITY\Security::getUser()->username)) :
                                     \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new PPAGE(),'default_beta/tpl/beta_loggedout.tpl'));
-            $vars = array_merge($vars,\SYSTEM\PAGE\text::tag('basic'),\SYSTEM\PAGE\text::tag('mojotrollz'));
+            $vars = array_merge($vars,\SYSTEM\PAGE\text::tag('mojotrollz'));
             return \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new PPAGE(),'default_beta/tpl/beta.tpl'), $vars);
         }
         $vars['key'] = $this->key;
-        $vars = array_merge($vars,\SYSTEM\PAGE\text::tag('basic'),\SYSTEM\PAGE\text::tag('mojotrollz'));
+        $vars = array_merge($vars,\SYSTEM\PAGE\text::tag('mojotrollz'));
         return \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new PPAGE(),'default_beta/tpl/beta_register.tpl'), $vars);
     }
     public static function js(){

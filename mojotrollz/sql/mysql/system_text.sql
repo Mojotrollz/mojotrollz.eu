@@ -19,6 +19,13 @@ REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('basic_logout', 'mojotrollz
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('basic_placeholder_username', 'mojotrollz');
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('basic_placeholder_password', 'mojotrollz');
 
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('sai_error_username_short', 'mojotrollz');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('sai_error_username_long', 'mojotrollz');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('sai_error_username_miss', 'mojotrollz');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('sai_error_password_short', 'mojotrollz');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('sai_error_password_long', 'mojotrollz');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('sai_error_password_miss', 'mojotrollz');
+
 REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('link_facebook', 'enUS', 'https://www.facebook.com/pages/Mojo-WoW/204351992944865', 10, 10, '2015-09-17 23:16:50', '2015-09-17 23:16:50');
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('link_facebook', 'link');
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('link_facebook', 'mojotrollz');

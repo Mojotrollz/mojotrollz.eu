@@ -1,3 +1,3 @@
-INSERT INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5200, 42, 0, 0, '_SAI_saimod_mojotrollz_beta', 'action', NULL);
-INSERT INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5201, 42, 3, 0, '_SAI_saimod_mojotrollz_beta', 'generate', 'INT');
-INSERT INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5210, 42, 2, 5200, 'del', 'code', 'STRING');
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5200, 42, 0, 0, '_SAI_saimod_mojotrollz_beta', 'action', NULL);
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5201, 42, 3, 0, '_SAI_saimod_mojotrollz_beta', 'generate', 'INT');
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5210, 42, 2, 5200, 'del', 'code', 'STRING');
