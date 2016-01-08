@@ -16,8 +16,8 @@
                                             style="margin-bottom: 15px; float: left;"
                                             id="register_username"
                                             placeholder="peter"
-                                            minlength="3" data-validation-minlength-message="${sai_error_username_short}"
-                                            required data-validation-required-message="Username required"/>
+                                            minlength="3" data-validation-minlength-message="${basic_username_short}"
+                                            required data-validation-required-message="${basic_username_miss}"/>
                                     <br/>
                                 </div>
                            </td>
@@ -31,8 +31,8 @@
                                             style="margin-bottom: 15px; float: left;"
                                             id="register_email"
                                             placeholder="${basic_placeholder_email}"
-                                            data-validation-email-message="${sai_error_email_wrong}"
-                                            required data-validation-required-message="EMail required"/>
+                                            data-validation-email-message="${basic_email_wrong}"
+                                            required data-validation-required-message="${basic_email_miss}"/>
                                     <br/>
                                 </div>
                            </td>
@@ -48,8 +48,8 @@
                                                   id="user_register_password1"
                                                   name="user_register_password1"
                                                   placeholder="${basic_placeholder_password}"
-                                                  minlength="5" data-validation-minlength-message="${sai_error_password_short}"
-                                                  required data-validation-required-message="Password required"/>
+                                                  minlength="5" data-validation-minlength-message="${basic_password_short}"
+                                                  required data-validation-required-message="${basic_password_miss}"/>
                                           <br/>
                                       </div>
                                       <div class="control-group controls" style="clear: both">
@@ -60,7 +60,7 @@
                                                   name="user_register_password2"
                                                   placeholder="${basic_placeholder_password}"
                                                   data-validation-matches-match="user_register_password1"
-                                                  data-validation-matches-message="Password missmatch"/>
+                                                  data-validation-matches-message="${basic_password_miss}"/>
                                           <br/>
                                       </div>
                                  </div>
