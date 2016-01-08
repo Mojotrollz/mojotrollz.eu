@@ -114,7 +114,7 @@ REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('webcraft_impressum', 'webc
 REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mojotrollz_client_text', 'enUS', '<h3>DOWNLOAD WOW CLIENTS</h3>Here you can&nbsp;download the three most common WoW Versions played on Private Servers.', 10, 10, '2016-01-04 04:49:08', '2016-01-04 04:49:08');
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mojotrollz_client_text', 'mojotrollz');
 
-REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mojotrollz_servers_text', 'enUS', '<h3>VOTE FOR SERVERS<br></h3><p>Vote for your favorit WoW Private Server here.</p>', 10, 10, '2016-01-04 04:43:52', '2016-01-04 04:43:52');
+REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mojotrollz_servers_text', 'enUS', '<h3>VOTE FOR SERVERS<br></h3><p>Vote for your favorite WoW Private Server here.</p>', 10, 10, '2016-01-04 04:43:52', '2016-01-04 04:43:52');
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mojotrollz_servers_text', 'mojotrollz');
 
 -- insert to protect this text
