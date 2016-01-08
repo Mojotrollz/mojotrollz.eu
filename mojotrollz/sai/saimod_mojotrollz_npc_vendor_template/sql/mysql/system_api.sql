@@ -6,3 +6,11 @@ REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `na
 REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5320, 42, 2, 5300, 'vendor', 'entry', 'INT');
 REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5321, 42, 3, 5300, 'vendor', 'search', 'JSON');
 REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5322, 42, 3, 5300, 'vendor', 'page', 'INT');
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5330, 42, 2, 5300, 'del', 'entry', 'INT');
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5331, 42, 2, 5300, 'del', 'item', 'INT');
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5340, 42, 2, 5300, 'add', 'entry', 'INT');
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5341, 42, 2, 5300, 'add', 'item', 'INT');
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5342, 42, 2, 5300, 'add', 'maxcount', 'INT');
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5343, 42, 2, 5300, 'add', 'incrtime', 'INT');
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5344, 42, 2, 5300, 'add', 'extendedcost', 'INT');
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5345, 42, 2, 5300, 'add', 'condition_id', 'INT');

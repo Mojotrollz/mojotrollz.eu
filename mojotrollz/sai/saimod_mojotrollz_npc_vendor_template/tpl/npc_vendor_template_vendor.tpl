@@ -33,6 +33,15 @@
         </td>
     </tr>
     ${entries}
+    <tr>
+        <td><a href="#!mojotrollz_npc_vendor_template_vendor;entry.${entry}">${entry}</a></td>
+        <td><input class="form-control" type="text" id="input_item" placeholder="item"></td>
+        <td><input class="form-control" type="text" id="input_maxcount" placeholder="maxcount" value="0"></td>
+        <td><input class="form-control" type="text" id="input_incrtime" placeholder="incrtime" value="0"></td>
+        <td><input class="form-control" type="text" id="input_extendedcost" placeholder="ExtendedCost" value="0"></td>
+        <td><input class="form-control" type="text" id="input_condition_id" placeholder="condition_id" value="0"></td>
+        <td><button type="button" class="btn-sm btn btn-success" id="btn_add" _entry="${entry}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ${basic_add}</button></td>
+    </tr>
 </table>
 <ul class="pagination">
     <li><a href="#!mojotrollz_npc_vendor_template_vendor;entry.${entry};search.${search};page.0">&laquo;</a></li>

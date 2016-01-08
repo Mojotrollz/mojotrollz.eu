@@ -3,8 +3,14 @@ namespace SAI;
 class saimod_mojotrollz_npc_vendor_template extends \SYSTEM\SAI\SaiModule {
     public static function sai_mod__SAI_saimod_mojotrollz_npc_vendor_template_action_comment($entry,$comment){
         \SQL\NPC_VENDOR_TEMPLATE_COMMENT::QI(array($entry,$comment));
-        return \JsonResult::ok();
-    }
+        return \JsonResult::ok();}
+    public static function sai_mod__SAI_saimod_mojotrollz_npc_vendor_template_action_add($entry,$item,$maxcount,$incrtime,$extendedcost,$condition_id){
+        \SQL\NPC_VENDOR_TEMPLATE_ADD::QI(array($entry,$item,$maxcount,$incrtime,$extendedcost,$condition_id),new \SQL\mangos_one_world_test());
+        return \SYSTEM\LOG\JsonResult::ok();}
+    public static function sai_mod__SAI_saimod_mojotrollz_npc_vendor_template_action_del($entry,$item){
+        \SQL\NPC_VENDOR_TEMPLATE_DEL::QI(array($entry,$item),new \SQL\mangos_one_world_test());
+        return \SYSTEM\LOG\JsonResult::ok();}
+    
     public static function sai_mod__SAI_saimod_mojotrollz_npc_vendor_template_action_vendor($entry,$search='{}',$page=0){
         $vars = array();
         $vars['search_item'] = $vars['search_maxcount'] = $vars['search_incrtime'] = $vars['search_extendedcost'] = $vars['search_condition_id'] = '';
