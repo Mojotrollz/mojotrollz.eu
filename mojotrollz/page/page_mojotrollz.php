@@ -27,4 +27,7 @@ class page_mojotrollz extends \SYSTEM\API\api_default {
         
     public static function page_article($id){
         return (new default_article($id))->html();}
+        
+    public static function page_item(){
+        return (new default_item())->html();}
 }
