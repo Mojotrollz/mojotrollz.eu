@@ -1,5 +1,5 @@
-
-var items = {
+function init_article(){
+    var items = {
   
   "hearthstone": {
       
@@ -499,3 +499,4 @@ $body.on("mouseout.wow", ".wow-item" , function(e) {
   }
 
 };*/
+}

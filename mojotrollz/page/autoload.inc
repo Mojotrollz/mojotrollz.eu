@@ -7,4 +7,3 @@ require_once dirname(__FILE__).'/default_login/autoload.inc';
 require_once dirname(__FILE__).'/default_serverlist/autoload.inc';
 require_once dirname(__FILE__).'/default_beta/autoload.inc';
 require_once dirname(__FILE__).'/default_article/autoload.inc';
-require_once dirname(__FILE__).'/default_item/autoload.inc';
