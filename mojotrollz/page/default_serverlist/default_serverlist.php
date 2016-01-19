@@ -1,7 +1,7 @@
 <?php
 class default_serverlist extends \SYSTEM\PAGE\Page {
     public static function js(){
-        return array(   \SYSTEM\WEBPATH(new PPAGE(),'default_serverlist/js/default_serverlist.js'));}
+        return array(   new PPAGE('default_serverlist/js/default_serverlist.js'));}
     
     public function html(){
         $vars = array();
@@ -21,9 +21,9 @@ class default_serverlist extends \SYSTEM\PAGE\Page {
                 $row['glyphicon_vote'] = 'glyphicon-ok';
             }
             $row['score'] += $row['votes'];
-            $vars['server_list'] .= \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_serverlist/tpl/serverlist_tr.tpl'),$row);}
+            $vars['server_list'] .= \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_serverlist/tpl/serverlist_tr.tpl'))->SERVERPATH(),$row);}
         $vars = array_merge($vars, \SYSTEM\PAGE\text::tag('mojotrollz'));
-        return \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_serverlist/tpl/serverlist.tpl'), $vars);
+        return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_serverlist/tpl/serverlist.tpl'))->SERVERPATH(), $vars);
     }
     
     private static function version_icon($version){

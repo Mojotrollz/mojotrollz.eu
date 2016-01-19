@@ -1,5 +1,5 @@
 <?php
 class PSQL extends \SYSTEM\PATH {
-    public static function getPath(){
-        return \SYSTEM\C_ROOT.'mojotrollz/sql/'.\SYSTEM\C_SUBPATH;}
+    public function __construct($subpath = '') {
+        parent::__construct(new \SYSTEM\PROOT(), 'mojotrollz/sql/', $subpath);}
 }

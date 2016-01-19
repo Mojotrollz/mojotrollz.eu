@@ -54,7 +54,7 @@ class saimod_mojotrollz_npc_vendor_template extends \SYSTEM\SAI\SaiModule {
         $count_filtered = 0;
         $res->seek(100*$page);
         while(($row = $res->next()) && ($count_filtered < 100)){           
-            $vars['entries'] .=  \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new \PSAI(),'saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template_vendor_entry.tpl'), $row);
+            $vars['entries'] .=  \SYSTEM\PAGE\replace::replaceFile((new \PSAI('saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template_vendor_entry.tpl'))->SERVERPATH(), $row);
             $count_filtered++;
         }
         $vars['pagination'] = '';
@@ -62,13 +62,13 @@ class saimod_mojotrollz_npc_vendor_template extends \SYSTEM\SAI\SaiModule {
         $vars['page_last'] = ceil($count/100)-1;
         for($i=0;$i < ceil($count/100);$i++){
             $data = array('entry' => $entry, 'page' => $i,'search' => $search, 'active' => ($i == $page) ? 'active' : '');
-            $vars['pagination'] .= \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new \PSAI(),'saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template_vendor_pagination.tpl'), $data);
+            $vars['pagination'] .= \SYSTEM\PAGE\replace::replaceFile((new \PSAI('saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template_vendor_pagination.tpl'))->SERVERPATH(), $data);
         }
         $vars['search'] = htmlentities($search);
         $vars['count'] = $count_filtered.'/'.$count;
         $vars['entry'] = $entry;
         $vars = array_merge($vars,  \SYSTEM\PAGE\text::tag('basic'));
-        return \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new \PSAI(),'saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template_vendor.tpl'), $vars);
+        return \SYSTEM\PAGE\replace::replaceFile((new \PSAI('saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template_vendor.tpl'))->SERVERPATH(), $vars);
     }
     public static function sai_mod__SAI_saimod_mojotrollz_npc_vendor_template($search='{}',$page=0){
         $vars = array();
@@ -117,7 +117,7 @@ class saimod_mojotrollz_npc_vendor_template extends \SYSTEM\SAI\SaiModule {
         $count_filtered = 0;
         $res->seek(100*$page);
         while(($row = $res->next()) && ($count_filtered < 100)){           
-            $vars['entries'] .=  \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new \PSAI(),'saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template_entry.tpl'), $row);
+            $vars['entries'] .=  \SYSTEM\PAGE\replace::replaceFile((new \PSAI('saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template_entry.tpl'))->SERVERPATH(), $row);
             $count_filtered++;
         }
         $vars['pagination'] = '';
@@ -125,16 +125,16 @@ class saimod_mojotrollz_npc_vendor_template extends \SYSTEM\SAI\SaiModule {
         $vars['page_last'] = ceil($count/100)-1;
         for($i=0;$i < ceil($count/100);$i++){
             $data = array('page' => $i,'search' => $search, 'active' => ($i == $page) ? 'active' : '');
-            $vars['pagination'] .= \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new \PSAI(),'saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template_pagination.tpl'), $data);
+            $vars['pagination'] .= \SYSTEM\PAGE\replace::replaceFile((new \PSAI('saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template_pagination.tpl'))->SERVERPATH(), $data);
         }
         $vars['search'] = htmlentities($search);
         $vars['count'] = $count_filtered.'/'.$count;
         $vars = array_merge($vars,  \SYSTEM\PAGE\text::tag('basic'));
-        return \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new \PSAI(),'saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template.tpl'), $vars);
+        return \SYSTEM\PAGE\replace::replaceFile((new \PSAI('saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template.tpl'))->SERVERPATH(), $vars);
     }
     public static function html_li_menu(){return '<li role="separator" class="nav-divider"></li><li><a data-toggle="tooltip" data-placement="left" title="test server: npc_vendor_template" href="#!mojotrollz_npc_vendor_template"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>&nbsp;&nbsp;Vendor Template</a></li>';}
     public static function right_public(){return false;}    
     public static function right_right(){return \SYSTEM\SECURITY\Security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
-    public static function js(){return array(\SYSTEM\WEBPATH(new \PSAI(),'saimod_mojotrollz_npc_vendor_template/js/saimod_mojotrollz_npc_vendor_template.js'));}        
+    public static function js(){return array(new \PSAI('saimod_mojotrollz_npc_vendor_template/js/saimod_mojotrollz_npc_vendor_template.js'));}        
     //public static function css(){return array();}
 }

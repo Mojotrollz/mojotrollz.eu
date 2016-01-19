@@ -63,7 +63,7 @@
             <!-- Flexslider -->
             <div class="row-fluid">
                 <div class="col-md-12 mojotrollz_col">
-                    <h1 class="fadeInDown animated lead mojotrollz_heading"><img title="mojotrollz.eu logo" alt="${mojotrollz_heading}" src="./api.php?call=files&amp;cat=content&amp;id=mojotrollz_logo.png" width="650"></h1>
+                    <h1 class="fadeInDown animated lead mojotrollz_heading"><img title="mojotrollz.eu logo" alt="${mojotrollz_heading}" src="./api.php?call=files&amp;cat=content&amp;id=mojotrollz_logo.png" width="55%"></h1>
                     <div class="flexslider mojotrollz_flexslider">
                         <ul class="slides">
                             <li><img alt="WoW Classic Vanilla Banner" src="./api.php?call=files&amp;cat=content&amp;id=banner_mojotrollz_1.gif" width="100%"></li>
@@ -76,7 +76,7 @@
             </div>
             <!-- Content -->
             <div class="row-fluid">
-                <div id="content" class="col-md-12 mojotrollz_col">
+                <div id="content" class="col-md-12 mojotrollz_col mojotrollz_col_contentmain">
                 </div>
             </div>
             <!-- Content More -->

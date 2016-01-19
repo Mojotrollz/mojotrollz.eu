@@ -24,13 +24,13 @@ class saimod_mojotrollz_beta extends \SYSTEM\SAI\SaiModule {
         while($code = $res->next()){
             $code['ago_date_generated'] = \SYSTEM\time::time_ago_string(strtotime($code['date_generated']));
             $code['ago_date_redeemed'] = $code['date_redeemed'] ? \SYSTEM\time::time_ago_string(strtotime($code['date_redeemed'])) : 'Open';
-            $vars['entries'] .= \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new \PSAI(),'saimod_mojotrollz_beta/tpl/beta_entry.tpl'), $code);}
+            $vars['entries'] .= \SYSTEM\PAGE\replace::replaceFile((new \PSAI('saimod_mojotrollz_beta/tpl/beta_entry.tpl'))->SERVERPATH(), $code);}
         $vars = \array_merge($vars, \SYSTEM\PAGE\text::tag('time'));    
-        return \SYSTEM\PAGE\replace::replaceFile(\SYSTEM\SERVERPATH(new \PSAI(),'saimod_mojotrollz_beta/tpl/beta.tpl'), $vars);}
+        return \SYSTEM\PAGE\replace::replaceFile((new \PSAI('saimod_mojotrollz_beta/tpl/beta.tpl'))->SERVERPATH(), $vars);}
     
     public static function html_li_menu(){return '<li class=""><a data-toggle="tooltip" data-placement="left" title="Mojotrollz Beta Codes" href="#!mojotrollz_beta"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;Mojotrollz Beta</a></li>';}
     public static function right_public(){return false;}    
     public static function right_right(){return \SYSTEM\SECURITY\Security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
-    public static function js(){return array(\SYSTEM\WEBPATH(new \PSAI(),'saimod_mojotrollz_beta/js/saimod_mojotrollz_beta.js'));}        
+    public static function js(){return array(new \PSAI('saimod_mojotrollz_beta/js/saimod_mojotrollz_beta.js'));}        
     //public static function css(){return array();}
 }

@@ -17,8 +17,7 @@ class saimod_mojotrollz_server_handling extends \SYSTEM\SAI\SaiModule {
     public static function html_li_menu(){return '<li class=""><a data-toggle="tooltip" data-placement="left" title="Mojotrollz Server" href="#!mojotrollz_server"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;Mojotrollz Server</a></li>';}
     public static function right_public(){return false;}    
     public static function right_right(){return \SYSTEM\SECURITY\Security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
-    public static function js(){return array(
-            \SYSTEM\WEBPATH(new \PSAI(),'saimod_mojotrollz_server_handling/js/saimod_mojotrollz_server_handling.js'));}
+    public static function js(){return array(new \PSAI('saimod_mojotrollz_server_handling/js/saimod_mojotrollz_server_handling.js'));}
     //public static function css(){}
     
     public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_stats_tbc($filter = 600){

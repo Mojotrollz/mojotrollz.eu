@@ -10,7 +10,7 @@
     <td>${score}</td>
     <td>
         <button type="submit" class="btn_vote btn-sm btn ${btn_vote_color}" server="${id}" style="width: 95%;">
-            <span class="glyphicon ${glyphicon_vote}" aria-hidden="true"></span>
+            <span class="glyphicon ${glyphicon_vote}" aria-hidden="true"> vote</span>
         </button>
     </td>
     <td>
@@ -19,7 +19,7 @@
         </button>
     </td>
     <td>
-        <button type="submit" class="btn-sm btn btn-primary" onClick="location.href='${link_wow_${version_url}}'" style="width: 100%;">
+        <button type="submit" class="btn-sm btn btn-primary" onClick="location.href='${link_wow_${version_url}}'" style="width: 95%;">
             <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
         </button>
     </td>

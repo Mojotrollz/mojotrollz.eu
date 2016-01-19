@@ -1,7 +1,7 @@
 <?php
 class default_start extends \SYSTEM\PAGE\Page {
     public static function js(){
-        return array(   \SYSTEM\WEBPATH(new PPAGE(),'default_start/js/default_start.js'));}
+        return array(new PPAGE('default_start/js/default_start.js'));}
     
     public function html(){
         $vars = array();
@@ -22,6 +22,6 @@ class default_start extends \SYSTEM\PAGE\Page {
             $vars['addon_list'] .= \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_start/tpl/addonlist_tr.tpl'),$row);}*/
             
         $vars = array_merge($vars, \SYSTEM\PAGE\text::tag('mojotrollz'));
-        return \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_start/tpl/default_start.tpl'), $vars);
+        return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_start/tpl/default_start.tpl'))->SERVERPATH(), $vars);
     }
 }

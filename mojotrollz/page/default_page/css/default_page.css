@@ -73,9 +73,13 @@ mojotrollz_download_first{
 #content_teamspeak{}
 
 .mojotrollz_col_content{
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 25px;
+    padding-right: 25px;
     padding-bottom: 25px;
+}
+.mojotrollz_col_contentmain{
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .ontop{
