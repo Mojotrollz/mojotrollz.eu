@@ -29,4 +29,7 @@ class api_mojotrollz extends \SYSTEM\API\api_system {
         return \SQL\MOJO_ACCOUNT_AVAILABLE::Q1(array($username), new \SQL\mangos_realm())['count'] == 0;}
     private static function wow_account_register($username,$email,$password){
         return \SQL\MOJO_ACCOUNT_REGISTER::QI(array($username,$email,$password), new \SQL\mangos_realm());}
+        
+    public static function call_tbc_action_item($id){
+        return \JsonResult::toString(\SQL\TBC_ITEM::Q1(array($id),new \SQL\mangos_one_world()));}
 }
