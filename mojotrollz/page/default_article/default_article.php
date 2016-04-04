@@ -4,10 +4,7 @@ class default_article extends \SYSTEM\PAGE\Page {
     public function __construct($id) {
         $this->id = $id;}
     public static function js(){
-        return array(   new PPAGE('default_article/js/handlebars-v4.0.5.js'),
-                        new PPAGE('default_article/js/default_article.js'));}
-    public static function scss(){
-        return array(   new PPAGE('default_article/css/default_item.scss'));}
+        return array(   new PPAGE('default_article/js/default_article.js'));}
         
     public function html(){
         $element = array('text' => \SYSTEM\PAGE\text::get($this->id));

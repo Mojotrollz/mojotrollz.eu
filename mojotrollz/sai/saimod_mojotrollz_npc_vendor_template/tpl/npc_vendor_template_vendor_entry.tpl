@@ -1,6 +1,6 @@
 <tr>
     <td><a href="#!mojotrollz_npc_vendor_template_vendor;entry.${entry}">${entry}</a></td>
-    <td>${item}</td>
+    <td>${item} <i class="wow-icon" data-item-id="${item}"></i></td>
     <td>${maxcount}</td>
     <td>${incrtime}</td>
     <td>${ExtendedCost}</td>
