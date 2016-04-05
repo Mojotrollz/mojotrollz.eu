@@ -145,5 +145,16 @@
       <p class="info__flavour-text">"{{ description }}"</p>
       {{/if}}
     </section>
+    <section class="wow-item__price">
+      {{#if price_gold }}
+      <p class="price__gold">Sell Price: {{ price_gold }}</p>
+      {{/if}}
+      {{#if price_silver }}
+      <p class="price__silver">{{ price_silver }}</p>
+      {{/if}}
+      {{#if price_copper }}
+      <p class="price__copper">{{ price_copper }}</p>
+      {{/if}}
+    </section>
   </aside>
 </script>

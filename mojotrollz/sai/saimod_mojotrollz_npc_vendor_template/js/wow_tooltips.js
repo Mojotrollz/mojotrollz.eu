@@ -386,6 +386,15 @@ var wow_statstype = {
     48: "Blockvalue"
 }
 
+var wow_spelltrigger = {
+    0: "Use",
+    1: "On Equip",
+    2: "Chance on Hit",
+    4: "Soulstone",
+    5: "Use",
+    6: "Learn"
+}
+
 function wow_tooltips(){
     //item hover
     var items = {}
@@ -437,7 +446,14 @@ function wow_tooltips(){
             json.result.type = wow_class_subclass[json.result.class][json.result.subclass];
             
             //flags
-            json.result.unique = json.result.flags % 524288 === 0 ?  true : false;
+            json.result.unique = json.result.flags % 524288 === 0 ?  'true' : 'false';
+            
+            //dmg
+            if(json.result.dmg_min1 > 0 || json.result.dmg_max1 > 0){
+                json.result.damage = {  min: json.result.dmg_min1,
+                                        max: json.result.dmg_max1,
+                                        speed: json.result.delay / 1000}
+            }
             
             //stats
             json.result.stats = {};
@@ -503,7 +519,29 @@ function wow_tooltips(){
             
             //Set
             
+            //spells
+            json.result.bonuses = [];
+            if(json.result.spellid_1 !== 0){
+                json.result.bonuses[0] = {description: wow_spelltrigger[json.result.spelltrigger_1]+': '+json.result.spelltext_1};}
+            if(json.result.spellid_2 !== 0){
+                json.result.bonuses[1] = {description: wow_spelltrigger[json.result.spelltrigger_2]+': '+json.result.spelltext_2};}
+            if(json.result.spellid_3 !== 0){
+                json.result.bonuses[2] = {description: wow_spelltrigger[json.result.spelltrigger_3]+': '+json.result.spelltext_3};}
+            if(json.result.spellid_4 !== 0){
+                json.result.bonuses[3] = {description: wow_spelltrigger[json.result.spelltrigger_4]+': '+json.result.spelltext_4};}
+            if(json.result.spellid_5 !== 0){
+                json.result.bonuses[4] = {description: wow_spelltrigger[json.result.spelltrigger_5]+': '+json.result.spelltext_5};}
+            
             //Price
+            var sp = json.result.SellPrice;
+            if(sp / 10000 >= 1){
+                json.result.price_gold = Math.floor(sp / 10000);
+                sp = sp % 10000;}
+            if(sp / 100 >= 1){
+                json.result.price_silver = Math.floor(sp / 100);
+                sp = sp % 100;}
+            if(sp => 1){
+                json.result.price_copper = sp;}
             
             items[json.result.entry] = json.result;
             if( json.result.icon ) {
