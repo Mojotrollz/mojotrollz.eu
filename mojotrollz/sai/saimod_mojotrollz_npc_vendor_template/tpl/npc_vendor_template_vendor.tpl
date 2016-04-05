@@ -52,20 +52,22 @@
 <button id="btn_back" onClick="system.back();" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> ${basic_back}</button>
 
 <script id="wow-item-template" type="text/x-handlebars-template">
-  <aside class="wow-item hidden" data-quality="{{ Quality }}">
-    <header class="wow-item__header">
-      <p class="header__title">{{ name }}</p>
-      {{#if binds}}<p class="header__binds">Binds {{ binds }}</p>{{/if}}
+    <aside class="wow-item hidden" data-quality="{{ quality }}">
+        <header class="wow-item__header">
+            <p class="header__title">{{ name }}</p>
+            {{#if ItemLevel}}
+            <p class="info__item-level">Item Level {{ ItemLevel }}</p>
+            {{/if}}
+            {{#if binds}}<p class="header__binds">{{ binds }}</p>{{/if}}
       {{#if unique}}
         <p class="header__unique">Unique</p>
       {{/if}}
     </header>
     <section class="wow-item__type">
-      <p class="type__slot">{{InventoryType}}</p>
-      <p class="type__item">{{class}}</p>
+      <p class="type__slot">{{slot}}</p>
+      <p class="type__item">{{type}}</p>
     </section>
     <section class="wow-item__stats">
-      
       {{#if damage}}
       <p class="stats__damage-armor"><span class="value">{{ damage.min }} - {{damage.max}}</span> Damage</p>
       <p class="stats__speed">Speed <span class="value">{{ speed damage.speed }}</span></p>
@@ -108,8 +110,8 @@
     
     <section class="wow-item__info">
       
-      {{#if durability}}
-      <p class="info__durability">Durability: {{ durability }} / {{ durability }}</p>
+      {{#if MaxDurability}}
+      <p class="info__durability">Durability: {{ MaxDurability }} / {{ MaxDurability }}</p>
       {{/if}}
       
       {{#each chanceOnHit}}
@@ -123,11 +125,6 @@
       {{#if RequiredLevel}}
       <p class="info__level-requirement">Requires Level {{ RequiredLevel }}</p>
       {{/if}}
-      
-      {{#if ItemLevel}}
-      <p class="info__item-level">Item Level {{ ItemLevel }}</p>
-      {{/if}}
-      
     </section>
     
     {{#if bonuses}}
@@ -144,8 +141,8 @@
       <p class="info__trade-level">Requires {{ tradelevel.trade }} ({{ tradelevel.level }})</p>
       {{/if}}
 
-      {{#if flavour }}
-      <p class="info__flavour-text">"{{ flavour }}"</p>
+      {{#if description }}
+      <p class="info__flavour-text">"{{ description }}"</p>
       {{/if}}
     </section>
   </aside>

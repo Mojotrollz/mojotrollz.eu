@@ -136,6 +136,7 @@ class saimod_mojotrollz_npc_vendor_template extends \SYSTEM\SAI\SaiModule {
     public static function right_public(){return false;}    
     public static function right_right(){return \SYSTEM\SECURITY\Security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
     public static function js(){return array(   new \PSAI('saimod_mojotrollz_npc_vendor_template/js/handlebars-v4.0.5.js'),
+                                                new \PSAI('saimod_mojotrollz_npc_vendor_template/js/wow_tooltips.js'),
                                                 new \PSAI('saimod_mojotrollz_npc_vendor_template/js/saimod_mojotrollz_npc_vendor_template.js'));}        
     //public static function css(){return array();}
     public static function scss(){

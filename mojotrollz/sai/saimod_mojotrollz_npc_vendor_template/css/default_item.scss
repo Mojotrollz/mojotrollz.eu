@@ -198,7 +198,9 @@ $flavour: #FFD100;
   
 }
 
-
+.info__item-level {
+    color: #ffd100;
+}
   
 .wow-item__header {
 
@@ -288,23 +290,23 @@ $flavour: #FFD100;
       text-indent: 1.8em;
       text-transform: capitalize;
       
-      &.socket--meta {
+      &.socket--Meta {
         @include socket( "meta" );
       }
       
-      &.socket--blue {
+      &.socket--Blue {
         @include socket( "blue" );
       }
       
-      &.socket--red {
+      &.socket--Red {
         @include socket( "red" );
       }
       
-      &.socket--yellow {
+      &.socket--Yellow {
         @include socket( "yellow" );
       }
       
-      &.socket--prismatic {
+      &.socket--Prismatic {
         @include socket( "prismatic" );
       }
       
