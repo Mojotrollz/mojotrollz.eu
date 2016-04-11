@@ -1,9 +1,6 @@
 [submodule "lib/system"]
 	path = lib/system
 	url = git@mojotrollz.eu:webcraft/system.git
-[submodule "lib/unslider"]
-	path = lib/unslider
-	url = git@mojotrollz.eu:webcraft/lib_unslider.git
 [submodule "lib/font_awesome"]
 	path = lib/font_awesome
 	url = git@mojotrollz.eu:webcraft/lib_font_awesome.git
@@ -13,3 +10,9 @@
 [submodule "lib/ts3"]
 	path = lib/ts3
 	url = git@mojotrollz.eu:webcraft/lib_ts3.git
+[submodule "lib/handlebars"]
+	path = lib/handlebars
+	url = ../lib_handlebars.git
+[submodule "lib/wow_tooltips"]
+	path = lib/wow_tooltips
+	url = ../lib_wow_tooltips.git
