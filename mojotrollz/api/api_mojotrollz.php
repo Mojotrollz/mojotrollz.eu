@@ -32,4 +32,7 @@ class api_mojotrollz extends \SYSTEM\API\api_system {
         
     public static function call_tbc_action_item($id){
         return \JsonResult::toString(\SQL\TBC_ITEM::Q1(array($id),new \SQL\mangos_one_world()));}
+        
+    public static function call_tbc_action_itemextendedcost($id){
+        return \JsonResult::toString(\SQL\TBC_ITEMEXTENDEDCOST::Q1(array($id),new \SQL\mangos_one_dbc()));}
 }
