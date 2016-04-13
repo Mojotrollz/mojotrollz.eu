@@ -67,6 +67,9 @@ class saimod_mojotrollz_npc_vendor_template extends \SYSTEM\SAI\SaiModule {
         $vars['search'] = htmlentities($search);
         $vars['count'] = $count_filtered.'/'.$count;
         $vars['entry'] = $entry;
+        $vars['wow_tooltip_templates'] = '';
+        $vars['wow_tooltip_templates'] .= \SYSTEM\PAGE\replace::replaceFile((new \PLIB('wow_tooltips/lib/tpl/wow-item-template.tpl'))->SERVERPATH());
+        $vars['wow_tooltip_templates'] .= \SYSTEM\PAGE\replace::replaceFile((new \PLIB('wow_tooltips/lib/tpl/wow-itemextendedcost-template.tpl'))->SERVERPATH());
         $vars = array_merge($vars,  \SYSTEM\PAGE\text::tag('basic'));
         return \SYSTEM\PAGE\replace::replaceFile((new \PSAI('saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template_vendor.tpl'))->SERVERPATH(), $vars);
     }
