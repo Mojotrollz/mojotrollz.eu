@@ -22,7 +22,7 @@ Cron Last Visit: ${last_visit}<br/>
             ${content}
         </tbody>    
         <tr>
-            <td id="input_id">ID</td>
+            <td><input class="form-control" type="text" id="input_id" placeholder="id" style="width: 100%;"></td>
             <td><input class="form-control" type="text" id="input_name" placeholder="name" style="width: 100%;"></td>
             <td><input class="form-control" type="text" id="input_url" placeholder="url" style="width: 100%;"></td>
             <td><input class="form-control" type="text" id="input_version" placeholder="version" style="width: 100%;"></td>

@@ -24,7 +24,7 @@ class saimod_mojotrollz_servers extends \SYSTEM\SAI\SaiModule {
         return \SYSTEM\LOG\JsonResult::ok();}
     
     public static function sai_mod__SAI_saimod_mojotrollz_servers_action_save($id,$name,$url,$version,$description){
-        \SQL\SAIMOD_MOJOTROLLZ_SAVE::QI(array($name,$url,$version,$description,$id));
+        \SQL\SAIMOD_MOJOTROLLZ_SAVE::QI(array($id,$name,$url,$version,$description));
         return \SYSTEM\LOG\JsonResult::ok();}
     
     public static function sai_mod__SAI_saimod_mojotrollz_servers_action_del($id){

@@ -7,7 +7,7 @@ function init_saimod_mojotrollz_servers() {
 
 function register_server_edit(){
     $('.btn_server_edit').click(function(){
-        $('#input_id').attr('_id',$(this).attr('_id'));
+        $('#input_id').val($(this).attr('_id'));
         $('#input_name').val($(this).attr('_name'));
         $('#input_url').val($(this).attr('_url'));
         $('#input_version').val($(this).attr('_version'));
@@ -51,7 +51,7 @@ function register_server_del(){
 
 function register_server_save(){
     $('#btn_server_save').click(function() {
-        var id = $('#input_id').attr('_id');
+        var id = $('#input_id').val();
         var name = $('#input_name').val();
         var url = $('#input_url').val();
         var version = $('#input_version').val();

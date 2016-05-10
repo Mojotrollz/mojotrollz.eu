@@ -1,5 +1,5 @@
 CREATE TABLE `mojotrollz_downloads` (
-	`ID` INT(11) NOT NULL,
+	`id` INT(11) NOT NULL,
 	`link` TEXT NOT NULL,
 	`img` TEXT NOT NULL,
 	`text` TEXT NOT NULL,

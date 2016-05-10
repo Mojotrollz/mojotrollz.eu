@@ -5,11 +5,9 @@ class default_start extends \SYSTEM\PAGE\Page {
         
     private static function downloads(){
         $result = '';
-        
         $res = \SQL\MOJOTROLLZ_DOWNLOADS::QQ();
         while($row = $res->next()){
-            $result .= \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_start/tpl/mojotrollz_download.tpl'))->SERVERPATH(),$row);
-        }
+            $result .= \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_start/tpl/mojotrollz_download.tpl'))->SERVERPATH(),$row);}
         return $result;
     }
     
