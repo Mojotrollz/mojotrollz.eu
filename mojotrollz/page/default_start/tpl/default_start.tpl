@@ -2,45 +2,12 @@
     <div class="mojotrollz_col_content" style="padding-bottom: 0px;">
         ${mojotrollz_client_text}
     </div>
-    <div class="col-md-3 mojotrollz_download">
-        <a href="${link_wow_1_12_1}">
-            <div class="mojotrollz_download_text">
-                <img class="mojotrollz_download_img" data-pyroimage="true" src="./api.php?call=files&amp;cat=content&amp;id=wow_1_12_1.png" alt="Windows" height="44" width="44"/>
-                <div><a href="${link_wow_1_12_1}">${mojotrollz_wow_1_12_1}</a></div>
-                <div class="mojotrollz_download_subtext">${mojotrollz_download_qbittorrent}</div>
-            </div>
-        </a>
-    </div>
-    <div class="col-md-3 mojotrollz_download">
-        <a href="${link_wow_2_4_3}">
-            <div class="mojotrollz_download_text">
-                <img class="mojotrollz_download_img" data-pyroimage="true" src="./api.php?call=files&amp;cat=content&amp;id=wow_2_4_3.png" alt="Windows" height="44" width="44"/>
-                <div><a href="${link_wow_2_4_3}">${mojotrollz_wow_2_4_3}</a></div>
-                <div class="mojotrollz_download_subtext">${mojotrollz_download_qbittorrent}</div>
-            </div>
-        </a>
-    </div>
-    <div class="col-md-3 mojotrollz_download">
-        <a href="${link_wow_3_3_5a}">
-            <div class="mojotrollz_download_text">
-                <img class="mojotrollz_download_img" data-pyroimage="true" src="./api.php?call=files&amp;cat=content&amp;id=wow_3_3_5a.png" alt="Windows" height="44" width="44"/>
-                <div><a href="${link_wow_3_3_5a}">${mojotrollz_wow_3_3_5a}</a></div>
-                <div class="mojotrollz_download_subtext">${mojotrollz_download_qbittorrent}</div>
-            </div>
-        </a>
-    </div>
-    <div class="col-md-3 mojotrollz_download">
-        <a href="${link_ts3}">
-            <div class="mojotrollz_download_text">
-                <img class="mojotrollz_download_img" data-pyroimage="true" src="./api.php?call=files&amp;cat=content&amp;id=ts.png" alt="Windows" height="44" width="44"/>
-                <div><a href="${link_ts3}">${mojotrollz_teamspeak3}</a></div>
-                <div class="mojotrollz_download_subtext">${mojotrollz_connect_ts}</div>
-            </div>
-        </a>
+    <div class="row mojotrollz_col_content" style="padding-bottom: 0px;">
+        ${mojotrollz_downloads}
     </div>
 </div>
 <div id="content_teamspeak">
-    <div style="padding-top: 25px;" class="col-md-9">
+    <div class="col-md-9">
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- mojotrollz -->
         <ins class="adsbygoogle"

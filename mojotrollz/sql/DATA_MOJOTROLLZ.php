@@ -9,6 +9,8 @@ class DATA_MOJOTROLLZ extends \SYSTEM\DB\QI {
                         (new \PSQL('/mysql/system_cron.sql'))->SERVERPATH(),
                         (new \PSQL('/mysql/schema_mojotrollz_server.sql'))->SERVERPATH(),
                         (new \PSQL('/mysql/schema_mojotrollz_vote.sql'))->SERVERPATH(),
-                        (new \PSQL('/mysql/schema_mojotrollz_addon.sql'))->SERVERPATH());
+                        (new \PSQL('/mysql/schema_mojotrollz_addon.sql'))->SERVERPATH(),
+                        (new \PSQL('/mysql/schema_mojotrollz_downloads.sql'))->SERVERPATH(),
+                        (new \PSQL('/mysql/mojotrollz_downloads.sql'))->SERVERPATH());
     }    
 }

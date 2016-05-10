@@ -2,6 +2,16 @@
 class default_start extends \SYSTEM\PAGE\Page {
     public static function js(){
         return array(new PPAGE('default_start/js/default_start.js'));}
+        
+    private static function downloads(){
+        $result = '';
+        
+        $res = \SQL\MOJOTROLLZ_DOWNLOADS::QQ();
+        while($row = $res->next()){
+            $result .= \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_start/tpl/mojotrollz_download.tpl'))->SERVERPATH(),$row);
+        }
+        return $result;
+    }
     
     public function html(){
         $vars = array();
@@ -12,6 +22,7 @@ class default_start extends \SYSTEM\PAGE\Page {
         \LIB\lib_ts3::php();
         $ts3 = TeamSpeak3::factory("serverquery://mojotrollztsquery:9aYllYkG@127.0.0.1:10011/");
         $vars['ts_players'] = $ts3->serverGetByPort(9987)->clientCount();
+        $vars['mojotrollz_downloads'] = self::downloads();
         
         /*$vars['addon_list'] = '';
         $res = \SQL\MOJOTROLLZ_ADDON_LIST::QQ();
