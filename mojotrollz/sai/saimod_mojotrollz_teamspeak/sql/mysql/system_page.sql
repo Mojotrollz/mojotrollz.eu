@@ -1,0 +1,1 @@
+REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (550, 42, 'mojotrollz_teamspeak', 'mojotrollz_teamspeak', -1, 0, 0, '#content', './sai.php?sai_mod=.SAI.saimod_mojotrollz_teamspeak', 'init_saimod_mojotrollz_teamspeak', '\\SAI\\saimod_mojotrollz_teamspeak');

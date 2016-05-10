@@ -1,12 +1,8 @@
 function init_saimod_mojotrollz_server(){
     {
-        load_visualisation_mojotrollz_server('vis_ts', 'stats_ts', '#filter_vis_ts', 'Players on Teamspeak', 900,400);
         load_visualisation_mojotrollz_server('vis_tbc', 'stats_tbc', '#filter_vis_tbc', 'Players on WoW-TBC', 400,250);
         load_visualisation_mojotrollz_server('vis_classic', 'stats_classic', '#filter_vis_classic', 'Players on WoW-Classic', 400,250);
         
-        $('#filter_vis_ts').on('change',function(){
-            load_visualisation_mojotrollz_server('vis_ts', 'stats_ts', '#filter_vis_ts', 'Players on Teamspeak', 900,400);
-        })
         $('#filter_vis_tbc').on('change',function(){
             load_visualisation_mojotrollz_server('vis_tbc', 'stats_tbc', '#filter_vis_tbc', 'Players on WoW-TBC', 400,250);
         })

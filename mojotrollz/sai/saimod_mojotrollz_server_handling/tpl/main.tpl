@@ -3,29 +3,6 @@
     <div class="panel-body">
         <button id="btn_update" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Update</button>
         <button id="btn_changes" class="btn-warning btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Find Changes</button>
-        <br>
-        <br>
-        <div id="vis_ts"></div>
-        <select id="filter_vis_ts">
-                <option value="2692000">30d</option>
-                <option value="1209600">14d</option>
-                <option value="604800">7d</option>
-                <option value="172800">2d</option>
-                <option value="86400">1d</option>
-                <option value="43200">12h</option>
-                <option value="21600">6h</option>
-                <option value="14400">4h</option>
-                <option value="7200">2h</option>
-                <option value="3600">1h</option>
-                <option value="1800">30m</option>
-                <option value="600" selected>10m</option>
-                <option value="300">5m</option>
-                <option value="60">1m</option>
-                <option value="30">30s</option>
-                <option value="10">10s</option>
-                <option value="5">5s</option>
-                <option value="1">1s</option>
-        </select>
     </div>
 </div>
 <div class="row">
