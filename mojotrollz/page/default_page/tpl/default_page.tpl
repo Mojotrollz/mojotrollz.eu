@@ -91,7 +91,7 @@
                         <!--<a href="#content_addons">${mojotrollz_addons}</a><br><br>-->
                     </div>
                     <div class="col-md-4">
-                        <a href="#!login">${mojotrollz_login}</a><br><br>
+                        <a href="#!login"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp; ${mojotrollz_login}</a><br><br>
                         <!--<a href="#!login(register)">REGISTER</a><br><br>
                         <a href="#!guild">GUILD PAGES</a><br><br>
                         <a href="#!gshirt">GUILD SHIRTS</a><br><br>-->
