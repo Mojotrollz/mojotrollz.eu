@@ -8,3 +8,5 @@ REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`
 REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (25, 1, 'beta', 'beta', -1, 0, 0, '#content', './?page=beta&key=${key}', 'init_beta', 'default_beta');
 
 REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (30, 1, 'article', 'article', -1, 0, 0, '#content', './?page=article&id=${article}', 'init_article', 'default_article');
+
+REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (35, 1, 'donate', 'donate', -1, 0, 0, '#content', './?page=donate', 'init_donate', 'default_donate');

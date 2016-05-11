@@ -56,6 +56,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="ontop"><a href="${link_facebook}" target="_blank"><i class="fa fa-facebook fa-lg"></i></a></li>
                         <li class="ontop"><a href="${link_youtube}" target="_blank"><i class="fa fa-youtube fa-lg"></i></a></li>
+                        <li class="ontop"><a href="#!donate"><i class="fa fa-usd fa-lg"></i></a></li>
                         <li class="ontop"><a href="#!login"><i class="glyphicon glyphicon-user"></i></a></li>
                     </ul>
                 </div>
@@ -94,8 +95,9 @@
                         <!--<a href="#!login(register)">REGISTER</a><br><br>
                         <a href="#!guild">GUILD PAGES</a><br><br>
                         <a href="#!gshirt">GUILD SHIRTS</a><br><br>-->
-                        <a href="${link_facebook}" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>&nbsp;&nbsp;
-                        <a href="${link_youtube}" target="_blank"><i class="fa fa-youtube fa-lg"></i></a>
+                        <a href="${link_facebook}" target="_blank"><i class="fa fa-facebook fa-lg"></i>&nbsp;&nbsp; Facebook</a><br><br>
+                        <a href="${link_youtube}" target="_blank"><i class="fa fa-youtube fa-lg"></i>&nbsp;&nbsp; Youtube</a><br><br>
+                        <a href="#!donate"><i class="fa fa-usd fa-lg"></i>&nbsp;&nbsp; Donate</a>
                     </div>
                     <div class="col-md-4">
                         <a href="#!impressum">${mojotrollz_impressum}</a><br><br>
