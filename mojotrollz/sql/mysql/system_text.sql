@@ -30,7 +30,7 @@ REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('basic_password_long', 'moj
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('basic_password_miss', 'mojotrollz');
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('basic_password_match', 'mojotrollz');
 
-REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('link_facebook', 'enUS', 'https://www.facebook.com/pages/Mojo-WoW/204351992944865', 10, 10, '2015-09-17 23:16:50', '2015-09-17 23:16:50');
+REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('link_facebook', 'enUS', 'https://www.facebook.com/mojotrollz/', 10, 10, '2015-09-17 23:16:50', '2015-09-17 23:16:50');
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('link_facebook', 'link');
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('link_facebook', 'mojotrollz');
 REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('link_slingit', 'enUS', 'http://www.slingit.org', 10, 10, '2015-09-17 23:18:39', '2015-09-17 23:18:39');
