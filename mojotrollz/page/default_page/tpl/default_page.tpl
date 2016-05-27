@@ -3,10 +3,10 @@
      <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="${meta_description}">
-        <meta name="author" content="${meta_author}">
-        <meta name="keywords" content="${meta_keywords}">
-        <title>${meta_title}</title>
+        <meta name="description" content="${meta_start_description}">
+        <meta name="author" content="${meta_start_author}">
+        <meta name="keywords" content="${meta_start_keywords}">
+        <title>${title_start}</title>
         <meta name="fragment" content="!">
         <link rel="icon" href="./api.php?call=files&amp;cat=content&amp;id=favicon.ico" type="image/x-icon"/>
         <style type="text/css">
