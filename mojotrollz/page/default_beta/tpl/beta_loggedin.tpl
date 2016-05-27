@@ -3,6 +3,13 @@
     <div class="panel-body">
         You are logged in as <b>${email}</b><br>
         Your Website Account-Name is: <b>${username}</b>
+        <br><br>
+        <h4>Mojotrollz 2.4.3 TBC Progressive</h4>
+        <p>
+            <b>Realmlist: </b><a href="./api.php?call=files&cat=server&id=realmlist.wtf" target="blank">set realmlist mojotrollz.eu</a>
+            <br>
+            <b>Client: </b><a href="${link_wow_2_4_3}" target="blank">${mojotrollz_wow_2_4_3}</a>
+        </p>
     </div>
 </div>
 <div class="panel panel-default">

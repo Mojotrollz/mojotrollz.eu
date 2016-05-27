@@ -22,12 +22,15 @@ class page_mojotrollz extends \SYSTEM\API\api_default {
     public static function page_serverlist(){
         return (new default_serverlist())->html();}
     
-    public static function page_beta($key=null){
-        return (new default_beta($key))->html();}
+    public static function page_beta(/*$key=null*/){
+        return (new default_beta(/*$key*/))->html();}
         
     public static function page_article($id){
         return (new default_article($id))->html();}
     
     public static function page_donate(){
         return (new default_donate())->html();}
+        
+    public static function page_register(){
+        return (new default_register())->html();}
 }

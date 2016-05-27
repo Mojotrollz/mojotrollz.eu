@@ -8,3 +8,4 @@ require_once dirname(__FILE__).'/default_serverlist/autoload.inc';
 require_once dirname(__FILE__).'/default_beta/autoload.inc';
 require_once dirname(__FILE__).'/default_article/autoload.inc';
 require_once dirname(__FILE__).'/default_donate/autoload.inc';
+require_once dirname(__FILE__).'/default_register/autoload.inc';

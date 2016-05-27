@@ -1,11 +1,9 @@
 <?php
 class default_login extends \SYSTEM\PAGE\Page {
     public static function title(){
-        return 'Mojotrollz - Login';}
-    //public static function meta(){
-    //    return array('keywords' => 'abc',
-    //                 'description' => 'cde');
-    //}
+        return \SYSTEM\PAGE\text::get('title_login');}
+    public static function meta(){
+        return \SYSTEM\PAGE\text::tag('meta_login');}
     public static function js(){
         return array(new \PPAGE('default_login/js/default_login.js'));}
     public function html(){

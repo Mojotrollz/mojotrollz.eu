@@ -1,7 +1,6 @@
 <div class="row-fluid">
-    <div class="col-md-12 mojotrollz_col mojotrollz_col_content">
+    <div class="col-md-12">
         <h2>Mojotrollz Beta Register Form</h2>
-        <p class="label label-success">Your Beta Key is: <b>${key}</b></p>
         <br><br>
         <form class="textbox" id="register_user_form">
             <div class="control-group" id="register_username_control_group">
@@ -73,5 +72,6 @@
                 <button class="btn-sm btn-primary" type="submit"><i class="icon-ok icon-white"></i> ${basic_register}</button>
             </div>
         </form>
+        <br>
     </div>
 </div>

@@ -1,8 +1,11 @@
 <?php
 class default_start extends \SYSTEM\PAGE\Page {
+    public static function title(){
+        return \SYSTEM\PAGE\text::get('title_start');}
+    public static function meta(){
+        return \SYSTEM\PAGE\text::tag('meta_start');}
     public static function js(){
         return array(new PPAGE('default_start/js/default_start.js'));}
-        
     private static function downloads(){
         $result = '';
         $res = \SQL\MOJOTROLLZ_DOWNLOADS::QQ();

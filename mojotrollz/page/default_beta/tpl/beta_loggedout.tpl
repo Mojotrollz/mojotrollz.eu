@@ -1,8 +1,15 @@
 <div class="panel panel-success">
-    <div class="panel-heading"><h4>Join the Beta Here</h4></div>
+    <div class="panel-heading"><h4>Public Beta</h4></div>
     <div class="panel-body">
-        <input id="input_beta_key" type="text" maxlength="6" placeholder="Enter Your Beta Key" style="width: 95%;"/>
+        <!--<input id="input_beta_key" type="text" maxlength="6" placeholder="Enter Your Beta Key" style="width: 95%;"/>
         <br><br>
+        <button id="btn_beta" class="btn btn-success btn-lg" style="width: 95%;">Join the Mojotribe</button>-->
+        <h4>Mojotrollz 2.4.3 TBC Progressive</h4>
+        <p>
+            <b>Realmlist: </b><a href="./api.php?call=files&cat=server&id=realmlist.wtf" target="blank">set realmlist mojotrollz.eu</a>
+            <br>
+            <b>Client: </b><a href="${link_wow_2_4_3}" target="blank">${mojotrollz_wow_2_4_3}</a>
+        </p>
         <button id="btn_beta" class="btn btn-success btn-lg" style="width: 95%;">Join the Mojotribe</button>
     </div>
 </div>
