@@ -11,14 +11,14 @@
                     <div class="tab-pane active" id="tab_stats">
                         <div id="vis_ts"></div>
                         <select id="filter_vis_ts" db="${db}">
-                                <option value="86400">1d</option>
+                                <option value="86400" selected>1d</option>
                                 <option value="43200">12h</option>
                                 <option value="21600">6h</option>
                                 <option value="14400">4h</option>
                                 <option value="7200">2h</option>
                                 <option value="3600">1h</option>
                                 <option value="1800">30m</option>
-                                <option value="600" selected>10m</option>
+                                <option value="600">10m</option>
                         </select>
                     </div>
                 </div>      

@@ -16,9 +16,9 @@
     <div class="panel-body">
         <form class="textbox" style="padding:10px" id="logout_form">
             <div class="control-group">
-                <div class="help-block"></div>
                 <input type="hidden" />
-                <button class="btn-sm btn btn-primary" style="width: 95%;" type="submit" id="logout_submit"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> ${basic_logout}</button>
+                <button class="btn-sm btn btn-primary" style="width: 100%;" type="submit" id="logout_submit"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> ${basic_logout}</button>
+                <div class="help-block"></div>
             </div>
         </form>
     </div>

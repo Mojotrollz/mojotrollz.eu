@@ -10,7 +10,7 @@
             <br>
             <b>Client: </b><a href="${link_wow_2_4_3}">${mojotrollz_wow_2_4_3}</a>
         </p>
-        <button id="btn_beta" class="btn btn-success btn-lg" style="width: 95%;">Join the Mojotribe</button>
+        <button id="btn_beta" class="btn btn-success btn-lg" style="width: 100%;">Join the Mojotribe</button>
     </div>
 </div>
 <div class="panel panel-default">
@@ -21,7 +21,7 @@
                 <div class="controls">
                     <input  type="text"
                             size="30"
-                            style="margin-bottom: 15px; width: 95%;"
+                            style="margin-bottom: 15px; width: 100%;"
                             id="bt_login_user"
                             placeholder="${basic_placeholder_username}"
                             minlength="3" data-validation-minlength-message="${sai_error_username_short}"
@@ -31,15 +31,15 @@
                 <div class="controls">
                     <input  type="password"
                             size="30"
-                            style="margin-bottom: 15px; width: 95%;"
+                            style="margin-bottom: 15px; width: 100%;"
                             id="bt_login_password"
                             placeholder="${basic_placeholder_password}"
                             minlength="5" data-validation-minlength-message="${sai_error_password_short}"
                             maxlength="16" data-validation-maxlength-message="${sai_error_password_long}"
                             required data-validation-required-message="${sai_error_password_miss}"/>
                 </div>        
+                <button class="btn-sm btn btn-primary" style="width: 100%;" type="submit" id="login_submit"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> ${basic_login}</button>
                 <div class="help-block"></div>
-                <button class="btn-sm btn btn-primary" style="width: 95%;" type="submit" id="login_submit"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> ${basic_login}</button>
             </div>
         </form>
     </div>
