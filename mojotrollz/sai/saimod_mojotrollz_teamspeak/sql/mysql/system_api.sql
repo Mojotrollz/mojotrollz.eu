@@ -1,2 +1,4 @@
 REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5500, 42, 0, 0, '_SAI_saimod_mojotrollz_teamspeak', 'action', NULL);
-REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5501, 42, 3, 5500, NULL, 'filter', 'INT');
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5501, 42, 3, 5500, 'stats', 'filter', 'INT');
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5502, 42, 3, 5500, 'stats', 'db', 'STRING');
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5503, 42, 3, 0, '_SAI_saimod_mojotrollz_teamspeak', 'db', 'STRING');
