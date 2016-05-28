@@ -7,7 +7,9 @@ class default_register extends \SYSTEM\PAGE\Page {
     public function html(){
         $vars = array();
         $vars = array_merge($vars,\SYSTEM\PAGE\text::tag('mojotrollz'));
-        return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_register/tpl/default_register.tpl'))->SERVERPATH(), $vars);
+        return \SYSTEM\PAGE\replace::replaceFile(   \SYSTEM\SECURITY\Security::isLoggedIn() ?
+                                                    (new PPAGE('default_register/tpl/register_loggedin.tpl'))->SERVERPATH() :
+                                                    (new PPAGE('default_register/tpl/default_register.tpl'))->SERVERPATH(), $vars);
     }
     public static function js(){
         return array(   new PPAGE('default_register/js/default_register.js'),

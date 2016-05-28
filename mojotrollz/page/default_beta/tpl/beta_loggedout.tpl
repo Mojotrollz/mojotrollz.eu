@@ -8,7 +8,7 @@
         <p>
             <b>Realmlist: </b><a href="./api.php?call=files&cat=server&id=realmlist.wtf" target="blank">set realmlist mojotrollz.eu</a>
             <br>
-            <b>Client: </b><a href="${link_wow_2_4_3}" target="blank">${mojotrollz_wow_2_4_3}</a>
+            <b>Client: </b><a href="${link_wow_2_4_3}">${mojotrollz_wow_2_4_3}</a>
         </p>
         <button id="btn_beta" class="btn btn-success btn-lg" style="width: 95%;">Join the Mojotribe</button>
     </div>

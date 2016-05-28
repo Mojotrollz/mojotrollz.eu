@@ -20,7 +20,7 @@ function init_register(){
                     data: register_data,
                     success: function (data) {
                         if(data.status){ // reload -> user will be loged in
-                            location.reload();
+                            system.load('beta');
                         }else{  // show errors
                             $('.help-block').html(data.result.message);
                         }

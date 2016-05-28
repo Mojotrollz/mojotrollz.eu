@@ -1,6 +1,6 @@
 <div class="row-fluid">
     <div class="col-md-12">
-        <h2>Mojotrollz Beta Register Form</h2>
+        <h2>Mojotrollz Beta - Register Form</h2>
         <br><br>
         <form class="textbox" id="register_user_form">
             <div class="control-group" id="register_username_control_group">
