@@ -8,8 +8,16 @@ class default_login extends \SYSTEM\PAGE\Page {
         return array(new \PPAGE('default_login/js/default_login.js'));}
     public function html(){
         $vars = \SYSTEM\PAGE\text::tag('mojotrollz');
-        return \SYSTEM\SECURITY\Security::isLoggedIn() ? 
-                \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_login/tpl/loggedin.tpl'))->SERVERPATH(), array_merge($vars,array('email' => \SYSTEM\SECURITY\Security::getUser()->email,'username' => \SYSTEM\SECURITY\Security::getUser()->username)))
-                : \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_login/tpl/loggedout.tpl'))->SERVERPATH(), $vars);
+        if(!\SYSTEM\SECURITY\Security::isLoggedIn()){
+            return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_login/tpl/loggedout.tpl'))->SERVERPATH(), $vars);}
+        
+        $vars['email'] = \SYSTEM\SECURITY\Security::getUser()->email;
+        $vars['username'] = \SYSTEM\SECURITY\Security::getUser()->username;
+        
+        $res = \SQL\MOJO_ACCOUNT_MAIN_ACCOUNT::Q1(array($vars['username'],$vars['email']));
+        $res['online'] = $res['online'] == 1 ? 'online' : 'offline';
+        $vars['wow_accounts'] = \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_login/tpl/wow_account.tpl'))->SERVERPATH(), $res);
+            
+        return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_login/tpl/loggedin.tpl'))->SERVERPATH(), $vars);
     }
 }

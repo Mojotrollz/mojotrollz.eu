@@ -13,6 +13,17 @@
     </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h4>WoW Account</h4></div>
+    <div class="panel-body">
+        <div class="row-fluid">
+            <div class="col-md-6"><b>Username</b></div>
+            <div class="col-md-3"><b>Chars</b></div>
+            <div class="col-md-3"><b>Online</b></div>
+        </div>
+        ${wow_accounts}
+    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-body">
         <form class="textbox" style="padding:10px" id="logout_form">
             <div class="control-group">

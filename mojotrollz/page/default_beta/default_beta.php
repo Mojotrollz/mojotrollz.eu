@@ -6,9 +6,16 @@ class default_beta extends \SYSTEM\PAGE\Page {
         return \SYSTEM\PAGE\text::tag('meta_beta');}
     public function html(){
         $vars = array();
-        $vars['beta_area'] =    \SYSTEM\SECURITY\Security::isLoggedIn() ?
-                                \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_beta/tpl/beta_loggedin.tpl'))->SERVERPATH(), array('email' => \SYSTEM\SECURITY\Security::getUser()->email,'username' => \SYSTEM\SECURITY\Security::getUser()->username)) :
-                                \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_beta/tpl/beta_loggedout.tpl'))->SERVERPATH());
+        if(\SYSTEM\SECURITY\Security::isLoggedIn()){
+            $vars['email'] = \SYSTEM\SECURITY\Security::getUser()->email;
+            $vars['username'] = \SYSTEM\SECURITY\Security::getUser()->username;
+            
+            $res = \SQL\MOJO_ACCOUNT_MAIN_ACCOUNT::Q1(array($vars['username'],$vars['email']));
+            $res['online'] = $res['online'] == 1 ? 'online' : 'offline';
+            $vars['wow_accounts'] = \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_login/tpl/wow_account.tpl'))->SERVERPATH(), $res);
+            $vars['beta_area'] = \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_beta/tpl/beta_loggedin.tpl'))->SERVERPATH(), $vars);
+        } else {
+            $vars['beta_area'] = \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_beta/tpl/beta_loggedout.tpl'))->SERVERPATH());}
         $vars = array_merge($vars,\SYSTEM\PAGE\text::tag('mojotrollz'));
         return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_beta/tpl/beta.tpl'))->SERVERPATH(), $vars);
     }
