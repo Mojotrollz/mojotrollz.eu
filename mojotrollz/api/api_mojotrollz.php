@@ -12,8 +12,8 @@ class api_mojotrollz extends \SYSTEM\API\api_system {
     }
     
     public static function call_mojo_action_register($username, $password, $email, $wowpassword){
-        if(!\SYSTEM\SECURITY\Security::available($username) || !self::wow_username_available($username)){
-            throw new \SYSTEM\LOG\ERROR('Username is not available.');}
+        if(!\SYSTEM\SECURITY\Security::available($username,$email) || !self::wow_username_available($username)){
+            throw new \SYSTEM\LOG\ERROR('EMail is already in use or Username is not available.');}
         
         if( !\SYSTEM\SECURITY\Security::create($username, $password, $email, \SYSTEM\CONFIG\config::get(\SYSTEM\CONFIG\config_ids::SYS_CONFIG_DEFAULT_LANG)) ||
             !self::wow_account_register($username,$email,$wowpassword)){
