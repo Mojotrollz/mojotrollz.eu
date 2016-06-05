@@ -16,7 +16,7 @@ class saimod_mojotrollz_beta extends \SYSTEM\SAI\SaiModule {
         
         if($generate){
             $vars['beta_code'] = \substr(\sha1(\rand(1, 99999)), 1, 6);
-            if(!\SQL\BETA_INSERT_CODE::QI(array($vars['beta_code'], \SYSTEM\SECURITY\Security::getUser()->id))){
+            if(!\SQL\BETA_INSERT_CODE::QI(array($vars['beta_code'], \SYSTEM\SECURITY\security::getUser()->id))){
                 $vars['beta_code'] = 'generate code failed. Retry!';}
         }
         
@@ -30,7 +30,7 @@ class saimod_mojotrollz_beta extends \SYSTEM\SAI\SaiModule {
     
     public static function html_li_menu(){return '<li class=""><a data-toggle="tooltip" data-placement="left" title="Mojotrollz Beta Codes" href="#!mojotrollz_beta"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;Beta</a></li>';}
     public static function right_public(){return false;}    
-    public static function right_right(){return \SYSTEM\SECURITY\Security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
+    public static function right_right(){return \SYSTEM\SECURITY\security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
     public static function js(){return array(new \PSAI('saimod_mojotrollz_beta/js/saimod_mojotrollz_beta.js'));}        
     //public static function css(){return array();}
 }

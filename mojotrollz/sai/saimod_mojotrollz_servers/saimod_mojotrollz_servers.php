@@ -17,7 +17,7 @@ class saimod_mojotrollz_servers extends \SYSTEM\SAI\SaiModule {
         return \SYSTEM\PAGE\replace::replaceFile((new \PSAI('saimod_mojotrollz_servers/tpl/saimod_mojotrollz_servers.tpl'))->SERVERPATH(),$vars);}
     public static function html_li_menu(){return '<li class=""><a data-toggle="tooltip" data-placement="left" title="Vote Servers" href="#!mojotrollz_servers"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp;&nbsp;Vote Servers</a></li>';}
     public static function right_public(){return false;}    
-    public static function right_right(){return \SYSTEM\SECURITY\Security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
+    public static function right_right(){return \SYSTEM\SECURITY\security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
     
     public static function sai_mod__SAI_saimod_mojotrollz_servers_action_visible($id,$visible){
         \SQL\SAIMOD_MOJOTROLLZ_VISIBLE::QI(array($visible, $id));

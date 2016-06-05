@@ -6,9 +6,9 @@ class default_beta extends \SYSTEM\PAGE\Page {
         return \SYSTEM\PAGE\text::tag('meta_beta');}
     public function html(){
         $vars = array();
-        if(\SYSTEM\SECURITY\Security::isLoggedIn()){
-            $vars['email'] = \SYSTEM\SECURITY\Security::getUser()->email;
-            $vars['username'] = \SYSTEM\SECURITY\Security::getUser()->username;
+        if(\SYSTEM\SECURITY\security::isLoggedIn()){
+            $vars['email'] = \SYSTEM\SECURITY\security::getUser()->email;
+            $vars['username'] = \SYSTEM\SECURITY\security::getUser()->username;
             
             $res = \SQL\MOJO_ACCOUNT_MAIN_ACCOUNT::Q1(array($vars['username'],$vars['email']));
             $res['online'] = $res['online'] == 1 ? 'online' : 'offline';

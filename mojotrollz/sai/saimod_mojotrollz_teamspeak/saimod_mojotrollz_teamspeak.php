@@ -14,7 +14,7 @@ class saimod_mojotrollz_teamspeak extends \SYSTEM\SAI\SaiModule {
         return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/main.tpl', $vars);}            
     public static function html_li_menu(){return '<li class=""><a data-toggle="tooltip" data-placement="left" title="Mojotrollz Teamspeak" href="#!mojotrollz_teamspeak"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>&nbsp;&nbsp;Teamspeak</a></li>';}
     public static function right_public(){return false;}    
-    public static function right_right(){return \SYSTEM\SECURITY\Security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
+    public static function right_right(){return \SYSTEM\SECURITY\security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
     public static function js(){return array(new \PSAI('saimod_mojotrollz_teamspeak/js/saimod_mojotrollz_teamspeak.js'));}
     //public static function css(){}
 

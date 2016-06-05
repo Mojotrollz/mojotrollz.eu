@@ -6,18 +6,17 @@ function init_register(){
         submitSuccess: function($form, event){    
                 var username = $('#register_username').val();
                 var password = $('#user_register_password2').val();
-                var register_data = {
-                    call: 'mojo',
-                    action: 'register',
-                    username: username,
-                    password: $.sha1(password),
-                    email: $('#register_email').val(),
-                    wowpassword: $.sha1(username.toUpperCase()+':'+password.toUpperCase()),
-                }
                 $.ajax({
                     dataType: "json",
                     url: './api.php',
-                    data: register_data,
+                    data: {
+                        call: 'account',
+                        action: 'create',
+                        username: username,
+                        password_sha1: $.sha1(password),
+                        email: $('#register_email').val(),
+                        wow_password: $.sha1(username.toUpperCase()+':'+password.toUpperCase()),
+                    },
                     success: function (data) {
                         if(data.status){ // reload -> user will be loged in
                             system.load('beta');
@@ -26,7 +25,6 @@ function init_register(){
                         }
                     }
                 });
-
                 event.preventDefault();
         }
     });

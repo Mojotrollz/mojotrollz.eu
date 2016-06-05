@@ -40,40 +40,34 @@
                                    </td>
                                 </tr>
                                 <tr>
-                                   <th>${basic_password}</th>
+                                   <th style="vertical-align: top; padding-top: 7px;">${basic_password}</th>
                                    <td>
-                                        <div class="control-group" id="user_password">
+                                        <div class="control-group" id="change_user_password">
+                                            <div class="control-group controls" style="clear: both">
+                                                <input  type="password"
+                                                        size="35"
+                                                        style="margin-bottom: 15px; float: left;"
+                                                        id="user_register_password1"
+                                                        name="user_register_password1"
+                                                        placeholder="${basic_placeholder_password}"
+                                                        minlength="5"
+                                                        data-validation-minlength-message="${basic_password_short}"
+                                                        required data-validation-required-message="${basic_password_miss}"/>
+                                                <br/>
+                                            </div>
                                               <div class="control-group controls" style="clear: both">
-                                                  <input  type="password"
-                                                          size="35"
-                                                          style="margin-bottom: 15px; float: left;"
-                                                          id="user_register_password1"
-                                                          name="user_register_password1"
-                                                          placeholder="${basic_placeholder_password}"
-                                                          minlength="5" data-validation-minlength-message="${basic_password_short}"
-                                                          required data-validation-required-message="${basic_password_miss}"/>
-                                                  <br/>
-                                              </div>
-                                         </div>
+                                                 <input  type="password"
+                                                         size="35"
+                                                         style="margin-bottom: 15px; float: left;"
+                                                         id="user_register_password2"
+                                                         name="user_register_password2"
+                                                         placeholder="${basic_placeholder_password}"
+                                                         data-validation-matches-match="user_register_password1"
+                                                         data-validation-matches-message="${basic_password_match}"/>
+                                                 <br/>
+                                             </div>
+                                        </div>
                                    </td>
-                                </tr>
-                                <tr>
-                                    <th></th>
-                                    <td>
-                                         <div class="control-group" id="user_password2">
-                                               <div class="control-group controls" style="clear: both">
-                                                   <input  type="password"
-                                                           size="35"
-                                                           style="margin-bottom: 15px; float: left;"
-                                                           id="user_register_password2"
-                                                           name="user_register_password2"
-                                                           placeholder="${basic_placeholder_password}"
-                                                           data-validation-matches-match="user_register_password1"
-                                                           data-validation-matches-message="${basic_password_miss}"/>
-                                                   <br/>
-                                               </div>
-                                          </div>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th>

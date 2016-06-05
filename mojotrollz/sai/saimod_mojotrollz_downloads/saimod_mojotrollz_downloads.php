@@ -14,7 +14,7 @@ class saimod_mojotrollz_downloads extends \SYSTEM\SAI\SaiModule {
         return \SYSTEM\PAGE\replace::replaceFile((new \PSAI('saimod_mojotrollz_downloads/tpl/saimod_mojotrollz_downloads.tpl'))->SERVERPATH(),$vars);}
     public static function html_li_menu(){return '<li class=""><a data-toggle="tooltip" data-placement="left" title="Mojotrollz Downloads" href="#!mojotrollz_downloads"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>&nbsp;&nbsp;Downloads</a></li>';}
     public static function right_public(){return false;}    
-    public static function right_right(){return \SYSTEM\SECURITY\Security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
+    public static function right_right(){return \SYSTEM\SECURITY\security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
     
     public static function sai_mod__SAI_saimod_mojotrollz_downloads_action_save($id,$link,$img,$text,$subtext){
         \SQL\SAIMOD_MOJOTROLLZ_DOWNLOADS_SAVE::QI(array($id,$link,$img,$text,$subtext));

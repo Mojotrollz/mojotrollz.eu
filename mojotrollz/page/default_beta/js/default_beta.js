@@ -7,12 +7,12 @@ function init_beta(){
         preventSubmit: true,
         submitError: function($form, event, errors) {},
         submitSuccess: function($form, event){            
-            $.get('./api.php?call=account&action=login&username='+$('#bt_login_user').val()+'&password_sha='+$.sha1($('#bt_login_password').val())+'&password_md5='+$.md5($('#bt_login_password').val()), function (data) {
-                if(data == 1){
+            system.account_login($('#bt_login_user').val(),$('#bt_login_password').val(),function(data){
+                if(data.status){
                     $('.help-block').html("Login successfull.</br>");
                     location.reload(true);
                 } else {
-                    $('.help-block').html("Login not successfull.</br> User & Password combination wrong.")
+                    $('.help-block').html("Login not successfull.</br> User & Password combination wrong.");
                 }
             });
             event.preventDefault();
@@ -23,8 +23,8 @@ function init_beta(){
         preventSubmit: true,
         submitError: function($form, event, errors) {},
         submitSuccess: function($form, event){            
-            $.get('./api.php?call=account&action=logout', function (data) {
-                if(data == 1){
+            system.account_logout(function (data) {
+                if(data.status){
                     $('.help-block').html("Logout successfull.</br>");
                     location.reload(true);
                 } else {
