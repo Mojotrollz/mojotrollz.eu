@@ -57,7 +57,7 @@
                         <li class="ontop"><a href="${link_facebook}" target="_blank"><i class="fa fa-facebook fa-lg"></i></a></li>
                         <li class="ontop"><a href="${link_youtube}" target="_blank"><i class="fa fa-youtube fa-lg"></i></a></li>
                         <li class="ontop"><a href="#!donate"><i class="fa fa-usd fa-lg"></i></a></li>
-                        <li class="ontop"><a href="#!login"><i class="glyphicon glyphicon-user"></i></a></li>
+                        <li class="ontop"><a href="#!account"><i class="glyphicon glyphicon-user"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -91,7 +91,7 @@
                         <!--<a href="#content_addons">${mojotrollz_addons}</a><br><br>-->
                     </div>
                     <div class="col-md-4">
-                        <a href="#!login"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp; ${mojotrollz_login}</a> / <a href="#!register"> REGISTER</a><br><br>
+                        <a href="#!account"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp; ${mojotrollz_login}</a> / <a href="#!register"> REGISTER</a><br><br>
                         <!--<a href="#!guild">GUILD PAGES</a><br><br>
                         <a href="#!gshirt">GUILD SHIRTS</a><br><br>-->
                         <a href="${link_facebook}" target="_blank"><i class="fa fa-facebook fa-lg"></i>&nbsp;&nbsp; FACEBOOK</a><br><br>

@@ -16,8 +16,8 @@ class page_mojotrollz extends \SYSTEM\API\api_default {
     public static function page_start(){
         return (new default_start())->html();}
     
-    public static function page_login(){
-        return (new default_login())->html();}
+    public static function page_account(){
+        return (new default_account())->html();}
     
     public static function page_serverlist(){
         return (new default_serverlist())->html();}

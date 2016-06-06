@@ -5,7 +5,8 @@
             <div class="panel-heading"><h4>Account</h4></div>
             <div class="panel-body">
                 You are logged in as <b>${email}</b><br>
-                Your Website Account-Name is: <b>${username}</b>
+                Your Website Account-Name is: <b>${username}</b><br>
+                ${option_confirm_email}
             </div>
         </div>
     </div>
@@ -21,6 +22,7 @@
                     <div class="col-md-3"><b>Online</b></div>
                 </div>
                 ${wow_accounts}
+                ${wow_accounts_confirm}
             </div>
         </div>
     </div>

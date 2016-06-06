@@ -10,9 +10,12 @@ class default_beta extends \SYSTEM\PAGE\Page {
             $vars['email'] = \SYSTEM\SECURITY\security::getUser()->email;
             $vars['username'] = \SYSTEM\SECURITY\security::getUser()->username;
             
-            $res = \SQL\MOJO_ACCOUNT_MAIN_ACCOUNT::Q1(array($vars['username'],$vars['email']));
-            $res['online'] = $res['online'] == 1 ? 'online' : 'offline';
-            $vars['wow_accounts'] = \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_login/tpl/wow_account.tpl'))->SERVERPATH(), $res);
+            $vars['wow_accounts'] = '';
+            $res = \SYSTEM\SECURITY\security::getUser()->email_confirmed ? \SQL\MOJO_ACCOUNT_ACCOUNTS::QQ(array($vars['email'])) : \SQL\MOJO_ACCOUNT_MAIN_ACCOUNT::QQ(array($vars['username'],$vars['email']));
+            while($row = $res->next()){
+                $row['online'] = $row['online'] == 1 ? 'online' : 'offline';
+                $vars['wow_accounts'] .= \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_login/tpl/wow_account.tpl'))->SERVERPATH(), $row);
+            }
             $vars['beta_area'] = \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_beta/tpl/beta_loggedin.tpl'))->SERVERPATH(), $vars);
         } else {
             $vars['beta_area'] = \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_beta/tpl/beta_loggedout.tpl'))->SERVERPATH());}
