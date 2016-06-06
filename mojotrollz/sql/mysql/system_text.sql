@@ -175,6 +175,31 @@ REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mojotrollz_client_text', '
 REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mojotrollz_servers_text', 'enUS', '<h3>VOTE FOR SERVERS<br></h3><p>Vote for your favorite WoW Private Server here.</p>', 10, 10, '2016-01-04 04:43:52', '2016-01-04 04:43:52');
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mojotrollz_servers_text', 'mojotrollz');
 
+REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mail_change_email', 'enUS', 'Hello ${username}${newline}${newline}follow this link to change your Accounts Email-Address to ${email}${newline}${base_url}api.php?call=account&action=confirm&token=${token}${newline}${newline}Sincerely your Mojotrollz.eu Team', 10, 10, '2016-06-06 03:32:41', '2016-06-06 03:17:53');
+REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mail_change_email_from', 'enUS', 'admin@mojotrollz.eu', 10, 10, '2016-06-06 03:19:53', '2016-06-06 03:19:53');
+REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mail_change_email_replyto', 'enUS', 'admin@mojotrollz.eu', 10, 10, '2016-06-06 03:20:15', '2016-06-06 03:20:15');
+REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mail_change_email_subject', 'enUS', 'Change Email on Mojotrollz.eu', 10, 10, '2016-06-06 03:14:38', '2016-06-06 03:14:38');
+REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mail_confirm_email', 'enUS', 'Hello ${username}${newline}${newline}follow this link to confirm your Email-Address ${email}${newline}${base_url}api.php?call=account&action=confirm&token=${token} ${newline}${newline}Sincerely your Mojotrollz.eu Team', 10, 10, '2016-06-06 01:44:07', '2016-06-06 01:42:58');
+REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mail_confirm_email_from', 'enUS', 'admin@mojotrollz.eu', 10, 10, '2016-06-06 01:12:32', '2016-06-06 01:12:32');
+REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mail_confirm_email_replyto', 'enUS', 'admin@mojotrollz.eu', 10, 10, '2016-06-06 01:12:51', '2016-06-06 01:12:51');
+REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mail_confirm_email_subject', 'enUS', 'Confirm Email on Mojotrollz.eu', 10, 10, '2016-06-06 03:14:18', '2016-06-06 03:14:18');
+REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mail_reset_password', 'enUS', 'Hello ${username}${newline}${newline}follow this link to rest Accounts Password to ${pw}${newline}${base_url}api.php?call=account&action=confirm&token=${token}${newline}${newline}Sincerely your Mojotrollz.eu Team', 10, 10, '2016-06-06 03:32:55', '2016-06-06 03:19:12');
+REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mail_reset_password_from', 'enUS', 'admin@mojotrollz.eu', 10, 10, '2016-06-06 03:21:14', '2016-06-06 03:21:14');
+REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mail_reset_password_replyto', 'enUS', 'admin@mojotrollz.eu', 10, 10, '2016-06-06 03:21:34', '2016-06-06 03:21:34');
+REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mail_reset_password_subject', 'enUS', 'Reset Password on Mojotrollz.eu', 10, 10, '2016-06-06 03:20:53', '2016-06-06 03:20:53');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mail_change_email', 'mail');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mail_change_email_from', 'mail');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mail_change_email_replyto', 'mail');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mail_change_email_subject', 'mail');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mail_confirm_email', 'mail');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mail_confirm_email_from', 'mail');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mail_confirm_email_replyto', 'mail');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mail_confirm_email_subject', 'mail');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mail_reset_password', 'mail');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mail_reset_password_from', 'mail');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mail_reset_password_replyto', 'mail');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mail_reset_password_subject', 'mail');
+
 INSERT INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mojotrollz_donate', 'enUS', '<h1>Donate to Mojotrollz.eu</h1><p><strong>We accept Bitcoin-Donations for Mojotrollz.eu</strong></p><p>Feel free to donate any amount you like us to receive. We will use those Donations to keep the Server Up and running. There is no Reward for donating yet - but you can be assured you have our deepest respect and be considered a Founder. If there will be Rewards for Donating in the Future you previous Donations will give you a special something so everyone can see how generous you are.</p><h3>Why Bitcoin</h3><p>Why Bitcoin you ask? Because its Anonymous. We value your and our Anonymity - therefore Bitcoin!</p>', 10, 10, '2016-05-28 01:05:50', '2016-05-28 01:05:50');
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mojotrollz_donate', 'mojotrollz');
 
