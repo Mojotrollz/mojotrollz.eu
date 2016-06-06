@@ -71,7 +71,7 @@
                                 </tr>
                                 <tr>
                                     <th>
-                                        <p style="float: left;"><a href="#!login">Login an existing Account</a></p>
+                                        <p style="float: left;"><a href="#!account">Login an existing Account</a></p>
                                     </th>
                                    <td>
                                         <p style="float: right; margin-top: 3px;">
