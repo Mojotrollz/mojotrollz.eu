@@ -14,7 +14,7 @@ class default_beta extends \SYSTEM\PAGE\Page {
             $res = \SYSTEM\SECURITY\security::getUser()->email_confirmed ? \SQL\MOJO_ACCOUNT_ACCOUNTS::QQ(array($vars['email'])) : \SQL\MOJO_ACCOUNT_MAIN_ACCOUNT::QQ(array($vars['username'],$vars['email']));
             while($row = $res->next()){
                 $row['online'] = $row['online'] == 1 ? 'online' : 'offline';
-                $vars['wow_accounts'] .= \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_login/tpl/wow_account.tpl'))->SERVERPATH(), $row);
+                $vars['wow_accounts'] .= \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_account/tpl/wow_account.tpl'))->SERVERPATH(), $row);
             }
             $vars['beta_area'] = \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_beta/tpl/beta_loggedin.tpl'))->SERVERPATH(), $vars);
         } else {
