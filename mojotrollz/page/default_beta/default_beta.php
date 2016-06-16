@@ -1,5 +1,5 @@
 <?php
-class default_beta extends \SYSTEM\PAGE\Page {
+class default_beta implements \SYSTEM\PAGE\Page {
     public static function title(){
         return \SYSTEM\PAGE\text::get('title_beta');}
     public static function meta(){
@@ -25,4 +25,6 @@ class default_beta extends \SYSTEM\PAGE\Page {
     public static function js(){
         return array(   new PPAGE('default_beta/js/default_beta.js'),
                         \LIB\lib_jqbootstrapvalidation::js());}
+
+    public static function css() {return array();}
 }

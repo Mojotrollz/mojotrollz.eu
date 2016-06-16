@@ -1,5 +1,5 @@
 <?php
-class cron_players_online_ts extends \SYSTEM\CRON\cronjob{
+class cron_players_online_ts implements \SYSTEM\CRON\cronjob{
     public static function run(){
         \LIB\lib_ts3::php();
         $ts3 = TeamSpeak3::factory("serverquery://mojotrollztsquery:9aYllYkG@127.0.0.1:10011/");

@@ -1,5 +1,5 @@
 <?php
-class default_start extends \SYSTEM\PAGE\Page {
+class default_start implements \SYSTEM\PAGE\Page {
     public static function title(){
         return \SYSTEM\PAGE\text::get('title_start');}
     public static function meta(){
@@ -36,4 +36,6 @@ class default_start extends \SYSTEM\PAGE\Page {
         $vars = array_merge($vars, \SYSTEM\PAGE\text::tag('mojotrollz'));
         return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_start/tpl/default_start.tpl'))->SERVERPATH(), $vars);
     }
+
+    public static function css() {return array();}
 }

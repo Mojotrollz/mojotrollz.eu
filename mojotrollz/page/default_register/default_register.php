@@ -1,5 +1,5 @@
 <?php
-class default_register extends \SYSTEM\PAGE\Page {
+class default_register implements \SYSTEM\PAGE\Page {
     public static function title(){
         return \SYSTEM\PAGE\text::get('title_register');}
     public static function meta(){
@@ -14,4 +14,6 @@ class default_register extends \SYSTEM\PAGE\Page {
     public static function js(){
         return array(   new PPAGE('default_register/js/default_register.js'),
                         \LIB\lib_jqbootstrapvalidation::js());}
+
+    public static function css() {return array();}
 }

@@ -1,6 +1,6 @@
 <?php
-class default_page extends \SYSTEM\PAGE\Page {
-    private static function js(){        
+class default_page implements \SYSTEM\PAGE\DefaultPage {
+    public static function js(){        
         return  \SYSTEM\HTML\html::script(\LIB\lib_jquery::js()->WEBPATH()).
                 \SYSTEM\HTML\html::script(\LIB\lib_bootstrap::js()->WEBPATH()).
                 \SYSTEM\HTML\html::script(\LIB\lib_jqbootstrapvalidation::js()->WEBPATH()).
@@ -10,7 +10,7 @@ class default_page extends \SYSTEM\PAGE\Page {
                             new PPAGE('default_page/js/default_page.js'))));
     }
     
-    private static function css(){  
+    public static function css(){  
         return  \SYSTEM\HTML\html::link(\LIB\lib_bootstrap::css()->WEBPATH(false)).
                 \SYSTEM\HTML\html::link(\LIB\lib_font_awesome::css()->WEBPATH(false)).
                 \SYSTEM\HTML\html::link(\LIB\lib_animate::css()->WEBPATH()).

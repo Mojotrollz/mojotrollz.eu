@@ -1,5 +1,5 @@
 <?php
-class default_article extends \SYSTEM\PAGE\Page {
+class default_article implements \SYSTEM\PAGE\Page {
     public static function title(){
         return \SYSTEM\PAGE\text::get('title_article');}
     public static function meta(){
@@ -15,4 +15,6 @@ class default_article extends \SYSTEM\PAGE\Page {
         $element = array_merge($element,\SYSTEM\PAGE\text::tag('time'));
         return SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_article/tpl/article.tpl'))->SERVERPATH(), $element);
     }
+
+    public static function css(){return array();}
 }

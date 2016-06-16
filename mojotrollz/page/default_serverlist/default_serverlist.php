@@ -1,9 +1,9 @@
 <?php
-class default_serverlist extends \SYSTEM\PAGE\Page {
-    //public static function title(){
-    //    return \SYSTEM\PAGE\text::get('title_serverlist');}
-    //public static function meta(){
-    //    return \SYSTEM\PAGE\text::tag('meta_serverlist');}
+class default_serverlist implements \SYSTEM\PAGE\Page {
+    public static function title(){
+        return \SYSTEM\PAGE\text::get('title_serverlist');}
+    public static function meta(){
+        return \SYSTEM\PAGE\text::tag('meta_serverlist');}
     public static function js(){
         return array(   new PPAGE('default_serverlist/js/default_serverlist.js'));}
     public function html(){
@@ -41,4 +41,6 @@ class default_serverlist extends \SYSTEM\PAGE\Page {
                 return '';
         }
     }
+
+    public static function css(){return array();}
 }

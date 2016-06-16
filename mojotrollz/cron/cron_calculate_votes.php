@@ -1,5 +1,5 @@
 <?php
-class cron_calculate_votes extends \SYSTEM\CRON\cronjob{
+class cron_calculate_votes implements \SYSTEM\CRON\cronjob{
     public static function run(){
         \SQL\CRON_CALCULATE_VOTES::QI();
         \SQL\CRON_DELETE_VOTES::QI();

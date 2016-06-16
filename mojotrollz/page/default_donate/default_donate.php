@@ -1,5 +1,5 @@
 <?php
-class default_donate extends \SYSTEM\PAGE\Page {
+class default_donate implements \SYSTEM\PAGE\Page {
     public static function title(){
         return \SYSTEM\PAGE\text::get('title_donate');}
     public static function meta(){
@@ -8,4 +8,7 @@ class default_donate extends \SYSTEM\PAGE\Page {
         $vars = \SYSTEM\PAGE\text::tag('mojotrollz');
         return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_donate/tpl/donate.tpl'))->SERVERPATH(), $vars);
     }
+
+    public static function css() {return array();}
+    public static function js() {return array();}
 }

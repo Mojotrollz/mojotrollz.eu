@@ -1,5 +1,5 @@
 <?php
-class default_account extends \SYSTEM\PAGE\Page {
+class default_account implements \SYSTEM\PAGE\Page {
     public static function title(){
         return \SYSTEM\PAGE\text::get('title_account');}
     public static function meta(){
@@ -23,4 +23,6 @@ class default_account extends \SYSTEM\PAGE\Page {
         $vars['wow_accounts_confirm'] = \SYSTEM\SECURITY\security::getUser()->email_confirmed ? '' : \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_account/tpl/wow_accounts_confirm.tpl'))->SERVERPATH());
         return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_account/tpl/loggedin.tpl'))->SERVERPATH(), $vars);
     }
+
+    public static function css() {return array();}
 }
