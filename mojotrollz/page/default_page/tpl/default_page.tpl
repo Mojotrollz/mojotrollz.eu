@@ -88,13 +88,14 @@
                         <a href="#content_home">${mojotrollz_mojotrollz}</a><br><br>
                         <a href="#content_servers">${mojotrollz_servers}</a><br><br>
                         <a href="#!beta">${mojotrollz_beta}</a><br><br>
+                        <a href="#!account"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp; ${mojotrollz_login}</a> / <a href="#!register"> REGISTER</a><br><br>
                         <!--<a href="#content_tshirts">${mojotrollz_tshirts}</a><br><br>-->
                         <!--<a href="#content_addons">${mojotrollz_addons}</a><br><br>-->
                     </div>
                     <div class="col-md-4">
-                        <a href="#!account"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp; ${mojotrollz_login}</a> / <a href="#!register"> REGISTER</a><br><br>
                         <!--<a href="#!guild">GUILD PAGES</a><br><br>
                         <a href="#!gshirt">GUILD SHIRTS</a><br><br>-->
+                        <a href="${link_twitch}" target="_blank"><i class="fa fa-twitch fa-lg"></i>&nbsp;&nbsp; TWITCH</a><br><br>
                         <a href="${link_facebook}" target="_blank"><i class="fa fa-facebook fa-lg"></i>&nbsp;&nbsp; FACEBOOK</a><br><br>
                         <a href="${link_youtube}" target="_blank"><i class="fa fa-youtube fa-lg"></i>&nbsp;&nbsp; YOUTUBE</a><br><br>
                         <a href="#!donate"><i class="fa fa-usd fa-lg"></i>&nbsp;&nbsp; DONATE</a>
