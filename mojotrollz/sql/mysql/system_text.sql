@@ -54,6 +54,9 @@ REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('link_wow_3_3_5a', 'mojotro
 REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('link_youtube', 'enUS', 'https://www.youtube.com/user/Mojotrolltribe/videos', 10, 10, '2015-09-17 23:16:41', '2015-09-17 23:16:41');
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('link_youtube', 'link');
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('link_youtube', 'mojotrollz');
+REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('link_twitch', 'enUS', 'https://www.twitch.tv/mojotrollz/', 10, 10, '2015-09-17 23:16:50', '2015-09-17 23:16:50');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('link_twitch', 'link');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('link_twitch', 'mojotrollz');
 
 REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('meta_article_description', 'enUS', 'Mojotrollz.eu - Your Online Gaming Community. Teamspeak 3 (ts3), Download WoW 1.12.1 Classic, WoW 2.4.3 TBC, WoW 3.3.5a WOTLK, Vote for Private Servers', 10, 10, '2016-05-28 01:33:13', '2016-05-28 01:33:13');
 REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('meta_article_keywords', 'enUS', 'World of Warcraft, Private Server, Download WoW, Addons, Gaming Community, Online Games', 10, 10, '2016-05-28 01:24:27', '2016-05-28 01:24:27');

@@ -54,6 +54,7 @@
                         <!--<li><a href="#content_addons">${mojotrollz_addons}</a></li>-->
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
+                        <li class="ontop"><a href="${link_twitch}" target="_blank"><i class="fa fa-twitch fa-lg"></i></a></li>
                         <li class="ontop"><a href="${link_facebook}" target="_blank"><i class="fa fa-facebook fa-lg"></i></a></li>
                         <li class="ontop"><a href="${link_youtube}" target="_blank"><i class="fa fa-youtube fa-lg"></i></a></li>
                         <li class="ontop"><a href="#!donate"><i class="fa fa-usd fa-lg"></i></a></li>
