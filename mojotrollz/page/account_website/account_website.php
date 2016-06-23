@@ -7,10 +7,11 @@ class account_website implements \SYSTEM\PAGE\Page {
     public static function js(){
         return array(new \PPAGE('account_website/js/account_website.js'));}
     public function html(){
-        if(!\SYSTEM\SECURITY\security::isLoggedIn()){
-            throw new \SYSTEM\LOG\ERROR("You need to be logged in!");}
-        
         $vars = \SYSTEM\PAGE\text::tag('mojotrollz');
+        
+        if(!\SYSTEM\SECURITY\security::isLoggedIn()){
+            return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('account_login/tpl/account_login.tpl'))->SERVERPATH(), $vars);}
+        
         $vars['email'] = \SYSTEM\SECURITY\security::getUser()->email;
         $vars['username'] = \SYSTEM\SECURITY\security::getUser()->username;
         $vars['option_confirm_email'] = \SYSTEM\SECURITY\security::getUser()->email_confirmed ? '' : \SYSTEM\PAGE\replace::replaceFile((new PPAGE('account_website/tpl/option_confirm_email.tpl'))->SERVERPATH(),$vars);

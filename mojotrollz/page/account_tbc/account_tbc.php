@@ -7,10 +7,11 @@ class account_tbc implements \SYSTEM\PAGE\Page {
     public static function js(){
         return array(new \PPAGE('account_tbc/js/account_tbc.js'));}
     public function html(){
-        if(!\SYSTEM\SECURITY\security::isLoggedIn()){
-            throw new \SYSTEM\LOG\ERROR("You need to be logged in!");}
-        
         $vars = \SYSTEM\PAGE\text::tag('mojotrollz');
+        
+        if(!\SYSTEM\SECURITY\security::isLoggedIn()){
+            return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('account_login/tpl/account_login.tpl'))->SERVERPATH(), $vars);}
+        
         $vars['email'] = \SYSTEM\SECURITY\security::getUser()->email;
         $vars['wow_accounts'] = '';
         $res = \SYSTEM\SECURITY\security::getUser()->email_confirmed ? \SQL\MOJO_ACCOUNT_ACCOUNTS::QQ(array($vars['email'])) : \SQL\MOJO_ACCOUNT_MAIN_ACCOUNT::QQ(array($vars['username'],$vars['email']));
