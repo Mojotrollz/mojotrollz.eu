@@ -2,45 +2,57 @@
   width: device-width;
 }
 
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
 html, body {
     height: 100%;
     width: 100%;
     margin: 0; 
     padding: 0;
     color: #7A7A7A;
+    min-height: 100%;
 }
 
 .mojotrollz_nav{
     border: 0;
     background-color: rgba(255,0,0,0) !important;
-    margin-top: 45px;
     margin-bottom: 0;
-    padding-left: 14px;
-    padding-right: 29px;
+    padding-right: 14px;
 }
 
 .mojotrollz_heading{
-    width: 100%;
+    width: 35%;
+    height: 100px;
+    
     z-index: 2;
     color: #B7B7B7;
     font-size: 90px;
     text-align: center;
-    top: -150px;
+    
     position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    
+    margin-top: 0;
+    
     visibility: visible;
     animation-delay: 0.7s;
     animation-name: fadeInDown;
 }
 
 .mojotrollz_flexslider{
-    padding-left: 14px;
-    padding-right: 14px;
+    min-height: 100px;
 }
 
 .mojotrollz_download{
     margin-left: 0;
     padding-left: 0;
-    width: 270px;
+    width: 277px;
 }
 
 .mojotrollz_download_text{
@@ -74,8 +86,8 @@ html, body {
     padding-bottom: 25px;
 }
 .mojotrollz_col_contentmain{
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .ontop{

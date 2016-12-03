@@ -8,4 +8,8 @@ $(document).ready(function() {
         slideshow: true,
         animationLoop: true,
     });
+    
+    $('.navbar-collapse a').click(function(){
+        $(".navbar-collapse").collapse('hide');
+    });
 });
