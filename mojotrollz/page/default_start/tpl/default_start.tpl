@@ -18,11 +18,11 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>-->
     </div>
-    <div class="col-md-3" style="text-align: right;">
+    <div class="col-md-3" style="text-align: center;">
         <h3>
             <b>${ts_players}</b> ${mojotrollz_players_online}
 
-            <button style="margin-top: 20px; width: 80%;" type="submit" class="btn-lg btn btn-success" onClick="location.href='ts3server://mojotrollz.eu'">
+            <button style="margin-top: 20px; width: 100%;" type="submit" class="btn-lg btn btn-success" onClick="location.href='ts3server://mojotrollz.eu'">
                 <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
                 &nbsp;&nbsp;${basic_connect}
             </button>

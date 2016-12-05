@@ -40,11 +40,12 @@
                 <!-- Navbar -->
                 <div class="navbar navbar-inverse mojotrollz_nav" role="navigation">
                     <div id="content_home" class="navbar-header ontop">
-                        <button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#navigation">
+                        <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#navigation">
                           <span class="icon-bar"></span>
                           <span class="icon-bar"></span>
                           <span class="icon-bar"></span>
                         </button>
+                        <!--<a class="navbar-brand hidden-lg" href="#" style="text-align: center;"><b>${mojotrollz_mojotrollz}</b></a>-->
                     </div>
                     <div class="collapse navbar-collapse anchor" id="navigation">
                         <ul class="nav navbar-nav navbar-left">
