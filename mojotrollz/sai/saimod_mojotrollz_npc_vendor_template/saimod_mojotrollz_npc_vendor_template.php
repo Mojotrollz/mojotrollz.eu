@@ -2,7 +2,7 @@
 namespace SAI;
 class saimod_mojotrollz_npc_vendor_template extends \SYSTEM\SAI\SaiModule {
     public static function sai_mod__SAI_saimod_mojotrollz_npc_vendor_template_action_comment($entry,$comment){
-        \SQL\NPC_VENDOR_TEMPLATE_COMMENT::QI(array($entry,$comment));
+        \SQL\NPC_VENDOR_TEMPLATE_COMMENT::QI(array($comment,$entry),new \SQL\mangos_one_world_test());
         return \JsonResult::ok();}
     public static function sai_mod__SAI_saimod_mojotrollz_npc_vendor_template_action_add($entry,$item,$maxcount,$incrtime,$extendedcost,$condition_id){
         \SQL\NPC_VENDOR_TEMPLATE_ADD::QI(array($entry,$item,$maxcount,$incrtime,$extendedcost,$condition_id),new \SQL\mangos_one_world_test());
@@ -77,9 +77,7 @@ class saimod_mojotrollz_npc_vendor_template extends \SYSTEM\SAI\SaiModule {
         $vars = array();
         $vars['search_entry'] = $vars['search_items'] = $vars['search_comments'] = '';
         $query =    'SELECT npc_vendor_template.entry, COUNT(*) as items, comments '.
-                    'FROM npc_vendor_template '.
-                    'LEFT JOIN '.\SYSTEM\CONFIG\config::get(\SYSTEM\CONFIG\config_ids::SYS_CONFIG_DB_DBNAME).'.mojotrollz_npc_vendor_template '.
-                    'ON npc_vendor_template.entry = mojotrollz_npc_vendor_template.entry';
+                    'FROM npc_vendor_template ';
         $query_group = ' GROUP BY npc_vendor_template.entry';
         $query_search = '';
         $query_search_having = '';
