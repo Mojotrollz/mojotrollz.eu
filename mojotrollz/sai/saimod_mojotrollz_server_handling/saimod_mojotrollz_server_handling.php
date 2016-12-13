@@ -51,12 +51,16 @@ class saimod_mojotrollz_server_handling extends \SYSTEM\SAI\SaiModule {
             $log .= chmod('/home/mojotrollz/mojo/'.'classic/world',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
             $log .= chmod('/home/mojotrollz/mojo/'.'classic/realm',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
             $log .= chmod('/home/mojotrollz/mojo/'.'classic/db',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
+            $log .= chmod('/home/mojotrollz/mojo/'.'classic/server/bin/bin/run-mangosd',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
+            $log .= chmod('/home/mojotrollz/mojo/'.'classic/server/bin_test/bin/run-mangosd',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
             $log .= chmod('/home/mojotrollz/mojo/'.'tbc/compile',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
             $log .= chmod('/home/mojotrollz/mojo/'.'tbc/run',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
             $log .= chmod('/home/mojotrollz/mojo/'.'tbc/world',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
             $log .= chmod('/home/mojotrollz/mojo/'.'tbc/world_test',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
             $log .= chmod('/home/mojotrollz/mojo/'.'tbc/realm',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
             $log .= chmod('/home/mojotrollz/mojo/'.'tbc/db',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
+            $log .= chmod('/home/mojotrollz/mojo/'.'tbc/server/bin/bin/run-mangosd',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
+            $log .= chmod('/home/mojotrollz/mojo/'.'tbc/server/bin_test/bin/run-mangosd',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
         } catch (\Exception $e){
             $log .= 'Error: '.$e->getMessage();
         }
@@ -135,203 +139,7 @@ class saimod_mojotrollz_server_handling extends \SYSTEM\SAI\SaiModule {
         }
         return \SYSTEM\LOG\JsonResult::toString($result);
     }
-    
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_classic_chars_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log/Char.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/classic/server/log/Char.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_classic_chars_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log_test/Char.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/classic/server/log_test/Char.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_classic_db_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log/DBErrors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/classic/server/log/DBErrors.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_classic_db_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log_test/DBErrors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/classic/server/log_test/DBErrors.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_classic_eventai_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log/EventAIErrors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/classic/server/log/EventAIErrors.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_classic_eventai_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log_test/EventAIErrors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/classic/server/log_test/EventAIErrors.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_classic_realm_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log/Realmd.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/classic/server/log/Realmd.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_classic_realm_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log_test/Realmd.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/classic/server/log_test/Realmd.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_classic_sd2_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log/SD2Errors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/classic/server/log/SD2Errors.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_classic_sd2_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log_test/SD2Errors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/classic/server/log_test/SD2Errors.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_classic_server_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log/Server.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/classic/server/log/Server.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_classic_server_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log_test/Server.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/classic/server/log_test/Server.log'));}
-    
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_tbc_chars_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log/Char.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/tbc/server/log/Char.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_tbc_chars_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log_test/Char.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/tbc/server/log_test/Char.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_tbc_db_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log/DBErrors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/tbc/server/log/DBErrors.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_tbc_db_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log/DBErrors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/tbc/server/log_test/DBErrors.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_tbc_eventai_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log/EventAIErrors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/tbc/server/log/EventAIErrors.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_tbc_eventai_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log_test/EventAIErrors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/tbc/server/log_test/EventAIErrors.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_tbc_realm_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log/Realmd.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/tbc/server/log/Realmd.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_tbc_realm_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log_test/Realmd.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/tbc/server/log_test/Realmd.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_tbc_sd2_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log/SD2Errors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/tbc/server/log/SD2Errors.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_tbc_sd2_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log_test/SD2Errors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/tbc/server/log_test/SD2Errors.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_tbc_server_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log/Server.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/tbc/server/log/Server.log'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_log_tbc_server_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log_test/Server.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_get_contents('/home/mojotrollz/mojo/tbc/server/log_test/Server.log'));}
-        
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_classic_chars_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log/Char.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/classic/server/log/Char.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_classic_chars_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log_test/Char.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/classic/server/log_test/Char.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_classic_db_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log/DBErrors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/classic/server/log/DBErrors.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_classic_db_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log_test/DBErrors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/classic/server/log_test/DBErrors.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_classic_eventai_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log/EventAIErrors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/classic/server/log/EventAIErrors.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_classic_eventai_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log_test/EventAIErrors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/classic/server/log_test/EventAIErrors.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_classic_realm_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log/Realmd.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/classic/server/log/Realmd.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_classic_realm_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log_test/Realmd.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/classic/server/log_test/Realmd.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_classic_sd2_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log/SD2Errors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/classic/server/log/SD2Errors.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_classic_sd2_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log_test/SD2Errors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/classic/server/log_test/SD2Errors.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_classic_server_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log/Server.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/classic/server/log/Server.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_classic_server_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/classic/server/log_test/Server.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/classic/server/log_test/Server.log',''));}
-    
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_tbc_chars_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log/Char.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/tbc/server/log/Char.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_tbc_chars_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log_test/Char.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/tbc/server/log_test/Char.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_tbc_db_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log/DBErrors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/tbc/server/log/DBErrors.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_tbc_db_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log_test/DBErrors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/tbc/server/log_test/DBErrors.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_tbc_eventai_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log/EventAIErrors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/tbc/server/log/EventAIErrors.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_tbc_eventai_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log_test/EventAIErrors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/tbc/server/log_test/EventAIErrors.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_tbc_realm_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log/Realmd.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/tbc/server/log/Realmd.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_tbc_realm_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log_test/Realmd.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/tbc/server/log_test/Realmd.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_tbc_sd2_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log/SD2Errors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/tbc/server/log/SD2Errors.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_tbc_sd2_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log_test/SD2Errors.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/tbc/server/log_test/SD2Errors.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_tbc_server_live(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log/Server.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/tbc/server/log/Server.log',''));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_logdel_tbc_server_test(){
-        if(!\file_exists('/home/mojotrollz/mojo/tbc/server/log_test/Server.log')){
-            return 'File not Found';}
-        return \htmlentities(\file_put_contents('/home/mojotrollz/mojo/tbc/server/log_test/Server.log',''));}
-    
+
     private static function shell_run($ver,$prog,$cmd){
         return \str_replace("\n","\r\n",shell_exec('/home/mojotrollz/mojo/run '.$ver.' '.$prog.' '.$cmd.' 2>&1'));}
     private static function shell_db($ver,$db,$cmd){
@@ -340,21 +148,16 @@ class saimod_mojotrollz_server_handling extends \SYSTEM\SAI\SaiModule {
         return \str_replace("\n","\r\n",shell_exec('/home/mojotrollz/mojo/compile '.$ver.' '.$cmd.' 2>&1'));}
     
     public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_compile_classic_live(){
-        return \htmlentities(self::shell_compile('classic', 'live'));}    
+        $log  = \htmlentities(self::shell_compile('classic', 'live'));
+        $log .= chmod('/home/mojotrollz/mojo/'.'classic/server/bin/bin/run-mangosd',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
+        return $log;
+    }
     public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_compile_classic_test(){
-        return \htmlentities(self::shell_compile('classic', 'test'));}
-        
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_db_classic_realm_live(){
-        return \htmlentities(self::shell_db('classic', 'realm', 'live'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_db_classic_chars_live(){
-        return \htmlentities(self::shell_db('classic', 'chars', 'live'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_db_classic_chars_test(){
-        return \htmlentities(self::shell_db('classic', 'chars', 'test'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_db_classic_world_live(){
-        return \htmlentities(self::shell_db('classic', 'world', 'live'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_db_classic_world_test(){
-        return \htmlentities(self::shell_db('classic', 'world', 'test'));}
-        
+        $log  = \htmlentities(self::shell_compile('classic', 'test'));
+        $log .= chmod('/home/mojotrollz/mojo/'.'classic/server/bin_test/bin/run-mangosd',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
+        return $log;
+    }
+                
     public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_realm_start(){
         return self::shell_run('classic', 'realm','start');}
     public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_world_start(){
@@ -375,20 +178,15 @@ class saimod_mojotrollz_server_handling extends \SYSTEM\SAI\SaiModule {
         return self::shell_run('classic', 'world_test','status');}
         
     public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_compile_tbc_live(){
-        return \htmlentities(self::shell_compile('tbc', 'live'));}    
+        $log  = \htmlentities(self::shell_compile('tbc', 'live'));
+        $log .= chmod('/home/mojotrollz/mojo/'.'tbc/server/bin/bin/run-mangosd',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
+        return $log;
+    }
     public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_compile_tbc_test(){
-        return \htmlentities(self::shell_compile('tbc', 'test'));}
-        
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_db_tbc_realm_live(){
-        return \htmlentities(self::shell_db('tbc', 'realm', 'live'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_db_tbc_chars_live(){
-        return \htmlentities(self::shell_db('tbc', 'chars', 'live'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_db_tbc_chars_test(){
-        return \htmlentities(self::shell_db('tbc', 'chars', 'test'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_db_tbc_world_live(){
-        return \htmlentities(self::shell_db('tbc', 'world', 'live'));}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_db_tbc_world_test(){
-        return \htmlentities(self::shell_db('tbc', 'world', 'test'));}
+        $log  = \htmlentities(self::shell_compile('tbc', 'test'));
+        $log .= chmod('/home/mojotrollz/mojo/'.'tbc/server/bin_test/bin/run-mangosd',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
+        return $log;
+    }
         
     public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_realm_start(){
         return self::shell_run('tbc', 'realm','start');}

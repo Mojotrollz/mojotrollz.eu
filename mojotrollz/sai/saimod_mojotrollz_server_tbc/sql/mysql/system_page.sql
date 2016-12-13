@@ -1,0 +1,1 @@
+REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (560, 42, 'mojotrollz_server_tbc', 'mojotrollz_server_tbc', -1, 0, 0, '#content', './sai.php?sai_mod=.SAI.saimod_mojotrollz_server_tbc', 'init_saimod_mojotrollz_server_tbc', '\\SAI\\saimod_mojotrollz_server_tbc');

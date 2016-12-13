@@ -56,11 +56,11 @@ function init_saimod_mojotrollz_server(){
         $('#table_changes').html('');
     });
     
-    register_classic();
-    register_tbc();
+    register_classic_svr();
+    register_tbc_svr();
 }
 
-function register_classic(){
+function register_classic_svr(){
     {
         $('#btn_classic_realm_start').click(function(){
             growl_start('Doing ... please wait')
@@ -598,7 +598,7 @@ function register_classic(){
     }
 }
 
-function register_tbc(){
+function register_tbc_svr(){
     {
         $('#btn_tbc_realm_start').click(function(){
             growl_start('Doing ... please wait')
