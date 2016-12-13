@@ -1,11 +1,7 @@
 <div class="panel panel-default">
-    <div class="panel-heading"><h4>Mojotrollz Server</h4></div>
+    <div class="panel-heading"><h4>Mojotrollz WoW-Servers</h4></div>
     <div class="panel-body">
         <div class="row">
-            <div class="col-md-12">
-                <button id="btn_update" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Update</button>
-                <button id="btn_changes" class="btn-warning btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Find Changes</button>
-            </div>
             <div class="col-md-6">
                 <div id="vis_classic"></div>
                 <select id="filter_vis_classic">
@@ -22,6 +18,8 @@
                     <option value="1800">30m</option>
                     <option value="600" selected>10m</option>
                 </select>
+                <br>
+                <br>
             </div>
             <div class="col-md-6">
                 <div id="vis_tbc"></div>
@@ -39,6 +37,12 @@
                         <option value="1800">30m</option>
                         <option value="600" selected>10m</option>
                 </select>
+                <br>
+                <br>
+            </div>
+            <div class="col-md-12">
+                <button id="btn_update" class="btn-primary btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Update</button>
+                <button id="btn_changes" class="btn-warning btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Find Changes</button>
             </div>
         </div>
     </div>

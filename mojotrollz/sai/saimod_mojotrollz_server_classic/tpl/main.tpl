@@ -3,6 +3,23 @@
         <div class="panel panel-default">
             <div class="panel-heading"><h4>Classic - Status</h4></div>
             <div class="panel-body">
+                <div id="vis_classic"></div>
+                <select id="filter_vis_classic">
+                    <option value="2692000">30d</option>
+                    <option value="1209600">14d</option>
+                    <option value="604800">7d</option>
+                    <option value="172800">2d</option>
+                    <option value="86400">1d</option>
+                    <option value="43200">12h</option>
+                    <option value="21600">6h</option>
+                    <option value="14400">4h</option>
+                    <option value="7200">2h</option>
+                    <option value="3600">1h</option>
+                    <option value="1800">30m</option>
+                    <option value="600" selected>10m</option>
+                </select>
+                <br>
+                <br>
                 <table class="table">
                     <tr>
                         <th>realm</th>
@@ -25,29 +42,10 @@
                         <td>${classic_test_players_online}</td>
                     </tr>
                 </table>
-                <div id="vis_classic"></div>
-                <select id="filter_vis_classic">
-                    <option value="2692000">30d</option>
-                    <option value="1209600">14d</option>
-                    <option value="604800">7d</option>
-                    <option value="172800">2d</option>
-                    <option value="86400">1d</option>
-                    <option value="43200">12h</option>
-                    <option value="21600">6h</option>
-                    <option value="14400">4h</option>
-                    <option value="7200">2h</option>
-                    <option value="3600">1h</option>
-                    <option value="1800">30m</option>
-                    <option value="600" selected>10m</option>
-                    <option value="300">5m</option>
-                    <option value="60">1m</option>
-                    <option value="30">30s</option>
-                    <option value="10">10s</option>
-                    <option value="5">5s</option>
-                    <option value="1">1s</option>
-            </select>
             </div>
         </div>
+    </div>
+    <div class="col-md-6">
         <div class="panel panel-default">
             <div class="panel-heading"><h4>Classic - Run</h4></div>
             <div class="panel-body">
@@ -73,6 +71,8 @@
                 </table>
             </div>
         </div>
+    </div>
+    <div class="col-md-6">
         <div class="panel panel-default">
             <div class="panel-heading"><h4>Classic - Database <font color="red" size="2">Stop the Server first!</font></h4></div>
             <div class="panel-body">
@@ -95,6 +95,8 @@
                 </table>
             </div>
         </div>
+    </div>
+    <div class="col-md-6">
         <div class="panel panel-default">
             <div class="panel-heading"><h4>Classic - Compile <font color="red" size="2">Stop the Server first!</font></h4></div>
             <div class="panel-body">
@@ -110,6 +112,8 @@
                 </table>
             </div>
         </div>
+    </div>
+    <div class="col-md-6">
         <div class="panel panel-default">
             <div class="panel-heading"><h4>Classic - Log</h4></div>
             <div class="panel-body">
