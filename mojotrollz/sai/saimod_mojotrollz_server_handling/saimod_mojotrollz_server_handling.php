@@ -51,8 +51,8 @@ class saimod_mojotrollz_server_handling extends \SYSTEM\SAI\SaiModule {
             $log .= chmod('/home/mojotrollz/mojo/'.'classic/world',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
             $log .= chmod('/home/mojotrollz/mojo/'.'classic/realm',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
             $log .= chmod('/home/mojotrollz/mojo/'.'classic/db',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
-            $log .= chmod('/home/mojotrollz/mojo/'.'classic/server/bin/bin/run-mangosd',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
-            $log .= chmod('/home/mojotrollz/mojo/'.'classic/server/bin_test/bin/run-mangosd',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
+            //$log .= chmod('/home/mojotrollz/mojo/'.'classic/server/bin/bin/run-mangosd',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
+            //$log .= chmod('/home/mojotrollz/mojo/'.'classic/server/bin_test/bin/run-mangosd',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
             $log .= chmod('/home/mojotrollz/mojo/'.'tbc/compile',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
             $log .= chmod('/home/mojotrollz/mojo/'.'tbc/run',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
             $log .= chmod('/home/mojotrollz/mojo/'.'tbc/world',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
