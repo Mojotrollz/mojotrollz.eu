@@ -14,7 +14,7 @@ class saimod_mojotrollz_server_handling extends \SYSTEM\SAI\SaiModule {
         $vars['tbc_players_online'] = self::online_tbc();
         $vars['tbc_test_players_online'] = self::online_tbc_test();
         return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/main.tpl', $vars);}            
-    public static function html_li_menu(){return '<li class=""><a data-toggle="tooltip" data-placement="left" title="Mojotrollz Server" href="#!mojotrollz_server"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;WoW Servers</a></li>';}
+    public static function html_li_menu(){return '<li class=""><a data-toggle="tooltip" data-placement="left" title="Mojotrollz Server" href="#!mojotrollz_server"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>&nbsp;&nbsp;WoW Servers</a></li>';}
     public static function right_public(){return false;}    
     public static function right_right(){return \SYSTEM\SECURITY\security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
     public static function js(){return array(new \PSAI('saimod_mojotrollz_server_handling/js/saimod_mojotrollz_server_handling.js'));}
@@ -142,64 +142,14 @@ class saimod_mojotrollz_server_handling extends \SYSTEM\SAI\SaiModule {
 
     private static function shell_run($ver,$prog,$cmd){
         return \str_replace("\n","\r\n",shell_exec('/home/mojotrollz/mojo/run '.$ver.' '.$prog.' '.$cmd.' 2>&1'));}
-    private static function shell_db($ver,$db,$cmd){
-        return \str_replace("\n","\r\n",shell_exec('/home/mojotrollz/mojo/db '.$ver.' '.$db.' '.$cmd.' 2>&1'));}
-    private static function shell_compile($ver,$cmd){
-        return \str_replace("\n","\r\n",shell_exec('/home/mojotrollz/mojo/compile '.$ver.' '.$cmd.' 2>&1'));}
     
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_compile_classic_live(){
-        $log  = \htmlentities(self::shell_compile('classic', 'live'));
-        $log .= chmod('/home/mojotrollz/mojo/'.'classic/server/bin/bin/run-mangosd',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
-        return $log;
-    }
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_compile_classic_test(){
-        $log  = \htmlentities(self::shell_compile('classic', 'test'));
-        $log .= chmod('/home/mojotrollz/mojo/'.'classic/server/bin_test/bin/run-mangosd',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
-        return $log;
-    }
-                
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_realm_start(){
-        return self::shell_run('classic', 'realm','start');}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_world_start(){
-        return self::shell_run('classic', 'world','start');}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_world_test_start(){
-        return self::shell_run('classic', 'world_test','start');}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_realm_stop(){
-        return self::shell_run('classic', 'realm','stop');}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_world_stop(){
-        return self::shell_run('classic', 'world','stop');}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_world_test_stop(){
-        return self::shell_run('classic', 'world_test','stop');}
     public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_realm_status(){
         return self::shell_run('classic', 'realm','status');}
     public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_world_status(){
         return self::shell_run('classic', 'world','status');}
     public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_classic_world_test_status(){
         return self::shell_run('classic', 'world_test','status');}
-        
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_compile_tbc_live(){
-        $log  = \htmlentities(self::shell_compile('tbc', 'live'));
-        $log .= chmod('/home/mojotrollz/mojo/'.'tbc/server/bin/bin/run-mangosd',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
-        return $log;
-    }
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_compile_tbc_test(){
-        $log  = \htmlentities(self::shell_compile('tbc', 'test'));
-        $log .= chmod('/home/mojotrollz/mojo/'.'tbc/server/bin_test/bin/run-mangosd',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
-        return $log;
-    }
-        
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_realm_start(){
-        return self::shell_run('tbc', 'realm','start');}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_start(){
-        return self::shell_run('tbc', 'world','start');}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_test_start(){
-        return self::shell_run('tbc', 'world_test','start');}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_realm_stop(){
-        return self::shell_run('tbc', 'realm','stop');}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_stop(){
-        return self::shell_run('tbc', 'world','stop');}
-    public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_test_stop(){
-        return self::shell_run('tbc', 'world_test','stop');}
+
     public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_realm_status(){
         return self::shell_run('tbc', 'realm','status');}
     public static function sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_status(){
