@@ -1,13 +1,23 @@
 function init_saimod_mojotrollz_server(){
     {
-        load_visualisation_mojotrollz_server('vis_tbc', 'stats_tbc', '#filter_vis_tbc', 'Players on WoW-TBC', 400,250);
-        load_visualisation_mojotrollz_server('vis_classic', 'stats_classic', '#filter_vis_classic', 'Players on WoW-Classic', 400,250);
+        load_visualisation_mojotrollz_server('vis_tbc_player', 'stats_tbc_player', '#filter_vis_tbc_player', 'Players on WoW-TBC', 400,250);
+        load_visualisation_mojotrollz_server('vis_classic_player', 'stats_classic_player', '#filter_vis_classic_player', 'Players on WoW-Classic', 400,250);
         
-        $('#filter_vis_tbc').on('change',function(){
-            load_visualisation_mojotrollz_server('vis_tbc', 'stats_tbc', '#filter_vis_tbc', 'Players on WoW-TBC', 400,250);
+        load_visualisation_mojotrollz_server('vis_tbc_server', 'stats_tbc_server', '#filter_vis_tbc_server', 'WoW-TBC Server Status', 400,250);
+        load_visualisation_mojotrollz_server('vis_classic_server', 'stats_classic_server', '#filter_vis_classic_server', 'WoW-Classic Server Status', 400,250);
+        
+        $('#filter_vis_tbc_player').on('change',function(){
+            load_visualisation_mojotrollz_server('vis_tbc_player', 'stats_tbc_player', '#filter_vis_tbc_player', 'Players on WoW-TBC', 400,250);
         })
-        $('#filter_vis_classic').on('change',function(){
-            load_visualisation_mojotrollz_server('vis_classic', 'stats_classic', '#filter_vis_classic', 'Players on WoW-Classic', 400,250);
+        $('#filter_vis_tbc_server').on('change',function(){
+            load_visualisation_mojotrollz_server('vis_tbc_server', 'stats_tbc_server', '#filter_vis_tbc_server', 'WoW-TBC Server Status', 400,250);
+        })
+        
+        $('#filter_vis_classic_player').on('change',function(){
+            load_visualisation_mojotrollz_server('vis_classic_player', 'stats_classic_player', '#filter_vis_classic_player', 'Players on WoW-Classic', 400,250);
+        })
+        $('#filter_vis_classic_server').on('change',function(){
+            load_visualisation_mojotrollz_server('vis_classic_server', 'stats_classic_server', '#filter_vis_classic_server', 'WoW-Classic Server Status', 400,250);
         })
     }
     {

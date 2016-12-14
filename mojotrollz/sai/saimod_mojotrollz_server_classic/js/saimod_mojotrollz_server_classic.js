@@ -1,9 +1,14 @@
 function init_saimod_mojotrollz_server_classic(){
     {
-        load_visualisation_mojotrollz_server_classic('vis_classic', 'stats_classic', '#filter_vis_classic', 'Players on WoW-Classic', 900,350);
+        load_visualisation_mojotrollz_classic('vis_classic_player', 'stats_classic_player', '#filter_vis_classic_player', 'Players on WoW-Classic', 400,250);
         
-        $('#filter_vis_classic').on('change',function(){
-            load_visualisation_mojotrollz_server_classic('vis_classic', 'stats_classic', '#filter_vis_classic', 'Players on WoW-Classic', 900,350);
+        load_visualisation_mojotrollz_classic('vis_classic_server', 'stats_classic_server', '#filter_vis_classic_server', 'WoW-Classic Server Status', 400,250);
+        
+        $('#filter_vis_classic_player').on('change',function(){
+            load_visualisation_mojotrollz_classic('vis_classic_player', 'stats_classic_player', '#filter_vis_classic_player', 'Players on WoW-Classic', 400,250);
+        })
+        $('#filter_vis_classic_server').on('change',function(){
+            load_visualisation_mojotrollz_classic('vis_classic_server', 'stats_classic_server', '#filter_vis_classic_server', 'WoW-Classic Server Status', 400,250);
         })
     }
     
@@ -592,7 +597,7 @@ function growl_end_error(message){
     });
 }
 
-function load_visualisation_mojotrollz_server_classic(div, stats, filter, name, width, height){
+function load_visualisation_mojotrollz_classic(div, stats, filter, name, width, height){
     $.getJSON('./sai.php?sai_mod=.SAI.saimod_mojotrollz_server_classic&action='+stats+'&filter='+$(filter).val(),function(json){
         if(!json || json.status != true || !json.result){         
             return;}

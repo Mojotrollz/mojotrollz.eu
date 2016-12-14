@@ -3,8 +3,44 @@
     <div class="panel-body">
         <div class="row">
             <div class="col-md-6">
-                <div id="vis_classic"></div>
-                <select id="filter_vis_classic">
+                <div id="vis_classic_player"></div>
+                <select id="filter_vis_classic_player">
+                    <option value="2692000">30d</option>
+                    <option value="1209600">14d</option>
+                    <option value="604800">7d</option>
+                    <option value="172800">2d</option>
+                    <option value="86400">1d</option>
+                    <option value="43200">12h</option>
+                    <option value="21600">6h</option>
+                    <option value="14400">4h</option>
+                    <option value="7200">2h</option>
+                    <option value="3600">1h</option>
+                    <option value="1800">30m</option>
+                    <option value="600" selected>10m</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <div id="vis_tbc_player"></div>
+                <select id="filter_vis_tbc_player">
+                        <option value="2692000">30d</option>
+                        <option value="1209600">14d</option>
+                        <option value="604800">7d</option>
+                        <option value="172800">2d</option>
+                        <option value="86400">1d</option>
+                        <option value="43200">12h</option>
+                        <option value="21600">6h</option>
+                        <option value="14400">4h</option>
+                        <option value="7200">2h</option>
+                        <option value="3600">1h</option>
+                        <option value="1800">30m</option>
+                        <option value="600" selected>10m</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="vis_classic_server"></div>
+                <select id="filter_vis_classic_server">
                     <option value="2692000">30d</option>
                     <option value="1209600">14d</option>
                     <option value="604800">7d</option>
@@ -22,8 +58,8 @@
                 <br>
             </div>
             <div class="col-md-6">
-                <div id="vis_tbc"></div>
-                <select id="filter_vis_tbc">
+                <div id="vis_tbc_server"></div>
+                <select id="filter_vis_tbc_server">
                         <option value="2692000">30d</option>
                         <option value="1209600">14d</option>
                         <option value="604800">7d</option>
