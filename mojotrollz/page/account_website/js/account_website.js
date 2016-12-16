@@ -1,6 +1,6 @@
 function init_account_website(){
     $('#link_confirm_email').click(function(){
-        system.account_confirm_email($(this).attr('user'),function (data) {
+        system.account_confirm_email(function (data) {
             if(data.status){
                 $('#notice_email_confirm').html("EMail sent");
             } else {

@@ -6,20 +6,11 @@ function init_account_changeemail(){
         preventSubmit: true,
         submitError: function (form, event, errors) {},
         submitSuccess: function($form, event){    
-            $.ajax({
-                dataType: "json",
-                url: './api.php',
-                data: {
-                    call: 'account',
-                    action: 'changeemail',
-                    new_email: $('#user_email_new').val(),
-                },
-                success: function (data) {
-                    if(data.status){ // reload -> user will be loged in
-                        $('#changeemail-help-block').html('EMail sent!');
-                    }else{  // show errors
-                        $('#changeemail-help-block').html(data.result ? data.result.message : 'Sending EMail failed!');
-                    }
+            system.account_change_email($('#user_email_new').val(),function (data) {
+                if(data.status){
+                    $('#changeemail-help-block').html('EMail sent!');
+                }else{  // show errors
+                    $('#changeemail-help-block').html(data.result ? data.result.message : 'Sending EMail failed!');
                 }
             });
             event.preventDefault();

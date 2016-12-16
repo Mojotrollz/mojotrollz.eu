@@ -14,7 +14,9 @@ class account_website implements \SYSTEM\PAGE\Page {
         
         $vars['email'] = \SYSTEM\SECURITY\security::getUser()->email;
         $vars['username'] = \SYSTEM\SECURITY\security::getUser()->username;
-        $vars['option_confirm_email'] = \SYSTEM\SECURITY\security::getUser()->email_confirmed ? '' : \SYSTEM\PAGE\replace::replaceFile((new PPAGE('account_website/tpl/option_confirm_email.tpl'))->SERVERPATH(),$vars);
+        $vars['option_confirm_email'] = \SYSTEM\SECURITY\security::getUser()->email_confirmed ? 
+            \SYSTEM\PAGE\replace::replaceFile((new PPAGE('account_website/tpl/option_confirmed_email.tpl'))->SERVERPATH(),$vars) :
+            \SYSTEM\PAGE\replace::replaceFile((new PPAGE('account_website/tpl/option_confirm_email.tpl'))->SERVERPATH(),$vars);
     
         return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('account_website/tpl/account_website.tpl'))->SERVERPATH(), $vars);
     }

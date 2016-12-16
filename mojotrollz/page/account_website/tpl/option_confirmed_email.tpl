@@ -1,0 +1,1 @@
+<p><a href="#!account(changeemail)">Change EMail</a></p>

@@ -14,31 +14,17 @@ class api_mojotrollz extends \SYSTEM\API\api_system {
     public static function call_account_action_create($username, $password, $email, $wowpassword){
         if(!\SYSTEM\SECURITY\security::available($username,$email) || !self::wow_username_available($username)){
             throw new \SYSTEM\LOG\ERROR('EMail is already in use or Username is not available.');}
-        
         if( !\SYSTEM\SECURITY\security::create($username, $password, $email, \SYSTEM\CONFIG\config::get(\SYSTEM\CONFIG\config_ids::SYS_CONFIG_DEFAULT_LANG)) ||
             !self::wow_account_register($username,$email,$wowpassword)){
             throw new ERROR("Account creation failed. Retry later.");}
-
         return JsonResult::ok();
     }
     
-    public static function call_account_action_changepassword($old_password_sha1, $new_password_sha1){
-        if(!\SYSTEM\SECURITY\security::isLoggedIn()){
-            throw new ERROR("You need to be logged in to change your Password!");}
-        
-        return self::call_account_action_change_password(\SYSTEM\SECURITY\security::getUser()->username, $old_password_sha1, $new_password_sha1);
-    }
+    public static function call_account_action_change_password($old_password_sha1, $new_password_sha1){
+        return \SYSTEM\SECURITY\security::change_password($old_password_sha1,$new_password_sha1);}
     
-    public static function call_account_action_changeemail($new_email){
-        if(!\SYSTEM\SECURITY\security::isLoggedIn()){
-            throw new ERROR("You need to be logged in to change your EMail!");}
-        
-        return self::call_account_action_change_email(\SYSTEM\SECURITY\security::getUser()->username, $new_email);
-    }
-    
-    //prevent normal register
-    //public static function call_account_action_create($username, $password_sha, $email, $locale){
-    //    return JsonResult::fail();}
+    public static function call_account_action_change_email($new_email){
+        return \SYSTEM\SECURITY\security::change_email($new_email,'mojotrollz_post_scripts::change_email');}
     
     private static function wow_username_available($username){
         return \SQL\MOJO_ACCOUNT_AVAILABLE::Q1(array($username), new \SQL\mangos_realm())['count'] == 0;}
