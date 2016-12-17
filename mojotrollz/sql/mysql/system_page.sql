@@ -5,6 +5,8 @@ REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`
 
 REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (15, 1, 'impressum', 'impressum', -1, 0, 0, '#content', './?page=impressum', 'init_impressum', 'default_impressum');
 
+REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (19, 1, 'resetpassword', 'resetpassword', -1, 0, 0, '#content', './?page=resetpassword', 'init_resetpassword', 'default_resetpassword');
+
 REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (20, 1, 'account', 'account', -1, 0, 0, '#content', './?page=account', 'init_account', 'default_account');
 REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (21, 1, 'website', 'account', 20, 1, 0, '#content_account', './?page=account_website', 'init_account_website', 'account_website');
 REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (22, 1, 'tbc', 'account', 20, 1, 1, '#content_account', './?page=account_tbc', 'init_account_tbc', 'account_tbc');

@@ -10,7 +10,7 @@ class account_website implements \SYSTEM\PAGE\Page {
         $vars = \SYSTEM\PAGE\text::tag('mojotrollz');
         
         if(!\SYSTEM\SECURITY\security::isLoggedIn()){
-            return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('account_login/tpl/account_login.tpl'))->SERVERPATH(), $vars);}
+            return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_account/tpl/account_login.tpl'))->SERVERPATH(), $vars);}
         
         $vars['email'] = \SYSTEM\SECURITY\security::getUser()->email;
         $vars['username'] = \SYSTEM\SECURITY\security::getUser()->username;

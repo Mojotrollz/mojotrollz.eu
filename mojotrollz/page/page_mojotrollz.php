@@ -34,6 +34,9 @@ class page_mojotrollz extends \SYSTEM\API\api_default {
     public static function page_register(){
         return (new default_register())->html();}
         
+    public static function page_resetpassword(){
+        return (new default_resetpassword())->html();}
+        
     public static function page_account_website(){
         return (new account_website())->html();}
         

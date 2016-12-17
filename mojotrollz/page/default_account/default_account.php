@@ -9,7 +9,7 @@ class default_account implements \SYSTEM\PAGE\Page {
     public function html(){
         $vars = \SYSTEM\PAGE\text::tag('mojotrollz');
         if(!\SYSTEM\SECURITY\security::isLoggedIn()){
-            return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_account/tpl/loggedout.tpl'))->SERVERPATH(), $vars);}
+            return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_account/tpl/account_login.tpl'))->SERVERPATH(), $vars);}
         return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_account/tpl/loggedin.tpl'))->SERVERPATH(), $vars);
     }
 

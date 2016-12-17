@@ -9,6 +9,7 @@ require_once dirname(__FILE__).'/default_beta/autoload.inc';
 require_once dirname(__FILE__).'/default_article/autoload.inc';
 require_once dirname(__FILE__).'/default_donate/autoload.inc';
 require_once dirname(__FILE__).'/default_register/autoload.inc';
+require_once dirname(__FILE__).'/default_resetpassword/autoload.inc';
 
 require_once dirname(__FILE__).'/account_website/autoload.inc';
 require_once dirname(__FILE__).'/account_tbc/autoload.inc';

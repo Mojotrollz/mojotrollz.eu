@@ -49,10 +49,10 @@
                                                         name="user_password_new2"
                                                         placeholder="${basic_placeholder_password}"
                                                         data-validation-matches-match="user_password_new1"
-                                                        data-validation-matches-message="${basic_password_match}"/>
+                                                        required data-validation-matches-message="${basic_password_match}"/>
                                                 <br/>
                                             </div>
-                                            <p class="help-block" id="changepassword-help-block" style="float: left; margin-top: 3px;"></p>
+                                            <p class="help-block" style="float: left; margin-top: 3px;"></p>
                                         </div>
                                     </td>
                                 </tr>
@@ -68,6 +68,7 @@
                                 </tr>
                            </tbody>
                         </table>
+                        <p id="changepassword-help-block" style="float: left; margin-top: 3px;"></p>
                     </div>
                 </form>
             </div>

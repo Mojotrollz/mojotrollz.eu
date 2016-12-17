@@ -34,6 +34,7 @@ REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('basic_password_old', 'mojo
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('basic_change_password', 'mojotrollz');
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('basic_change_email', 'mojotrollz');
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('basic_email_new', 'mojotrollz');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('basic_email', 'mojotrollz');
 
 REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('link_facebook', 'enUS', 'https://www.facebook.com/mojotrollz/', 10, 10, '2015-09-17 23:16:50', '2015-09-17 23:16:50');
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('link_facebook', 'link');
