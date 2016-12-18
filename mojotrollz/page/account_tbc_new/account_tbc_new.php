@@ -10,7 +10,7 @@ class account_tbc_new implements \SYSTEM\PAGE\Page {
         $vars = \SYSTEM\PAGE\text::tag('mojotrollz');
         
         if(!\SYSTEM\SECURITY\security::isLoggedIn()){
-            return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_account/tpl/account_login.tpl'))->SERVERPATH(), $vars);}
+            return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('account_website/tpl/account_login.tpl'))->SERVERPATH(), $vars);}
         
         return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('account_tbc_new/tpl/account_tbc_new.tpl'))->SERVERPATH(), $vars);
     }

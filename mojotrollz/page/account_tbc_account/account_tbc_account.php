@@ -14,7 +14,7 @@ class account_tbc_account implements \SYSTEM\PAGE\Page {
         $vars = \SYSTEM\PAGE\text::tag('mojotrollz');
         
         if(!\SYSTEM\SECURITY\security::isLoggedIn()){
-            return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_account/tpl/account_login.tpl'))->SERVERPATH(), $vars);}
+            return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('account_website/tpl/account_login.tpl'))->SERVERPATH(), $vars);}
             
         $user = \SYSTEM\SECURITY\security::getUser();    
         if(!$user->email_confirmed && $user->username != $this->account){
