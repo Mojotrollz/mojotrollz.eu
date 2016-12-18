@@ -51,4 +51,10 @@ class page_mojotrollz extends \SYSTEM\API\api_default {
     
     public static function page_account_tbc_new(){
         return (new account_tbc_new())->html();}
+    
+    public static function page_account_tbc_account($account){
+        return (new account_tbc_account($account))->html();}
+
+    public static function page_account_tbc_changepassword($account){
+        return (new account_tbc_changepassword($account))->html();}
 }

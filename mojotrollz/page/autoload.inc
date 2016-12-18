@@ -17,3 +17,5 @@ require_once dirname(__FILE__).'/account_changeemail/autoload.inc';
 
 require_once dirname(__FILE__).'/account_tbc/autoload.inc';
 require_once dirname(__FILE__).'/account_tbc_new/autoload.inc';
+require_once dirname(__FILE__).'/account_tbc_account/autoload.inc';
+require_once dirname(__FILE__).'/account_tbc_changepassword/autoload.inc';

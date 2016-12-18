@@ -14,9 +14,11 @@ REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`
 
 REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (24, 1, 'tbc', 'account', 20, 1, 1, '#content_account', './?page=account_tbc', 'init_account_tbc', 'account_tbc');
 REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (25, 1, 'tbc_new', 'account', 20, 1, 1, '#content_account', './?page=account_tbc_new', 'init_account_tbc_new', 'account_tbc_new');
+REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (26, 1, 'tbc_account', 'account', 20, 1, 1, '#content_account', './?page=account_tbc_account&account=${account}', 'init_account_tbc_account', 'account_tbc_account');
+REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (27, 1, 'tbc_changepassword', 'account', 20, 1, 1, '#content_account', './?page=account_tbc_changepassword&account=${account}', 'init_account_tbc_changepassword', 'account_tbc_changepassword');
 
-REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (26, 1, 'beta', 'beta', -1, 0, 0, '#content', './?page=beta', 'init_beta', 'default_beta');
-REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (27, 1, 'register', 'register', -1, 0, 0, '#content', './?page=register', 'init_register', 'default_register');
+REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (28, 1, 'beta', 'beta', -1, 0, 0, '#content', './?page=beta', 'init_beta', 'default_beta');
+REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (29, 1, 'register', 'register', -1, 0, 0, '#content', './?page=register', 'init_register', 'default_register');
 
 REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (30, 1, 'article', 'article', -1, 0, 0, '#content', './?page=article&id=${article}', 'init_article', 'default_article');
 

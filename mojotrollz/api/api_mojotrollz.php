@@ -29,9 +29,17 @@ class api_mojotrollz extends \SYSTEM\API\api_system {
             throw new ERROR("Account creation failed. Retry later.");}
         return JsonResult::ok();
     }
-    
+        
     public static function call_account_action_change_password($old_password_sha1, $new_password_sha1){
         return \SYSTEM\SECURITY\security::change_password($old_password_sha1,$new_password_sha1);}
+
+    public static function call_account_action_change_password_wow($account, $old_wow_password_sha1, $new_wow_password_sha1){
+        if(!\SYSTEM\SECURITY\security::isLoggedIn()){
+            throw new \SYSTEM\LOG\ERROR('You need to be logged in to change your WoW Account\'s Password.');}
+        $user = \SYSTEM\SECURITY\security::getUser();    
+        if(!$user->email_confirmed && $user->username != $account){
+            throw new \SYSTEM\LOG\ERROR('You need to confirm your EMail to change this WoW Account\'s Password.');}
+        return self::wow_account_change_password($account,$old_wow_password_sha1,$new_wow_password_sha1,$user->email);}
     
     public static function call_account_action_change_email($new_email){
         return \SYSTEM\SECURITY\security::change_email($new_email,'mojotrollz_post_scripts::change_email');}
@@ -40,6 +48,8 @@ class api_mojotrollz extends \SYSTEM\API\api_system {
         return \SQL\MOJO_ACCOUNT_AVAILABLE::Q1(array($username), new \SQL\mangos_realm())['count'] == 0;}
     private static function wow_account_register($username,$email,$password){
         return \SQL\MOJO_ACCOUNT_REGISTER::QI(array($username,$email,$password), new \SQL\mangos_realm());}
+    private static function wow_account_change_password($account,$old_wow_password_sha1,$new_wow_password_sha1,$email){
+        return \SQL\MOJO_ACCOUNT_CHANGE_PASSWORD::QI(array($new_wow_password_sha1,$account,$old_wow_password_sha1,$email), new \SQL\mangos_realm()) ? JsonResult::ok() : JsonResult::fail();;}
         
     public static function call_tbc_action_item($id){
         return \JsonResult::toString(\SQL\TBC_ITEM::Q1(array($id),new \SQL\mangos_one_world()));}
