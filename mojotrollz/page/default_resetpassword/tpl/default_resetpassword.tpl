@@ -1,7 +1,7 @@
 <div class="row-fluid">
     <br><br>
     <div class="col-md-6 col-md-offset-3">
-        <div class="panel panel-primary">
+        <div class="panel panel-default">
             <div class="panel-heading"><h4>Mojotrollz - Reset Password</h4></div>
             <div class="panel-body" style="padding-bottom: 0;">
                 <table id="userLoginTable"> <!-- style="margin-left: 20px;" -->
@@ -18,7 +18,7 @@
                         </tr>
                         <tr>
                             <th style="padding-top: 10px;">
-                                <p style="float: left;"><a href="#!register">Register an Account</a></p>
+                                <p style="float: left;"><a href="#!account">Login</a> or <a href="#!register">Register</a> an Account</p>
                             </th>
                             <td>
                                 <p style="float: right;">

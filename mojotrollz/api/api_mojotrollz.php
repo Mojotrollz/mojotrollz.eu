@@ -11,11 +11,21 @@ class api_mojotrollz extends \SYSTEM\API\api_system {
                 \SYSTEM\LOG\JsonResult::fail();
     }
     
-    public static function call_account_action_create($username, $password, $email, $wowpassword){
+    public static function call_account_action_create($username, $password, $email, $wow_password){
         if(!\SYSTEM\SECURITY\security::available($username,$email) || !self::wow_username_available($username)){
             throw new \SYSTEM\LOG\ERROR('EMail is already in use or Username is not available.');}
         if( !\SYSTEM\SECURITY\security::create($username, $password, $email, \SYSTEM\CONFIG\config::get(\SYSTEM\CONFIG\config_ids::SYS_CONFIG_DEFAULT_LANG)) ||
-            !self::wow_account_register($username,$email,$wowpassword)){
+            !self::wow_account_register($username,$email,$wow_password)){
+            throw new ERROR("Account creation failed. Retry later.");}
+        return JsonResult::ok();
+    }
+    
+    public static function call_account_action_create_wow($username, $wow_password){
+        if(!\SYSTEM\SECURITY\security::isLoggedIn()){
+            throw new \SYSTEM\LOG\ERROR('You need to be logged in to register another WoW Account.');}
+        if(!self::wow_username_available($username)){
+            throw new \SYSTEM\LOG\ERROR('Username is not available.');}
+        if( !self::wow_account_register($username, \SYSTEM\SECURITY\security::getUser()->email,$wow_password)){
             throw new ERROR("Account creation failed. Retry later.");}
         return JsonResult::ok();
     }

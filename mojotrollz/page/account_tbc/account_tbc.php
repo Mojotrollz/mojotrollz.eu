@@ -19,7 +19,9 @@ class account_tbc implements \SYSTEM\PAGE\Page {
         while($row = $res->next()){
             $row['online'] = $row['online'] == 1 ? 'online' : 'offline';
             $vars['wow_accounts'] .= \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_account/tpl/wow_account.tpl'))->SERVERPATH(), $row);}
-        $vars['wow_accounts_confirm'] = \SYSTEM\SECURITY\security::getUser()->email_confirmed ? '' : \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_account/tpl/wow_accounts_confirm.tpl'))->SERVERPATH());
+        $vars['wow_accounts_confirm'] = \SYSTEM\SECURITY\security::getUser()->email_confirmed ?
+            \SYSTEM\PAGE\replace::replaceFile((new PPAGE('account_tbc/tpl/account_tbc_new.tpl'))->SERVERPATH()) :
+            \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_account/tpl/wow_accounts_confirm.tpl'))->SERVERPATH());
         return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('account_tbc/tpl/account_tbc.tpl'))->SERVERPATH(), $vars);
     }
 

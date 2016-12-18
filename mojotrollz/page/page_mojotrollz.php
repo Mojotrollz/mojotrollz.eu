@@ -39,13 +39,16 @@ class page_mojotrollz extends \SYSTEM\API\api_default {
         
     public static function page_account_website(){
         return (new account_website())->html();}
-        
-    public static function page_account_tbc(){
-        return (new account_tbc())->html();}
 
     public static function page_account_changepassword(){
         return (new account_changepassword())->html();}
 
     public static function page_account_changeemail(){
         return (new account_changeemail())->html();}
+        
+    public static function page_account_tbc(){
+        return (new account_tbc())->html();}
+    
+    public static function page_account_tbc_new(){
+        return (new account_tbc_new())->html();}
 }
