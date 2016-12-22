@@ -6,8 +6,9 @@
             <div class="panel-heading"><h4>Account</h4></div>
             <div class="panel-body">
                 <ul class="nav nav-pills nav-stacked" id="account_menu">
-                    <li id="li_account" class="active"><a href="#!account">Website Account</a></li>
-                    <li id="li_tbc"><a href="#!account(tbc)">WoW TBC Accounts</a></li>
+                    <li id="li_account" class="active"><a href="#!account"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;Website Account</a></li>
+                    <li id="li_serverstatus"><a href="#!account(serverstatus)"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;&nbsp;Serverstatus</a></li>
+                    <li id="li_tbc"><a href="#!account(tbc)"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>&nbsp;&nbsp;WoW TBC Accounts</a></li>
                     <br>
                     <li>
                         <form class="textbox" style="padding:10px" id="logout_form">

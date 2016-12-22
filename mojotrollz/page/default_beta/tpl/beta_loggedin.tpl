@@ -15,29 +15,29 @@
 <div class="panel panel-success">
     <div class="panel-heading"><h4>Server Status</h4></div>
     <div class="panel-body">
-        <table>
+        <table style="width: 100%;">
             <tr>
                 <td>
-                    <b>Realm:&nbsp;&nbsp;</b>
+                    <b>Realm Server:&nbsp;&nbsp;</b>
                 </td>
-                <td>
-                    <img src="./api.php?call=files&cat=content&id=${realm_online}.png" width="18" height="18"/>&nbsp;&nbsp;${realm_online}
+                <td style="text-align: right;">
+                    ${realm_online}&nbsp;&nbsp;<img src="./api.php?call=files&cat=content&id=${realm_online}.png" width="18" height="18"/>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <b>World: </b>
+                    <b>World Server: </b>
                 </td>
-                <td>
-                    <img src="./api.php?call=files&cat=content&id=${world_online}.png" width="18" height="18"/>&nbsp;&nbsp;${world_online}
+                <td style="text-align: right;">
+                    ${world_online}&nbsp;&nbsp;<img src="./api.php?call=files&cat=content&id=${world_online}.png" width="18" height="18"/>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <b>Test: </b>
+                    <b>Test Server: </b>
                 </td>
-                <td>
-                    <img src="./api.php?call=files&cat=content&id=${test_online}.png" width="18" height="18"/>&nbsp;&nbsp;${test_online}
+                <td style="text-align: right;">
+                    ${test_online}&nbsp;&nbsp;<img src="./api.php?call=files&cat=content&id=${test_online}.png" width="18" height="18"/>
                 </td>
             </tr>
         </table>
@@ -49,7 +49,7 @@
         <div class="row-fluid">
             <div class="col-md-6"><b>Username</b></div>
             <div class="col-md-3"><b>Chars</b></div>
-            <div class="col-md-3"><b>Online</b></div>
+            <div class="col-md-3" style="text-align: right;"><b>Online</b></div>
         </div>
         ${wow_accounts}
     </div>

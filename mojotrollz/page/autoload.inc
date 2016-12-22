@@ -14,6 +14,7 @@ require_once dirname(__FILE__).'/default_resetpassword/autoload.inc';
 require_once dirname(__FILE__).'/account_website/autoload.inc';
 require_once dirname(__FILE__).'/account_changepassword/autoload.inc';
 require_once dirname(__FILE__).'/account_changeemail/autoload.inc';
+require_once dirname(__FILE__).'/account_serverstatus/autoload.inc';
 
 require_once dirname(__FILE__).'/account_tbc/autoload.inc';
 require_once dirname(__FILE__).'/account_tbc_new/autoload.inc';

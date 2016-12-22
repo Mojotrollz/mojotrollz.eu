@@ -46,6 +46,9 @@ class page_mojotrollz extends \SYSTEM\API\api_default {
     public static function page_account_changeemail(){
         return (new account_changeemail())->html();}
         
+    public static function page_account_serverstatus(){
+        return (new account_serverstatus())->html();}
+        
     public static function page_account_tbc(){
         return (new account_tbc())->html();}
     

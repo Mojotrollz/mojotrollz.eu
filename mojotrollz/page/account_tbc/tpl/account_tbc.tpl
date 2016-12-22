@@ -4,7 +4,7 @@
         <div class="row-fluid">
             <div class="col-md-6"><b>Username</b></div>
             <div class="col-md-3"><b>Chars</b></div>
-            <div class="col-md-3"><b>Online</b></div>
+            <div class="col-md-3" style="text-align: right;"><b>Online</b></div>
         </div>
         ${wow_accounts}
         ${wow_accounts_confirm}
