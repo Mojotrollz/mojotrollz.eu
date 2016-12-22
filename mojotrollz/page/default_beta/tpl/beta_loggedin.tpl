@@ -12,6 +12,37 @@
         </p>
     </div>
 </div>
+<div class="panel panel-success">
+    <div class="panel-heading"><h4>Server Status</h4></div>
+    <div class="panel-body">
+        <table>
+            <tr>
+                <td>
+                    <b>Realm:&nbsp;&nbsp;</b>
+                </td>
+                <td>
+                    <img src="./api.php?call=files&cat=content&id=${realm_online}.png" width="18" height="18"/>&nbsp;&nbsp;${realm_online}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>World: </b>
+                </td>
+                <td>
+                    <img src="./api.php?call=files&cat=content&id=${world_online}.png" width="18" height="18"/>&nbsp;&nbsp;${world_online}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Test: </b>
+                </td>
+                <td>
+                    <img src="./api.php?call=files&cat=content&id=${test_online}.png" width="18" height="18"/>&nbsp;&nbsp;${test_online}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
 <div class="panel panel-default">
     <div class="panel-heading"><h4>WoW Account</h4></div>
     <div class="panel-body">

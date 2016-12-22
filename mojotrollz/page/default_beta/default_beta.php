@@ -6,6 +6,9 @@ class default_beta implements \SYSTEM\PAGE\Page {
         return \SYSTEM\PAGE\text::tag('meta_beta');}
     public function html(){
         $vars = array();
+        $vars['realm_online']   = \SAI\saimod_mojotrollz_server_handling::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_realm_status() == 1 ? 'online' : 'offline';
+        $vars['world_online']   = \SAI\saimod_mojotrollz_server_handling::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_status() == 1 ? 'online' : 'offline';
+        $vars['test_online']    = \SAI\saimod_mojotrollz_server_handling::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_test_status() == 1 ? 'online' : 'offline';
         if(\SYSTEM\SECURITY\security::isLoggedIn()){
             $vars['email'] = \SYSTEM\SECURITY\security::getUser()->email;
             $vars['username'] = \SYSTEM\SECURITY\security::getUser()->username;
@@ -18,7 +21,7 @@ class default_beta implements \SYSTEM\PAGE\Page {
             }
             $vars['beta_area'] = \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_beta/tpl/beta_loggedin.tpl'))->SERVERPATH(), $vars);
         } else {
-            $vars['beta_area'] = \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_beta/tpl/beta_loggedout.tpl'))->SERVERPATH());}
+            $vars['beta_area'] = \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_beta/tpl/beta_loggedout.tpl'))->SERVERPATH(), $vars);}
         $vars = array_merge($vars,\SYSTEM\PAGE\text::tag('mojotrollz'));
         return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_beta/tpl/beta.tpl'))->SERVERPATH(), $vars);
     }
