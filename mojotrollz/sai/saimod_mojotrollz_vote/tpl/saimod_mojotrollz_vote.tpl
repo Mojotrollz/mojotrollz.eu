@@ -1,4 +1,4 @@
-<h4>Mojotrollz Servers</h4>
+<h4>Mojotrollz Vote Servers</h4>
 <hr>
 Cron Last Visit: ${last_visit}<br/>
 <a href="./sai.php?call=cron" target="_blank">Start Cron</a>

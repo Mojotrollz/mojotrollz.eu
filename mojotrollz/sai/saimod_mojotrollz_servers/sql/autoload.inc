@@ -1,4 +1,4 @@
 <?php
 \SYSTEM\autoload::registerFolder(dirname(__FILE__),'SQL');
 \SYSTEM\autoload::registerFolder(dirname(__FILE__).'/qq/','SQL');
-\SYSTEM\SQL\setup::register('SQL\\DATA_SAIMOD_MOJOTROLLZ_SERVERS');
+\SYSTEM\SQL\setup::register('SQL\\DATA_SAIMOD_MOJOTROLLZ_SERVER_HANDLING');

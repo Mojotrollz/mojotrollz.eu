@@ -1,9 +1,7 @@
-REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5011, 42, 2, 5000, 'visible', 'visible', 'INT');
-REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5010, 42, 2, 5000, 'visible', 'id', 'INT');
-REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5008, 42, 2, 5000, 'del', 'id', 'INT');
-REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5005, 42, 2, 5000, 'save', 'description', 'STRING');
-REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5004, 42, 2, 5000, 'save', 'version', 'INT');
-REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5003, 42, 2, 5000, 'save', 'url', 'STRING');
-REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5002, 42, 2, 5000, 'save', 'name', 'STRING');
-REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5001, 42, 2, 5000, 'save', 'id', 'INT');
-REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5000, 42, 0, 0, '_SAI_saimod_mojotrollz_servers', 'action', NULL);
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5100, 42, 0, 0, '_SAI_saimod_mojotrollz_servers', 'action', NULL);
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5110, 42, 2, 5100, 'revert', 'path', 'STRING');
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5111, 42, 3, 5100, 'revert', 'submodule', 'STRING');
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5115, 42, 2, 5100, 'remove', 'path', 'STRING');
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5116, 42, 3, 5100, 'remove', 'submodule', 'STRING');
+
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5120, 42, 3, 5100, NULL, 'filter', 'INT');
