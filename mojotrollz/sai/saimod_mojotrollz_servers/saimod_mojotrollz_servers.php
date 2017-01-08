@@ -2,6 +2,13 @@
 namespace SAI;
 class saimod_mojotrollz_servers extends \SYSTEM\SAI\SaiModule {    
     public static function sai_mod__SAI_saimod_mojotrollz_servers(){
+        return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/mojotrollz_servers.tpl');}            
+    public static function html_li_menu(){return '<li class=""><a data-toggle="tooltip" data-placement="left" title="Mojotrollz Server" href="#!mojotrollz_servers"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>&nbsp;&nbsp;WoW Servers</a></li>';}
+    public static function right_public(){return false;}    
+    public static function right_right(){return \SYSTEM\SECURITY\security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
+    public static function js(){return array(new \PSAI('saimod_mojotrollz_servers/js/saimod_mojotrollz_servers.js'));}
+    
+    public static function sai_mod__SAI_saimod_mojotrollz_servers_action_status(){
         $vars = array();
         $vars['classic_realm_status'] = self::sai_mod__SAI_saimod_mojotrollz_servers_action_run_classic_realm_status();
         $vars['classic_world_status'] = self::sai_mod__SAI_saimod_mojotrollz_servers_action_run_classic_world_status();
@@ -13,12 +20,10 @@ class saimod_mojotrollz_servers extends \SYSTEM\SAI\SaiModule {
         $vars['tbc_world_test_status'] = self::sai_mod__SAI_saimod_mojotrollz_servers_action_run_tbc_world_test_status();
         $vars['tbc_players_online'] = self::online_tbc();
         $vars['tbc_test_players_online'] = self::online_tbc_test();
-        return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/main.tpl', $vars);}            
-    public static function html_li_menu(){return '<li class=""><a data-toggle="tooltip" data-placement="left" title="Mojotrollz Server" href="#!mojotrollz_servers"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>&nbsp;&nbsp;WoW Servers</a></li>';}
-    public static function right_public(){return false;}    
-    public static function right_right(){return \SYSTEM\SECURITY\security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
-    public static function js(){return array(new \PSAI('saimod_mojotrollz_servers/js/saimod_mojotrollz_servers.js'));}
-    //public static function css(){}
+        return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/status.tpl', $vars);
+    }
+    public static function sai_mod__SAI_saimod_mojotrollz_servers_action_update(){
+        return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/update.tpl');}            
     
     public static function sai_mod__SAI_saimod_mojotrollz_servers_action_stats_tbc_player($filter = 600){
         return \SYSTEM\LOG\JsonResult::toString(\SQL\STATS_TBC_PLAYER::QA(array($filter)));}
@@ -38,7 +43,7 @@ class saimod_mojotrollz_servers extends \SYSTEM\SAI\SaiModule {
         return 0;}//\SQL\ONLINE_PLAYERS::Q1(new \SQL\mangos_zero_chars_test())['count'];}
     public static function online_tbc_test(){
         return \SQL\ONLINE_PLAYERS::Q1(new \SQL\mangos_one_chars_test())['count'];}
-    public static function sai_mod__SAI_saimod_mojotrollz_servers_action_update(){        
+    public static function sai_mod__SAI_saimod_mojotrollz_servers_action_update_server(){        
         \LIB\lib_git::php();
         $log = '';
         try {

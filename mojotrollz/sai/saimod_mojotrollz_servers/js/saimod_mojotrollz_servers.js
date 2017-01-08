@@ -1,5 +1,21 @@
 function init_saimod_mojotrollz_servers(){
     {
+        $('#tabs a').click(function () {
+            $('#tabs li').each(function(){
+                $(this).removeClass('active');});
+            $(this).parent().addClass('active');
+        });
+    }
+}
+
+function init_saimod_mojotrollz_servers_status() {
+    {
+        $('#tabs li').each(function(){
+            $(this).removeClass('active');});
+        $('#menu_status').parent().addClass('active');
+    }
+    
+    {
         load_visualisation_mojotrollz_server('vis_tbc_player', 'stats_tbc_player', '#filter_vis_tbc_player', 'Players on WoW-TBC', 400,250);
         load_visualisation_mojotrollz_server('vis_classic_player', 'stats_classic_player', '#filter_vis_classic_player', 'Players on WoW-Classic', 400,250);
         
@@ -20,13 +36,22 @@ function init_saimod_mojotrollz_servers(){
             load_visualisation_mojotrollz_server('vis_classic_server', 'stats_classic_server', '#filter_vis_classic_server', 'WoW-Classic Server Status', 400,250);
         })
     }
+}
+
+function init_saimod_mojotrollz_servers_update() {
+    {
+        $('#tabs li').each(function(){
+            $(this).removeClass('active');});
+        $('#menu_update').parent().addClass('active');
+    }
+    
     {
         $('#btn_update').click(function(){
             growl_start('Updating Server Repository... please wait')
             $.ajax({    type :'GET',
                         url  : './sai.php',
                         data : {    sai_mod: '.SAI.saimod_mojotrollz_servers',
-                                    action: 'update'},
+                                    action: 'update_server'},
                         success : function(data) {
                             $('#output_log').append(data);
                             growl_end_success("Server Repository updated successfully!");
@@ -59,12 +84,12 @@ function init_saimod_mojotrollz_servers(){
 
             });
         });
+        
+        $('#btn_clear').click(function(){
+            $('#output_log').html('');
+            $('#table_changes').html('');
+        });
     }
-    
-    $('#btn_clear').click(function(){
-        $('#output_log').html('');
-        $('#table_changes').html('');
-    });
 }
 
 function revert_file(path,submodule){
