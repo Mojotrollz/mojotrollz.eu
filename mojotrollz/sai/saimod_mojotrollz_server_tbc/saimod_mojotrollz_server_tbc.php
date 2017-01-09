@@ -73,9 +73,10 @@ class saimod_mojotrollz_server_tbc extends \SYSTEM\SAI\SaiModule {
     public static function sai_mod__SAI_saimod_mojotrollz_server_tbc_action_bot_toggle($account, $guid, $server, $status){
         if($status == 0){
             \SQL\TBC_CHARACTER_BOT::QI(array($account,$guid,$server));
+            //\mojotrollz_tbc_soap::test_bot_login($account, $guid);
         } else {
-            //TODO: Remove Bot from World
             \SQL\TBC_CHARACTER_UNBOT::QI(array($account));
+            $server == 0 ? \mojotrollz_tbc_soap::bot_logout($account) : \mojotrollz_tbc_soap::test_bot_logout($account);
         }
     }
     
