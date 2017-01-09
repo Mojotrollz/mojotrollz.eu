@@ -2,18 +2,81 @@
 namespace SAI;
 class saimod_mojotrollz_server_tbc extends \SYSTEM\SAI\SaiModule {    
     public static function sai_mod__SAI_saimod_mojotrollz_server_tbc(){
+        return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/mojotrollz_server_tbc.tpl');}
+    public static function html_li_menu(){return '<li class=""><a data-toggle="tooltip" data-placement="left" title="Mojotrollz TBC Server" href="#!mojotrollz_server_tbc"><span class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span>&nbsp;&nbsp;TBC Server</a></li>';}
+    public static function right_public(){return false;}    
+    public static function right_right(){return \SYSTEM\SECURITY\security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
+    public static function js(){return array(new \PSAI('saimod_mojotrollz_server_tbc/js/saimod_mojotrollz_server_tbc.js'));}
+    //public static function css(){}
+    
+    public static function sai_mod__SAI_saimod_mojotrollz_server_tbc_action_status(){
         $vars = array();
         $vars['tbc_realm_status'] = self::sai_mod__SAI_saimod_mojotrollz_server_tbc_action_run_tbc_realm_status();
         $vars['tbc_world_status'] = self::sai_mod__SAI_saimod_mojotrollz_server_tbc_action_run_tbc_world_status();
         $vars['tbc_world_test_status'] = self::sai_mod__SAI_saimod_mojotrollz_server_tbc_action_run_tbc_world_test_status();
         $vars['tbc_players_online'] = self::online_tbc();
         $vars['tbc_test_players_online'] = self::online_tbc_test();
-        return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/main.tpl', $vars);}            
-    public static function html_li_menu(){return '<li class=""><a data-toggle="tooltip" data-placement="left" title="Mojotrollz TBC Server" href="#!mojotrollz_server_tbc"><span class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span>&nbsp;&nbsp;TBC Server</a></li>';}
-    public static function right_public(){return false;}    
-    public static function right_right(){return \SYSTEM\SECURITY\security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
-    public static function js(){return array(new \PSAI('saimod_mojotrollz_server_tbc/js/saimod_mojotrollz_server_tbc.js'));}
-    //public static function css(){}
+        return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/status.tpl', $vars);
+    }
+    public static function sai_mod__SAI_saimod_mojotrollz_server_tbc_action_control(){
+        return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/control.tpl');}
+    public static function sai_mod__SAI_saimod_mojotrollz_server_tbc_action_account($search='%',$page=0){
+        $res = \SQL\TBC_ACCOUNTS::QQ(array($search,$search,$search));
+        $count = \SQL\TBC_ACCOUNTS_COUNT::Q1(array($search,$search,$search))['count'];
+        
+        $vars = array();
+        $vars['search'] = $search;
+        $vars['page'] = $page;
+        $vars['entries'] = '';
+        $count_filtered = 0;
+        $res->seek(100*$page);
+        while(($r = $res->next()) && ($count_filtered < 100)){  
+            $r['online'] = $r['online'] == 1 ? 'online' : 'offline';
+            $r['system_account'] = $r['system_account'] > 0 ? 'online' : 'offline';
+            $r['bot'] = $r['bot'] > 0 ? 'online' : 'offline';
+            $vars['entries'] .= \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/account_entry.tpl', $r);
+            $count_filtered++;}
+        $vars['pagination'] = '';
+        $vars['page_last'] = ceil($count/100)-1;
+        for($i=0;$i < ceil($count/100);$i++){
+            $data = array('page' => $i,'search' => $search, 'active' => ($i == $page) ? 'active' : '');
+            $vars['pagination'] .= \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/account_pagination.tpl', $data);
+        }
+        $vars['count'] = $count_filtered.'/'.$count;
+        return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/account.tpl',$vars);
+    }
+    public static function sai_mod__SAI_saimod_mojotrollz_server_tbc_action_account_show($id){
+        $vars = \SQL\TBC_ACCOUNT::Q1(array($id));
+        $vars['entries'] = $vars['entries_test'] = '';
+        $res = \SQL\TBC_CHARACTERS::QQ(array($id));
+        while($r = $res->next()){
+            $r['online'] = $r['online'] == 1 ? 'online' : 'offline';
+            $r['status'] = $r['bot'] ? '1' : '0';
+            $r['bot'] = $r['bot'] ? 'online' : 'offline';
+            $r['server'] = 0;
+            $r['account'] = $vars['id'];
+            $vars['entries'] .= \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/account_show_entry.tpl', $r);
+        }
+        $res = \SQL\TBC_CHARACTERS_TEST::QQ(array($id));
+        while($r = $res->next()){
+            $r['online'] = $r['online'] == 1 ? 'online' : 'offline';
+            $r['status'] = $r['bot'] ? '1' : '0';
+            $r['bot'] = $r['bot'] ? 'online' : 'offline';
+            $r['server'] = 1;
+            $r['account'] = $vars['id'];
+            $vars['entries_test'] .= \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/account_show_entry.tpl', $r);
+        }
+        return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/account_show.tpl',$vars);
+    }
+    
+    public static function sai_mod__SAI_saimod_mojotrollz_server_tbc_action_bot_toggle($account, $guid, $server, $status){
+        if($status == 0){
+            \SQL\TBC_CHARACTER_BOT::QI(array($account,$guid,$server));
+        } else {
+            //TODO: Remove Bot from World
+            \SQL\TBC_CHARACTER_UNBOT::QI(array($account));
+        }
+    }
     
     public static function sai_mod__SAI_saimod_mojotrollz_server_tbc_action_stats_tbc_player($filter = 600){
         return \SYSTEM\LOG\JsonResult::toString(\SQL\STATS_TBC_PLAYER::QA(array($filter)));}

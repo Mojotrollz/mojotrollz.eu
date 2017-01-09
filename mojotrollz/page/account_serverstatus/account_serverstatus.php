@@ -12,9 +12,9 @@ class account_serverstatus implements \SYSTEM\PAGE\Page {
         if(!\SYSTEM\SECURITY\security::isLoggedIn()){
             return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('account_website/tpl/account_login.tpl'))->SERVERPATH(), $vars);}
         
-        $vars['realm_online']   = \SAI\saimod_mojotrollz_server_handling::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_realm_status() == 1 ? 'online' : 'offline';
-        $vars['world_online']   = \SAI\saimod_mojotrollz_server_handling::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_status() == 1 ? 'online' : 'offline';
-        $vars['test_online']    = \SAI\saimod_mojotrollz_server_handling::sai_mod__SAI_saimod_mojotrollz_server_handling_action_run_tbc_world_test_status() == 1 ? 'online' : 'offline';
+        $vars['realm_online']   = \SAI\saimod_mojotrollz_servers::sai_mod__SAI_saimod_mojotrollz_servers_action_run_tbc_realm_status() == 1 ? 'online' : 'offline';
+        $vars['world_online']   = \SAI\saimod_mojotrollz_servers::sai_mod__SAI_saimod_mojotrollz_servers_action_run_tbc_world_status() == 1 ? 'online' : 'offline';
+        $vars['test_online']    = \SAI\saimod_mojotrollz_servers::sai_mod__SAI_saimod_mojotrollz_servers_action_run_tbc_world_test_status() == 1 ? 'online' : 'offline';
         return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('account_serverstatus/tpl/account_serverstatus.tpl'))->SERVERPATH(), $vars);
     }
 

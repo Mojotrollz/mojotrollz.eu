@@ -1,5 +1,21 @@
 function init_saimod_mojotrollz_server_tbc(){
     {
+        $('#tabs a').click(function () {
+            $('#tabs li').each(function(){
+                $(this).removeClass('active');});
+            $(this).parent().addClass('active');
+        });
+    }
+}
+
+function init_saimod_mojotrollz_server_tbc_status(){
+    {
+        $('#tabs li').each(function(){
+            $(this).removeClass('active');});
+        $('#menu_status').parent().addClass('active');
+    }
+    
+    {
         load_visualisation_mojotrollz_tbc('vis_tbc_player', 'stats_tbc_player', '#filter_vis_tbc_player', 'Players on WoW-TBC', 400,250);
         
         load_visualisation_mojotrollz_tbc('vis_tbc_server', 'stats_tbc_server', '#filter_vis_tbc_server', 'WoW-TBC Server Status', 400,250);
@@ -11,17 +27,62 @@ function init_saimod_mojotrollz_server_tbc(){
             load_visualisation_mojotrollz_tbc('vis_tbc_server', 'stats_tbc_server', '#filter_vis_tbc_server', 'WoW-TBC Server Status', 400,250);
         })
     }
-    
-    $('#btn_clear').click(function(){
-        $('#output_log').html('');
-        $('#table_changes').html('');
-    });
-    
-    register_tbc();
 }
 
-function register_tbc(){
+function init_saimod_mojotrollz_server_tbc_account(){
     {
+        $('#tabs li').each(function(){
+            $(this).removeClass('active');});
+        $('#menu_account').parent().addClass('active');
+        
+        $('#btn_search').click(function(){
+            system.load('mojotrollz_server_tbc(account);search.'+$('#input_search').val(),true);
+        });
+    }
+}
+
+function init_saimod_mojotrollz_server_tbc_account_show(){
+    {
+        $('#tabs li').each(function(){
+            $(this).removeClass('active');});
+        $('#menu_account').parent().addClass('active');
+    }
+    {
+        $('.bot').click(function(){
+            var account = $(this).attr('account');
+            var guid = $(this).attr('guid');
+            var server = $(this).attr('server');
+            var status = $(this).attr('status');
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_tbc',
+                                    action: 'bot_toggle',
+                                    account: account,
+                                    guid: guid,
+                                    server: server,
+                                    status: status},
+                        success : function() {
+                            system.reload();
+                        }
+
+            });
+        });
+    }
+}
+
+function init_saimod_mojotrollz_server_tbc_control(){
+    {
+        $('#tabs li').each(function(){
+            $(this).removeClass('active');});
+        $('#menu_control').parent().addClass('active');
+    }
+    
+    {
+        $('#btn_clear').click(function(){
+            $('#output_log').html('');
+            $('#table_changes').html('');
+        });
+        
         $('#btn_tbc_realm_start').click(function(){
             growl_start('Doing ... please wait')
             $.ajax({    type :'GET',
