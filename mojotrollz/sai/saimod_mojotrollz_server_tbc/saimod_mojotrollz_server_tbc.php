@@ -34,6 +34,7 @@ class saimod_mojotrollz_server_tbc extends \SYSTEM\SAI\SaiModule {
             $r['online'] = $r['online'] == 1 ? 'online' : 'offline';
             $r['system_account'] = $r['system_account'] > 0 ? 'online' : 'offline';
             $r['bot'] = $r['bot'] > 0 ? 'online' : 'offline';
+            $r['username'] = \htmlspecialchars($r['username']);
             $vars['entries'] .= \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/account_entry.tpl', $r);
             $count_filtered++;}
         $vars['pagination'] = '';
