@@ -19,10 +19,10 @@ class mojotrollz_tbc_soap {
     public static function test_bot_login($account,$character){
         return self::soap_test('bot login '.$account.' '.$character);}
     public static function bot_login($account,$character){
-        return self::soap('bot login '.$account.' '.$character);}
+        return self::soap_live('bot login '.$account.' '.$character);}
         
     public static function test_bot_logout($account){
         return self::soap_test('bot logout '.$account);}
     public static function bot_logout($account){
-        return self::soap('bot logout '.$account);}
+        return self::soap_live('bot logout '.$account);}
 }
