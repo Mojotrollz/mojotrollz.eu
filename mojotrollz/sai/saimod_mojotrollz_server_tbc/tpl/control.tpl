@@ -98,6 +98,13 @@
                         <td style="text-align: right;"><button id="btn_logdel_tbc_chars_test" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
                     </tr>
                     <tr>
+                        <th>Database.log</th>
+                        <td></td>
+                        <td></td>
+                        <td style="text-align: right;"><button id="btn_log_tbc_database_test" class="btn-success btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> test</button></td>
+                        <td style="text-align: right;"><button id="btn_logdel_tbc_database_test" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
+                    </tr>
+                    <tr>
                         <th>DBErrors.log</th>
                         <td style="text-align: right;"><button id="btn_log_tbc_db_live" class="btn-success btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> live</button></td>
                         <td style="text-align: right;"><button id="btn_logdel_tbc_db_live" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
@@ -112,11 +119,18 @@
                         <td style="text-align: right;"><button id="btn_logdel_tbc_eventai_test" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
                     </tr>
                     <tr>
+                        <th>GM.log</th>
+                        <td style="text-align: right;"><button id="btn_log_tbc_gm_live" class="btn-success btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> live</button></td>
+                        <td style="text-align: right;"><button id="btn_logdel_tbc_gm_live" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
+                        <td style="text-align: right;"><button id="btn_log_tbc_gm_test" class="btn-success btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> test</button></td>
+                        <td style="text-align: right;"><button id="btn_logdel_tbc_gm_test" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
+                    </tr>
+                    <tr>
                         <th>Realmd.log</th>
                         <td style="text-align: right;"><button id="btn_log_tbc_realm_live" class="btn-success btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> live</button></td>
-                        <td style="text-align: right;"><button id="btn_logdel_tbc_realm_live" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
-                        <td style="text-align: right;"><button id="btn_log_tbc_realm_test" class="btn-success btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> test</button></td>
-                        <td style="text-align: right;"><button id="btn_logdel_tbc_realm_test" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
+                        <td style="text-align: right;"><button id="btn_logdel_tbc_realm_live" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>                        
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th>SD2Errors.log</th>
@@ -131,6 +145,20 @@
                         <td style="text-align: right;"><button id="btn_logdel_tbc_server_live" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
                         <td style="text-align: right;"><button id="btn_log_tbc_server_test" class="btn-success btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> test</button></td>
                         <td style="text-align: right;"><button id="btn_logdel_tbc_server_test" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
+                    </tr>
+                    <tr>
+                        <th>Crash.log</th>
+                        <td style="text-align: right;"><button id="btn_log_tbc_crash_live" class="btn-success btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> live</button></td>
+                        <td style="text-align: right;"><button id="btn_logdel_tbc_crash_live" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
+                        <td style="text-align: right;"><button id="btn_log_tbc_crash_test" class="btn-success btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> test</button></td>
+                        <td style="text-align: right;"><button id="btn_logdel_tbc_crash_test" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
+                    </tr>
+                    <tr>
+                        <th>Serverlog</th>
+                        <td style="text-align: right;"><button id="btn_log_tbc_serverlog_live" class="btn-success btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> live</button></td>
+                        <td style="text-align: right;"><button id="btn_logdel_tbc_serverlog_live" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
+                        <td style="text-align: right;"><button id="btn_log_tbc_serverlog_test" class="btn-success btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> test</button></td>
+                        <td style="text-align: right;"><button id="btn_logdel_tbc_serverlog_test" class="btn-danger btn btn-sm" style="margin-right: 15px; height: 32px; font-size: 13px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
                     </tr>
                 </table>
             </div>
