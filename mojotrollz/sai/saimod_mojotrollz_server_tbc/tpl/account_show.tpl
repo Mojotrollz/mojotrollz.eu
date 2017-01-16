@@ -42,6 +42,6 @@
             </tr>
             ${entries_test}
         </table>
-        <button class="btn-sm btn btn-success" id="btn_back" onclick="system.load('mojotrollz_server_tbc(account)')"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back</button>
+        <button class="btn-sm btn btn-success" id="btn_back" onclick="system.back()"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back</button>
     </div>
 </div>
