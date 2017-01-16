@@ -1,5 +1,5 @@
 <div class="panel panel-default">
-    <div class="panel-heading"><h4>TBC - Accounts</h4></div>
+    <div class="panel-heading"><h4>TBC - Characters</h4></div>
     <div class="panel-body">
         <button class="btn-sm btn btn-success" id="btn_search" type="submit" style="float: right; margin-left: 10px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</button>
         <input class="input-medium search-query action-control" id="input_search" type="text" placeholder="Search..." size="20" style="float: right;" value="${search}"/>
@@ -7,12 +7,11 @@
         <table class="table table-hover table-condensed sai_table tablesorter">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>Chars</th>
-                    <th>JoinDate</th>
-                    <th>LastLogin</th>
+                    <th>GUID</th>
+                    <th>Name</th>
+                    <th>Account</th>
+                    <th>Level</th>
+                    <th>Time</th>
                     <th>Sys</th>
                     <th>Bot</th>
                     <th>On</th>

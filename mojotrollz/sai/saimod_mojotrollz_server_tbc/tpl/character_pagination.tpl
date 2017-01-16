@@ -1,0 +1,1 @@
+<li class="${active}"><a href="#!mojotrollz_server_tbc(character);search.${search};page.${page}">${page}</a></li>

@@ -70,6 +70,47 @@ function init_saimod_mojotrollz_server_tbc_account_show(){
     }
 }
 
+function init_saimod_mojotrollz_server_tbc_character(){
+    {
+        $('#tabs li').each(function(){
+            $(this).removeClass('active');});
+        $('#menu_character').parent().addClass('active');
+        
+        $('#btn_search').click(function(){
+            system.load('mojotrollz_server_tbc(character);search.'+$('#input_search').val(),true);
+        });
+    }
+}
+
+function init_saimod_mojotrollz_server_tbc_character_show(){
+    {
+        $('#tabs li').each(function(){
+            $(this).removeClass('active');});
+        $('#menu_character').parent().addClass('active');
+    }
+    {
+        $('.bot').click(function(){
+            var account = $(this).attr('account');
+            var guid = $(this).attr('guid');
+            var server = $(this).attr('server');
+            var status = $(this).attr('status');
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_tbc',
+                                    action: 'bot_toggle',
+                                    account: account,
+                                    guid: guid,
+                                    server: server,
+                                    status: status},
+                        success : function() {
+                            system.reload();
+                        }
+
+            });
+        });
+    }
+}
+
 function init_saimod_mojotrollz_server_tbc_control(){
     {
         $('#tabs li').each(function(){

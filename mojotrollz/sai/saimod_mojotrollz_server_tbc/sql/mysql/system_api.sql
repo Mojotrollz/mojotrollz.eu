@@ -11,3 +11,8 @@ REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `na
 REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5651, 42, 2, 5600, 'bot_toggle', 'guid', 'UINT0');
 REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5652, 42, 2, 5600, 'bot_toggle', 'server', 'UINT0');
 REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5653, 42, 2, 5600, 'bot_toggle', 'status', 'UINT0');
+
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5660, 42, 3, 5600, 'character', 'search', 'STRING');
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5661, 42, 3, 5600, 'character', 'page', 'UINT0');
+
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5670, 42, 2, 5600, 'character_show', 'guid', 'UINT0');

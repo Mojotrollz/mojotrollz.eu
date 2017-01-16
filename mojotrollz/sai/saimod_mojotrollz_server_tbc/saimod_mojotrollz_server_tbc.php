@@ -49,7 +49,7 @@ class saimod_mojotrollz_server_tbc extends \SYSTEM\SAI\SaiModule {
     public static function sai_mod__SAI_saimod_mojotrollz_server_tbc_action_account_show($id){
         $vars = \SQL\TBC_ACCOUNT::Q1(array($id));
         $vars['entries'] = $vars['entries_test'] = '';
-        $res = \SQL\TBC_CHARACTERS::QQ(array($id));
+        $res = \SQL\TBC_ACCOUNT_CHARACTERS::QQ(array($id));
         while($r = $res->next()){
             $r['online'] = $r['online'] == 1 ? 'online' : 'offline';
             $r['status'] = $r['bot'] ? '1' : '0';
@@ -65,9 +65,45 @@ class saimod_mojotrollz_server_tbc extends \SYSTEM\SAI\SaiModule {
             $r['bot'] = $r['bot'] ? 'online' : 'offline';
             $r['server'] = 1;
             $r['account'] = $vars['id'];
-            $vars['entries_test'] .= \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/account_show_entry.tpl', $r);
+            $vars['entries_test'] .= \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/account_show_entry_test.tpl', $r);
         }
         return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/account_show.tpl',$vars);
+    }
+    public static function sai_mod__SAI_saimod_mojotrollz_server_tbc_action_character($search='%',$page=0){
+        $res = \SQL\TBC_CHARACTERS::QQ(array($search,$search,$search));
+        $count = \SQL\TBC_CHARACTERS_COUNT::Q1(array($search,$search,$search))['count'];
+        
+        $vars = array();
+        $vars['search'] = $search;
+        $vars['page'] = $page;
+        $vars['entries'] = '';
+        $count_filtered = 0;
+        $res->seek(100*$page);
+        while(($r = $res->next()) && ($count_filtered < 100)){  
+            $r['online'] = $r['online'] == 1 ? 'online' : 'offline';
+            $r['system_account'] = $r['system_account'] > 0 ? 'online' : 'offline';
+            $r['bot'] = $r['bot'] > 0 ? 'online' : 'offline';
+            $r['username'] = \htmlspecialchars($r['username']);
+            $r['totaltime'] = floor($r['totaltime']/86400).'d '.gmdate("H\h i\m s\s", $r['totaltime']);
+            $vars['entries'] .= \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/character_entry.tpl', $r);
+            $count_filtered++;}
+        $vars['pagination'] = '';
+        $vars['page_last'] = ceil($count/100)-1;
+        for($i=0;$i < ceil($count/100);$i++){
+            $data = array('page' => $i,'search' => $search, 'active' => ($i == $page) ? 'active' : '');
+            $vars['pagination'] .= \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/character_pagination.tpl', $data);
+        }
+        $vars['count'] = $count_filtered.'/'.$count;
+        return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/character.tpl',$vars);
+    }
+    public static function sai_mod__SAI_saimod_mojotrollz_server_tbc_action_character_show($guid){
+        $vars = \SQL\TBC_CHARACTER::Q1(array($guid));
+        $vars['totaltime'] = floor($vars['totaltime']/86400).'d '.gmdate("H\h i\m s\s", $vars['totaltime']);
+        $vars['online'] = $vars['online'] == 1 ? 'online' : 'offline';
+        $vars['status'] = $vars['bot'] ? '1' : '0';
+        $vars['bot'] = $vars['bot'] > 0 ? 'online' : 'offline';
+        $vars['server'] = 0;
+        return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/character_show.tpl',$vars);
     }
     
     public static function sai_mod__SAI_saimod_mojotrollz_server_tbc_action_bot_toggle($account, $guid, $server, $status){

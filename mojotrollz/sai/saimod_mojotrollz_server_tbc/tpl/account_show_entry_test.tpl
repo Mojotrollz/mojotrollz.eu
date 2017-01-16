@@ -1,4 +1,4 @@
-<tr onclick="system.load('mojotrollz_server_tbc(character_show);guid.${guid}')">
+<tr>
     <td>${guid}</td>
     <td>${name}</td>
     <td>${level}</td>
