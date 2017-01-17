@@ -109,6 +109,29 @@ function init_saimod_mojotrollz_server_tbc_character_show(){
             });
         });
     }
+    
+    {
+        $('#btn_chg_account').click(function(){
+            var guid = $(this).attr('guid');
+            var accountname = $('#input_account').val();
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_tbc',
+                                    action: 'change_account',
+                                    guid: guid,
+                                    accountname: accountname},
+                        success : function(data) {
+                            if(data.status){
+                                alert('ok');
+                                system.reload();
+                            } else {
+                                alert('Fail: '+data.result.message);
+                            }
+                        }
+
+            });
+        });
+    }
 }
 
 function init_saimod_mojotrollz_server_tbc_control(){

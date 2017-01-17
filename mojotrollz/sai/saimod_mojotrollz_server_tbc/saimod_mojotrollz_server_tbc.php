@@ -106,6 +106,16 @@ class saimod_mojotrollz_server_tbc extends \SYSTEM\SAI\SaiModule {
         return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/character_show.tpl',$vars);
     }
     
+    public static function sai_mod__SAI_saimod_mojotrollz_server_tbc_action_change_account($guid, $accountname){
+        $account = \SQL\TBC_ACCOUNT_NAME::Q1(array($accountname));
+        if(!$account){
+            throw new \SYSTEM\LOG\ERROR('Account not found.');}
+        if($account['char_count'] >= 10){
+            throw new \SYSTEM\LOG\ERROR('Account has to many Characters.');}
+        \SQL\TBC_CHARACTER_CHANGE_ACCOUNT::QI(array($account['id'],$guid));
+        return \SYSTEM\LOG\JsonResult::ok();
+    }
+    
     public static function sai_mod__SAI_saimod_mojotrollz_server_tbc_action_bot_toggle($account, $guid, $server, $status){
         if($status == 0){
             \SQL\TBC_CHARACTER_BOT::QI(array($account,$guid,$server));

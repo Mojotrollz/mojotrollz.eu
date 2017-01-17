@@ -16,3 +16,5 @@ REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `na
 REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5661, 42, 3, 5600, 'character', 'page', 'UINT0');
 
 REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5670, 42, 2, 5600, 'character_show', 'guid', 'UINT0');
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5671, 42, 2, 5600, 'change_account', 'guid', 'UINT0');
+REPLACE INTO `system_api` (`ID`, `group`, `type`, `parentID`, `parentValue`, `name`, `verify`) VALUES (5672, 42, 2, 5600, 'change_account', 'accountname', 'STRING');

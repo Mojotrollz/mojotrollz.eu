@@ -37,7 +37,18 @@
             <tr>
                 <th>System Account</th>
                 <td><a href="#!security(user);username.${system_account}">${system_account}</a></td>
-            </tr>  
+            </tr>
+            <tr>
+                <th></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Move Character</th>
+                <td>
+                    <input class="input-medium action-control" id="input_account" type="text" placeholder="Accountname" size="20"/>
+                    <button guid="${guid}" class="btn-sm btn btn-success" id="btn_chg_account" type="submit" style="margin-left: 10px;"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Change</button>
+                </td>
+            </tr>
         </table>
         <button class="btn-sm btn btn-success" id="btn_back" onclick="system.back()"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back</button>
     </div>
