@@ -48,6 +48,7 @@ class saimod_mojotrollz_server_tbc extends \SYSTEM\SAI\SaiModule {
     }
     public static function sai_mod__SAI_saimod_mojotrollz_server_tbc_action_account_show($id){
         $vars = \SQL\TBC_ACCOUNT::Q1(array($id));
+        $vars['username'] = \htmlspecialchars($vars['username']);
         $vars['entries'] = $vars['entries_test'] = '';
         $res = \SQL\TBC_ACCOUNT_CHARACTERS::QQ(array($id));
         while($r = $res->next()){
