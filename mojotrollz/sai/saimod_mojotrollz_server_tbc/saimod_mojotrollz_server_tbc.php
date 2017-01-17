@@ -69,6 +69,17 @@ class saimod_mojotrollz_server_tbc extends \SYSTEM\SAI\SaiModule {
         }
         return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/account_show.tpl',$vars);
     }
+    
+    public static function sai_mod__SAI_saimod_mojotrollz_server_tbc_action_delete_account($id){
+        $account = \SQL\TBC_ACCOUNT_CHARACTERS_COUNT::Q1(array($id));
+        if(!$account){
+            throw new \SYSTEM\LOG\ERROR('Account not found.');}
+        if($account['char_count'] > 0){
+            throw new \SYSTEM\LOG\ERROR('Account still has Characters.');}
+        \SQL\TBC_ACCOUNT_DELETE::QI(array($id));
+        return \SYSTEM\LOG\JsonResult::ok();
+    }
+    
     public static function sai_mod__SAI_saimod_mojotrollz_server_tbc_action_character($search='%',$page=0){
         $res = \SQL\TBC_CHARACTERS::QQ(array($search,$search,$search));
         $count = \SQL\TBC_CHARACTERS_COUNT::Q1(array($search,$search,$search))['count'];

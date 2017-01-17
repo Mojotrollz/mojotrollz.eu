@@ -68,6 +68,27 @@ function init_saimod_mojotrollz_server_tbc_account_show(){
             });
         });
     }
+    
+    {
+        $('#btn_del_account').click(function(){
+            var id = $(this).attr('account');
+            $.ajax({    type :'GET',
+                        url  : './sai.php',
+                        data : {    sai_mod: '.SAI.saimod_mojotrollz_server_tbc',
+                                    action: 'delete_account',
+                                    id: id},
+                        success : function(data) {
+                            if(data.status){
+                                alert('ok');
+                                system.back();
+                            } else {
+                                alert('Fail: '+data.result.message);
+                            }
+                        }
+
+            });
+        });
+    }
 }
 
 function init_saimod_mojotrollz_server_tbc_character(){

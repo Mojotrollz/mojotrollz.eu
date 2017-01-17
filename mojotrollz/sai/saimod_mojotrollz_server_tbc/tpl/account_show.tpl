@@ -25,7 +25,17 @@
             <tr>
                 <th>System Account</th>
                 <td><a href="#!security(user);username.${system_account}">${system_account}</a></td>
-            </tr>  
+            </tr>
+            <tr>
+                <th></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Delete Account</th>
+                <td>
+                    <button account="${id}" class="btn-sm btn btn-danger" id="btn_del_account" type="submit"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> Delete</button>
+                </td>
+            </tr>
         </table>
         <br/>
         <table class="table table-hover table-condensed sai_table tablesorter">
