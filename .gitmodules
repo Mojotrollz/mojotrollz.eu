@@ -16,3 +16,6 @@
 [submodule "lib/wow_tooltips"]
 	path = lib/wow_tooltips
 	url = ../lib_wow_tooltips.git
+[submodule "lib/minecraft_query"]
+	path = lib/minecraft_query
+	url = ../lib_minecraft_query.git
