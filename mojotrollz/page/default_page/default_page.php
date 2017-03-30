@@ -3,7 +3,7 @@ class default_page implements \SYSTEM\PAGE\DefaultPage {
     public static function js(){        
         return  \SYSTEM\HTML\html::script(\LIB\lib_jquery::js()->WEBPATH()).
                 \SYSTEM\HTML\html::script(\LIB\lib_bootstrap::js()->WEBPATH()).
-                \SYSTEM\HTML\html::script(\LIB\lib_jqbootstrapvalidation::js()->WEBPATH()).
+                \SYSTEM\HTML\html::script(\SYSTEM\CACHE\cache_js::url(array(\LIB\lib_jqbootstrapvalidation::js()))).
                 \SYSTEM\HTML\html::script(\LIB\lib_flexslider::js()->WEBPATH()).
                 \SYSTEM\HTML\html::script(\SYSTEM\CACHE\cache_js::url(
                     array(  \LIB\lib_system::js(),

@@ -5,7 +5,7 @@
     <td>${chars}</td>
     <td>${joindate}</td>
     <td>${last_login}</td>
-    <td><img src="./api.php?call=files&cat=content&id=${system_account}.png" width="18" height="18"/></td>
-    <td><img src="./api.php?call=files&cat=content&id=${bot}.png" width="18" height="18"/></td>
-    <td><img src="./api.php?call=files&cat=content&id=${online}.png" width="18" height="18"/></td>
+    <td><img src="./files/content/${system_account}.png" width="18" height="18"/></td>
+    <td><img src="./files/content/${bot}.png" width="18" height="18"/></td>
+    <td><img src="./files/content/${online}.png" width="18" height="18"/></td>
 </tr>

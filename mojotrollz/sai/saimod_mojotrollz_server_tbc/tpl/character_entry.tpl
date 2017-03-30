@@ -4,7 +4,7 @@
     <td>${username} (${email})</td>
     <td>${level}</td>
     <td>${totaltime}</td>
-    <td><img src="./api.php?call=files&cat=content&id=${system_account}.png" width="18" height="18"/></td>
-    <td><img src="./api.php?call=files&cat=content&id=${bot}.png" width="18" height="18"/></td>
-    <td><img src="./api.php?call=files&cat=content&id=${online}.png" width="18" height="18"/></td>
+    <td><img src="./files/content/${system_account}.png" width="18" height="18"/></td>
+    <td><img src="./files/content/${bot}.png" width="18" height="18"/></td>
+    <td><img src="./files/content/${online}.png" width="18" height="18"/></td>
 </tr>

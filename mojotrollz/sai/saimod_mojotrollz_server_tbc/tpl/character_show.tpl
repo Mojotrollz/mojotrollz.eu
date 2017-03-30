@@ -20,11 +20,11 @@
             </tr>
             <tr>
                 <th>Online</th>
-                <td><img src="./api.php?call=files&cat=content&id=${online}.png" width="18" height="18"/></td>
+                <td><img src="./files/content/${online}.png" width="18" height="18"/></td>
             </tr>
             <tr>
                 <th>Bot</th>
-                <td><img class="bot" guid="${guid}" status="${status}" account="${account_id}" server="${server}" src="./api.php?call=files&cat=content&id=${bot}.png" width="18" height="18"/></td>
+                <td><img class="bot" guid="${guid}" status="${status}" account="${account_id}" server="${server}" src="./files/content/${bot}.png" width="18" height="18"/></td>
             </tr>
             <tr>
                 <th></th>

@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^files/([^/]+)/([^/]+)$ api.php?call=files&cat=$1&id=$2
