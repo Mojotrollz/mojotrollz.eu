@@ -30,8 +30,6 @@
                 padding-right: 15px;
             }
         </style>
-        ${css}
-        ${js}
     </head>
     <body>
         <h1 class="fadeInDown animated lead mojotrollz_heading"><img class="img-responsive" title="mojotrollz.eu logo" alt="${mojotrollz_heading}" src="./files/content/mojotrollz_logo.png" width="100%"></h1>
@@ -112,4 +110,6 @@
             </div>
         </div>
     </body>
+    ${css}
+    ${js}
 </html>
