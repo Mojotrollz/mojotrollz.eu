@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
      <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="${meta_start_description}">
         <meta name="author" content="${meta_start_author}">
@@ -32,11 +32,11 @@
         </style>
     </head>
     <body>
-        <h1 class="fadeInDown animated lead mojotrollz_heading"><img class="img-responsive" title="mojotrollz.eu logo" alt="${mojotrollz_heading}" src="./files/content/mojotrollz_logo.png" width="100%"></h1>
+        <h1 class="fadeInDown animated lead mojotrollz_heading"><img class="img-responsive" title="${mojotrollz_heading}" alt="${mojotrollz_heading}" src="./files/content/mojotrollz_logo.png"></h1>
         <div class="container">
             <div id="tapete" class="row">
                 <!-- Navbar -->
-                <div class="navbar navbar-inverse mojotrollz_nav" role="navigation">
+                <nav class="navbar navbar-inverse mojotrollz_nav" role="navigation">
                     <div id="content_home" class="navbar-header ontop">
                         <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#navigation">
                           <span class="icon-bar"></span>
@@ -54,23 +54,23 @@
                             <!--<li><a href="#content_addons">${mojotrollz_addons}</a></li>-->
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="ontop"><a href="${link_twitch}" target="_blank"><i class="fa fa-twitch fa-lg"></i></a></li>
-                            <li class="ontop"><a href="${link_facebook}" target="_blank"><i class="fa fa-facebook fa-lg"></i></a></li>
-                            <li class="ontop"><a href="${link_youtube}" target="_blank"><i class="fa fa-youtube fa-lg"></i></a></li>
-                            <li class="ontop"><a href="#!donate"><i class="fa fa-usd fa-lg"></i></a></li>
-                            <li class="ontop"><a href="#!account"><i class="glyphicon glyphicon-user"></i></a></li>
+                            <li class="ontop"><a href="${link_twitch}" target="_blank"><i class="fa fa-twitch fa-lg"><span class="sr-only">Twitch</span></i></a></li>
+                            <li class="ontop"><a href="${link_facebook}" target="_blank"><i class="fa fa-facebook fa-lg"><span class="sr-only">Facebook</span></i></a></li>
+                            <li class="ontop"><a href="${link_youtube}" target="_blank"><i class="fa fa-youtube fa-lg"><span class="sr-only">Youtube</span></i></a></li>
+                            <li class="ontop"><a href="#!donate"><i class="fa fa-usd fa-lg"><span class="sr-only">Donate</span></i></a></li>
+                            <li class="ontop"><a href="#!account"><i class="glyphicon glyphicon-user"><span class="sr-only">Account/Login</span></i></a></li>
                         </ul>
                     </div>
-                </div>
+                </nav>
                 <!-- Flexslider -->
                 <div class="row-fluid">
                     <div class="col-md-12 mojotrollz_col">
                         <div class="flexslider mojotrollz_flexslider">
                             <ul class="slides">
-                                <li><img alt="WoW Classic Vanilla Banner" src="./files/content/banner_mojotrollz_1.png" width="100%"></li>
-                                <li style="display: none"><img alt="WoW The Burning Crusade Banner" src="./files/content/banner_mojotrollz_2.png" width="100%"></li>
-                                <li style="display: none"><img alt="World of Warcraft Pandaria Banner" src="./files/content/banner_mojotrollz_3.png" width="100%"></li>
-                                <li style="display: none"><img alt="The Struggle of our Community Banner" src="./files/content/banner_mojotrollz_4.png" width="100%"></li>
+                                <li><img alt="WoW Classic Vanilla Banner" src="./files/content/banner_mojotrollz_1.png" style="width:100%"></li>
+                                <li style="display: none"><img alt="WoW The Burning Crusade Banner" src="./files/content/banner_mojotrollz_2.png" style="width:100%"></li>
+                                <li style="display: none"><img alt="World of Warcraft Pandaria Banner" src="./files/content/banner_mojotrollz_3.png" style="width:100%"></li>
+                                <li style="display: none"><img alt="The Struggle of our Community Banner" src="./files/content/banner_mojotrollz_4.png" style="width:100%"></li>
                             </ul>
                         </div>
                     </div>
@@ -109,7 +109,7 @@
                 </div>
             </div>
         </div>
+        ${css}
+        ${js}
     </body>
-    ${css}
-    ${js}
 </html>

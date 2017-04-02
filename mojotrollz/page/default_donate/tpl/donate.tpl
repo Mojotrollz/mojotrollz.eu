@@ -4,7 +4,7 @@
     </div>
     <div class="col-md-3" style="padding-left: 40px; padding-top: 120px;">
         <a href="bitcoin:1DZmhdbP4YQvwYBTNDNEBnDFn1gYrHb3uT&amount=0.025&message=Mojodonate">
-            <img src="./files/content/bitcoin-donation-tab.png"/>
+            <img src="./files/content/bitcoin-donation-tab.png" alt="Donate Button - Donate Bitcoin"/>
         </a>
     </div>
 </div>
