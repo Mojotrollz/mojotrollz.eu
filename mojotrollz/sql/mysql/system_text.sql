@@ -185,6 +185,11 @@ REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mojotrollz_client_text', '
 REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mojotrollz_servers_text', 'enUS', '<h3>VOTE FOR SERVERS<br></h3><p>Vote for your favorite WoW Private Server here.</p>', 10, 10, '2016-01-04 04:43:52', '2016-01-04 04:43:52');
 REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mojotrollz_servers_text', 'mojotrollz');
 
+REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mojotrollz_minecraft', 'enUS', 'MINECRAFT', 10, 10, '2016-01-04 04:43:52', '2016-01-04 04:43:52');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mojotrollz_minecraft', 'mojotrollz');
+REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mojotrollz_minecraft_text', 'enUS', '<h1>Mojotrollz Minecraft Server</h1><h4>Join the Mojotrollz Minecraft on <b>mojotrollz.eu</b></h4>', 10, 10, '2016-01-04 04:43:52', '2016-01-04 04:43:52');
+REPLACE INTO `system_text_tag` (`id`, `tag`) VALUES ('mojotrollz_minecraft_text', 'mojotrollz');
+
 REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mail_change_email', 'enUS', 'Hello ${username}${newline}${newline}follow this link to change your Accounts Email-Address to ${email}${newline}${base_url}api.php?call=account&action=confirm&token=${token}${newline}${newline}Sincerely your Mojotrollz.eu Team', 10, 10, '2016-06-06 03:32:41', '2016-06-06 03:17:53');
 REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mail_change_email_from', 'enUS', 'admin@mojotrollz.eu', 10, 10, '2016-06-06 03:19:53', '2016-06-06 03:19:53');
 REPLACE INTO `system_text` (`id`, `lang`, `text`, `author`, `author_edit`, `time_create`, `time_edit`) VALUES ('mail_change_email_replyto', 'enUS', 'admin@mojotrollz.eu', 10, 10, '2016-06-06 03:20:15', '2016-06-06 03:20:15');

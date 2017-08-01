@@ -24,3 +24,5 @@ REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`
 REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (31, 1, 'article', 'article', -1, 0, 0, '#content', './?page=article&id=${article}', 'init_article', 'default_article');
 
 REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (35, 1, 'donate', 'donate', -1, 0, 0, '#content', './?page=donate', 'init_donate', 'default_donate');
+
+REPLACE INTO `system_page` (`id`, `group`, `name`, `state`, `parent_id`, `login`, `type`, `div`, `url`, `func`, `php_class`) VALUES (40, 1, 'minecraft', 'minecraft', -1, 0, 0, '#content', './?page=minecraft', 'init_minecraft', 'default_minecraft');

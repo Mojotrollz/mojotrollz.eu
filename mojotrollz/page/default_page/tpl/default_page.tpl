@@ -50,6 +50,7 @@
                             <li class="active ontop"><a href="#content_home">${mojotrollz_mojotrollz}</a></li>
                             <li class="ontop"><a href="#!serverlist">${mojotrollz_servers}</a></li>
                             <li class="ontop"><a href="#!beta">${mojotrollz_beta}</a></li>
+                            <li class="ontop"><a href="#!minecraft">${mojotrollz_minecraft}</a></li>
                             <!--<li><a href="#content_tshirts" onClick="">${mojotrollz_tshirts}</a></li>-->
                             <!--<li><a href="#content_addons">${mojotrollz_addons}</a></li>-->
                         </ul>
@@ -88,6 +89,7 @@
                         <a href="#content_home">${mojotrollz_mojotrollz}</a><br><br>
                         <a href="#!serverlist">${mojotrollz_servers}</a><br><br>
                         <a href="#!beta">${mojotrollz_beta}</a><br><br>
+                        <a href="#!minecraft">${mojotrollz_minecraft}</a><br><br>
                         <a href="#!account"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp; ${mojotrollz_login}</a> / <a href="#!register"> REGISTER</a><br><br>
                         <!--<a href="#content_tshirts">${mojotrollz_tshirts}</a><br><br>-->
                         <!--<a href="#content_addons">${mojotrollz_addons}</a><br><br>-->
