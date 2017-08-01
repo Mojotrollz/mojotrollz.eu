@@ -1,4 +1,6 @@
 <?php
+//silence model declaration warning
+$_ = function () {
 class api_mojotrollz extends \SYSTEM\API\api_system {
     public static function call_mojo_action_newserver($address){
         return  \SQL\MOJOTROLLZ_SERVER_INSERT::QI(array($address,$address)) ?
@@ -57,3 +59,6 @@ class api_mojotrollz extends \SYSTEM\API\api_system {
     public static function call_tbc_action_itemextendedcost($id){
         return \JsonResult::toString(\SQL\TBC_ITEMEXTENDEDCOST::Q1(array($id),new \SQL\mangos_one_dbc()));}
 }
+};
+@$_();
+unset($_);
