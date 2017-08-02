@@ -11,7 +11,7 @@ function init_register(){
                 url: './api.php',
                 data: {
                     call: 'account',
-                    action: 'create',
+                    action: 'register',
                     username: username,
                     password_sha1: $.sha1(password),
                     email: $('#register_email').val(),

@@ -1,6 +1,4 @@
 <?php
-//silence model declaration warning
-$_ = function () {
 class api_mojotrollz extends \SYSTEM\API\api_system {
     public static function call_mojo_action_newserver($address){
         return  \SQL\MOJOTROLLZ_SERVER_INSERT::QI(array($address,$address)) ?
@@ -13,7 +11,11 @@ class api_mojotrollz extends \SYSTEM\API\api_system {
                 \SYSTEM\LOG\JsonResult::fail();
     }
     
-    public static function call_account_action_create($username, $password, $email, $wow_password){
+    //override System call 2 prevent creatio without wow acc
+    public static function call_account_action_create($username, $password_sha1, $email, $locale = null){
+        throw new \ERROR('Not allowed - use action register');}
+    
+    public static function call_account_action_register($username, $password, $email, $wow_password){
         if(!\SYSTEM\SECURITY\security::available($username,$email) || !self::wow_username_available($username)){
             throw new \SYSTEM\LOG\ERROR('EMail is already in use or Username is not available.');}
         if( !\SYSTEM\SECURITY\security::create($username, $password, $email, \SYSTEM\CONFIG\config::get(\SYSTEM\CONFIG\config_ids::SYS_CONFIG_DEFAULT_LANG)) ||
@@ -59,6 +61,3 @@ class api_mojotrollz extends \SYSTEM\API\api_system {
     public static function call_tbc_action_itemextendedcost($id){
         return \JsonResult::toString(\SQL\TBC_ITEMEXTENDEDCOST::Q1(array($id),new \SQL\mangos_one_dbc()));}
 }
-};
-@$_();
-unset($_);
