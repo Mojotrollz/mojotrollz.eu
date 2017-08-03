@@ -19,3 +19,6 @@
 [submodule "lib/minecraft_query"]
 	path = lib/minecraft_query
 	url = ../lib_minecraft_query.git
+[submodule "mojotrollz/sai/saimod_webcraft_updates"]
+	path = mojotrollz/sai/saimod_webcraft_updates
+	url = ../saimod_webcraft_updates.git
