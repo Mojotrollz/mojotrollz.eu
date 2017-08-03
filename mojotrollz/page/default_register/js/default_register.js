@@ -13,7 +13,7 @@ function init_register(){
                     call: 'account',
                     action: 'register',
                     username: username,
-                    password_sha1: $.sha1(password),
+                    password: $.sha1(password),
                     email: $('#register_email').val(),
                     wow_password: $.sha1(username.toUpperCase()+':'+password.toUpperCase()),
                 },
