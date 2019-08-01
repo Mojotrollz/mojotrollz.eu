@@ -1,15 +1,15 @@
 [submodule "lib/system"]
 	path = lib/system
-	url = git@mojotrollz.eu:webcraft/system.git
+	url = ../system.git
 [submodule "lib/font_awesome"]
 	path = lib/font_awesome
-	url = git@mojotrollz.eu:webcraft/lib_font_awesome.git
+	url = ../lib_font_awesome.git
 [submodule "lib/flexslider"]
 	path = lib/flexslider
-	url = git@mojotrollz.eu:webcraft/host_flexslider.git
+	url = ../host_flexslider.git
 [submodule "lib/ts3"]
 	path = lib/ts3
-	url = git@mojotrollz.eu:webcraft/lib_ts3.git
+	url = ../lib_ts3.git
 [submodule "lib/handlebars"]
 	path = lib/handlebars
 	url = ../lib_handlebars.git
