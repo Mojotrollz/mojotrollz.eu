@@ -6,7 +6,7 @@
 	url = ../lib_font_awesome.git
 [submodule "lib/flexslider"]
 	path = lib/flexslider
-	url = ../host_flexslider.git
+	url = ../lib_flexslider.git
 [submodule "lib/ts3"]
 	path = lib/ts3
 	url = ../lib_ts3.git
