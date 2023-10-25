@@ -1,24 +1,24 @@
 [submodule "lib/system"]
 	path = lib/system
-	url = ../system.git
+	url = ../../webcraftmedia/system.git
 [submodule "lib/font_awesome"]
 	path = lib/font_awesome
-	url = ../lib_font_awesome.git
+	url = ../../webcraftmedia/lib_font_awesome.git
 [submodule "lib/flexslider"]
 	path = lib/flexslider
-	url = ../lib_flexslider.git
+	url = ../../webcraftmedia/lib_flexslider.git
 [submodule "lib/ts3"]
 	path = lib/ts3
-	url = ../lib_ts3.git
+	url = ../../webcraftmedia/lib_ts3.git
 [submodule "lib/handlebars"]
 	path = lib/handlebars
-	url = ../lib_handlebars.git
+	url = ../../webcraftmedia/lib_handlebars.git
 [submodule "lib/wow_tooltips"]
 	path = lib/wow_tooltips
-	url = ../lib_wow_tooltips.git
+	url = ../../webcraftmedia/lib_wow_tooltips.git
 [submodule "lib/minecraft_query"]
 	path = lib/minecraft_query
-	url = ../lib_minecraft_query.git
+	url = ../../webcraftmedia/lib_minecraft_query.git
 [submodule "mojotrollz/sai/saimod_webcraft_updates"]
 	path = mojotrollz/sai/saimod_webcraft_updates
-	url = ../saimod_webcraft_updates.git
+	url = ../../webcraftmedia/saimod_webcraft_updates.git
