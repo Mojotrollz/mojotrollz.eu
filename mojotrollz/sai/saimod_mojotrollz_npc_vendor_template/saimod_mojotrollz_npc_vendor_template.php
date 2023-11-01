@@ -1,6 +1,6 @@
 <?php
 namespace SAI;
-class saimod_mojotrollz_npc_vendor_template extends \SYSTEM\SAI\SaiModule {
+class saimod_mojotrollz_npc_vendor_template extends \SYSTEM\SAI\sai_module {
     public static function sai_mod__SAI_saimod_mojotrollz_npc_vendor_template_action_comment($entry,$comment){
         \SQL\NPC_VENDOR_TEMPLATE_COMMENT::QI(array($comment,$entry),new \SQL\mangos_one_world_test());
         return \JsonResult::ok();}

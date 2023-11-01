@@ -1,7 +1,7 @@
 <?php
 namespace SAI;
 
-class saimod_mojotrollz_downloads extends \SYSTEM\SAI\SaiModule {    
+class saimod_mojotrollz_downloads extends \SYSTEM\SAI\sai_module {    
     public static function sai_mod__SAI_saimod_mojotrollz_downloads(){
         $vars = array();
         $vars['content'] = '';

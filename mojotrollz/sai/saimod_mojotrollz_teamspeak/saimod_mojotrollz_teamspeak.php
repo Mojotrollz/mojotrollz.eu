@@ -1,6 +1,6 @@
 <?php
 namespace SAI;
-class saimod_mojotrollz_teamspeak extends \SYSTEM\SAI\SaiModule {    
+class saimod_mojotrollz_teamspeak extends \SYSTEM\SAI\sai_module {    
     public static function sai_mod__SAI_saimod_mojotrollz_teamspeak($db = null){
         $vars = array();
         $vars['db'] = $db;

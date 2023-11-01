@@ -1,7 +1,7 @@
 <?php
 namespace SAI;
 
-class saimod_mojotrollz_vote extends \SYSTEM\SAI\SaiModule {    
+class saimod_mojotrollz_vote extends \SYSTEM\SAI\sai_module {    
     public static function sai_mod__SAI_saimod_mojotrollz_vote(){
         $vars = array();
         $vars['content'] = '';

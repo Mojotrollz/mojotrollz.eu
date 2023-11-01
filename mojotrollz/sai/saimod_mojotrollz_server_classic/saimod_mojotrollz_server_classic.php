@@ -1,6 +1,6 @@
 <?php
 namespace SAI;
-class saimod_mojotrollz_server_classic extends \SYSTEM\SAI\SaiModule {    
+class saimod_mojotrollz_server_classic extends \SYSTEM\SAI\sai_module {    
     public static function sai_mod__SAI_saimod_mojotrollz_server_classic(){
         $vars = array();
         $vars['classic_realm_status'] = self::sai_mod__SAI_saimod_mojotrollz_server_classic_action_run_classic_realm_status();

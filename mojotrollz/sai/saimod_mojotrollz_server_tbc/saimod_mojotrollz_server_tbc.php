@@ -1,6 +1,6 @@
 <?php
 namespace SAI;
-class saimod_mojotrollz_server_tbc extends \SYSTEM\SAI\SaiModule {    
+class saimod_mojotrollz_server_tbc extends \SYSTEM\SAI\sai_module {    
     public static function sai_mod__SAI_saimod_mojotrollz_server_tbc(){
         return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/mojotrollz_server_tbc.tpl');}
     public static function html_li_menu(){return '<li class=""><a data-toggle="tooltip" data-placement="left" title="Mojotrollz TBC Server" href="#!mojotrollz_server_tbc"><span class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span>&nbsp;&nbsp;TBC Server</a></li>';}

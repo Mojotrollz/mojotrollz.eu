@@ -1,6 +1,6 @@
 <?php
 namespace SAI;
-class saimod_mojotrollz_beta extends \SYSTEM\SAI\SaiModule {
+class saimod_mojotrollz_beta extends \SYSTEM\SAI\sai_module {
     public static function code_check($code){
         return \SQL\BETA_CHECK_CODE::Q1(array($code))['count'] > 0;}
     
