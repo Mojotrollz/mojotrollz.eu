@@ -1,5 +1,5 @@
 <?php
-require_once 'inex.inc';
+require_once 'index.inc';
 
 \SYSTEM\system::start(\WEBCRAFT\config(dirname(__FILE__)));
 
