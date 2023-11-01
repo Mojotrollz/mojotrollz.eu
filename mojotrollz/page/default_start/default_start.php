@@ -21,7 +21,10 @@ class default_start implements \SYSTEM\PAGE\Page {
         $vars['content_addons'] = '';//\SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_start/tpl/content_addons.tpl'));
             
         \LIB\lib_ts3::php();
-        $ts3 = TeamSpeak3::factory("serverquery://mojotrollztsquery:9aYllYkG@127.0.0.1:10011/");
+        $ts3 = TeamSpeak3::factory('serverquery://'.
+            \SYSTEM\CONFIG\config::get(\config_ids::TEAMSPEAK_QUERY_USER).':'.
+            \SYSTEM\CONFIG\config::get(\config_ids::TEAMSPEAK_QUERY_PASSWORD).'@'.
+            \SYSTEM\CONFIG\config::get(\config_ids::TEAMSPEAK_HOST).':10011/');
         $vars['ts_players'] = $ts3->serverGetByPort(9987)->clientCount();
         $vars['mojotrollz_downloads'] = self::downloads();
         
