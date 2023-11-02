@@ -3,7 +3,7 @@ class default_page implements \SYSTEM\PAGE\DefaultPage {
     public static function js(){        
         return  \SYSTEM\HTML\html::script(\SYSTEM\CACHE\cache_js::minify(
                     array(  \LIB\lib_jquery::js(),
-                            \LIB\lib_bootstrap::js(),
+                            \LIB\lib_bootstrap3::js(),
                             \LIB\lib_jqbootstrapvalidation::js(),
                             \LIB\lib_flexslider::js(),
                             \LIB\lib_system::js(),
@@ -11,8 +11,8 @@ class default_page implements \SYSTEM\PAGE\DefaultPage {
     }
     
     public static function css(){  
-        return  \SYSTEM\HTML\html::link(\LIB\lib_bootstrap::css()->WEBPATH(false)).
-                \SYSTEM\HTML\html::link(\LIB\lib_font_awesome::css()->WEBPATH(false)).
+        return  \SYSTEM\HTML\html::link(\LIB\lib_bootstrap3::css()->WEBPATH(false)).
+                \SYSTEM\HTML\html::link(\LIB\lib_font_awesome4::css()->WEBPATH(false)).
                 \SYSTEM\HTML\html::link(\SYSTEM\CACHE\cache_css::minify(
                     array(  \LIB\lib_flexslider::css(),
                             \LIB\lib_animate::css(),
