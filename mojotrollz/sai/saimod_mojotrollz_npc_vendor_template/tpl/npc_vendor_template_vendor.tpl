@@ -1,4 +1,4 @@
-<button id="btn_back" onClick="system.back();" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> ${basic_back}</button>
+<button id="btn_back" onClick="system.back();" class="btn btn-sm btn-success"><span class="fa fa-chevron-left" aria-hidden="true"></span> ${basic_back}</button>
 <h6>${basic_rows}: ${count} ${basic_page}: ${page}</h6>
 <table class="sai_table" style="width: 100%;">
     <tr>
@@ -29,7 +29,7 @@
             <input class="input-medium search-query action-control" id="input_search_condition_id" type="text" placeholder="${basic_placeholder_search}" size="20" value="${search_condition_id}"/>
         </td>
         <td>
-            <button class="btn-sm btn btn-success" id="btn_search" entry="${entry}" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> ${basic_search}</button>
+            <button class="btn-sm btn btn-success" id="btn_search" entry="${entry}" type="submit"><span class="fa fa-search" aria-hidden="true"></span> ${basic_search}</button>
         </td>
     </tr>
     ${entries}
@@ -40,7 +40,7 @@
         <td><input class="form-control" type="text" id="input_incrtime" placeholder="incrtime" value="0"></td>
         <td><input class="form-control" type="text" id="input_extendedcost" placeholder="ExtendedCost" value="0"></td>
         <td><input class="form-control" type="text" id="input_condition_id" placeholder="condition_id" value="0"></td>
-        <td><button type="button" class="btn-sm btn btn-success" id="btn_add" _entry="${entry}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ${basic_add}</button></td>
+        <td><button type="button" class="btn-sm btn btn-success" id="btn_add" _entry="${entry}"><span class="fa fa-plus" aria-hidden="true"></span> ${basic_add}</button></td>
     </tr>
 </table>
 <ul class="pagination">
@@ -49,6 +49,6 @@
     <li><a href="#!mojotrollz_npc_vendor_template_vendor;entry.${entry};search.${search};page.${page_last}">&raquo;</a></li>
 </ul>
 <br>
-<button id="btn_back" onClick="system.back();" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> ${basic_back}</button>
+<button id="btn_back" onClick="system.back();" class="btn btn-sm btn-success"><span class="fa fa-chevron-left" aria-hidden="true"></span> ${basic_back}</button>
 
 ${wow_tooltip_templates}

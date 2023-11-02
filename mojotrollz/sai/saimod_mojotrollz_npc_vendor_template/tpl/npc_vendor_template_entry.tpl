@@ -5,6 +5,6 @@
         <input class="input-medium search-query action-control" id="input_comment_${entry}" type="text" size="20" value="${comments}"/>
     </td>
     <td>
-        <button class="btn-sm btn btn-success btn_comment" entry="${entry}" type="submit"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Comment</button>
+        <button class="btn-sm btn btn-success btn_comment" entry="${entry}" type="submit"><span class="fa fa-edit" aria-hidden="true"></span> Comment</button>
     </td>
 </tr>

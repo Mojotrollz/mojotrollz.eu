@@ -56,8 +56,8 @@ class api_mojotrollz extends \SYSTEM\API\api_system {
         return \SQL\MOJO_ACCOUNT_CHANGE_PASSWORD::QI(array($new_wow_password_sha1,$account,$old_wow_password_sha1,$email), new \SQL\mangos_realm()) ? JsonResult::ok() : JsonResult::fail();;}
         
     public static function call_tbc_action_item($id){
-        return \JsonResult::toString(\SQL\TBC_ITEM::Q1(array($id),new \SQL\mangos_one_world()));}
+        return \JsonResult::toString(\SQL\TBC_ITEM::Q1(array($id),\SQL\mangos_one_world::connection()));}
         
     public static function call_tbc_action_itemextendedcost($id){
-        return \JsonResult::toString(\SQL\TBC_ITEMEXTENDEDCOST::Q1(array($id),new \SQL\mangos_one_dbc()));}
+        return \JsonResult::toString(\SQL\TBC_ITEMEXTENDEDCOST::Q1(array($id),\SQL\mangos_one_dbc::connection()));}
 }

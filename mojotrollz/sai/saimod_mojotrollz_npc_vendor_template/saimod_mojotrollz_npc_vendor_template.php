@@ -143,7 +143,6 @@ class saimod_mojotrollz_npc_vendor_template extends \SYSTEM\SAI\sai_module {
     public static function js(){return array(   \LIB\lib_handlebars::js(),
                                                 \LIB\lib_wow_tooltips::js(),
                                                 new \PSAI('saimod_mojotrollz_npc_vendor_template/js/saimod_mojotrollz_npc_vendor_template.js'));}        
-    //public static function css(){return array();}
-    public static function scss(){
+    public static function css(){
         return array(   new \PSAI('saimod_mojotrollz_npc_vendor_template/css/default_item.scss'));}
 }

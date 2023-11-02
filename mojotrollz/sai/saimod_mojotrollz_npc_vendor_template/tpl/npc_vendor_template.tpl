@@ -17,7 +17,7 @@
             <input class="input-medium search-query action-control" id="input_search_comments" type="text" placeholder="${basic_placeholder_search}" size="20" value="${search_comments}"/>
         </td>
         <td>
-            <button class="btn-sm btn btn-success" id="btn_search" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> ${basic_search}</button>
+            <button class="btn-sm btn btn-success" id="btn_search" type="submit"><span class="fa fa-search" aria-hidden="true"></span> ${basic_search}</button>
         </td>
     </tr>
     ${entries}
@@ -30,7 +30,7 @@
             <input class="form-control" type="text" id="input_extendedcost" placeholder="ExtendedCost" style="width: 50px; float: left;">
             <input class="form-control" type="text" id="input_condition_id" placeholder="condition_id" style="width: 50px; float: left;">
         </td>
-        <td><button type="button" class="btn-sm btn btn-success" id="btn_add"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ${basic_add}</button></td>
+        <td><button type="button" class="btn-sm btn btn-success" id="btn_add"><span class="fa fa-plus" aria-hidden="true"></span> ${basic_add}</button></td>
     </tr>
 </table>
 <ul class="pagination">
