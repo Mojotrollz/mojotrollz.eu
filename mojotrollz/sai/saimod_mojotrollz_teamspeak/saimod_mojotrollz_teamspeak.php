@@ -8,8 +8,12 @@ class saimod_mojotrollz_teamspeak extends \SYSTEM\SAI\sai_module {
         if(file_exists((new \PLOG())->SERVERPATH())){
             $scanned_directory = array_diff(scandir((new \PLOG())->SERVERPATH()), array('..', '.'));
             foreach($scanned_directory as $file){
+                if($file === '.gitignore'){
+                    continue;
+                }
                 $vars['db_nav'] .= \SYSTEM\PAGE\replace::replaceFile((new \PSAI('saimod_mojotrollz_teamspeak/tpl/db_menu.tpl'))->SERVERPATH(),
-                                    array('db' => str_replace('.','_',$file), 'active' => str_replace('.','_',$file) == $db ? 'active' : '' ));}
+                                    array('db' => str_replace('.','_',$file), 'active' => str_replace('.','_',$file) == $db ? 'active' : '' ));
+            }
         }
         return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/main.tpl', $vars);}            
     public static function menu(){
