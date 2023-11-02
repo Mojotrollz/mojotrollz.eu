@@ -46,7 +46,7 @@ class saimod_mojotrollz_npc_vendor_template extends \SYSTEM\SAI\sai_module {
             }
         }
         $query_count = 'SELECT COUNT(*) as count FROM ('.$query.') t1';
-        $con = new \SYSTEM\DB\Connection(new \SQL\mangos_one_world_test());
+        $con = new \SYSTEM\DB\Connection(\SQL\mangos_one_world_test::connection());
         $count = $con->prepare('count_npc_vendor_template_vendor',$query_count,$query_vars)->next()['count'];
         $res = $con->prepare('select_npc_vendor_template_vendor', $query, $query_vars);
         
@@ -106,7 +106,7 @@ class saimod_mojotrollz_npc_vendor_template extends \SYSTEM\SAI\sai_module {
         if($query_search_having){
             $query = $query.' HAVING '.\substr($query_search_having, 4);}
         $query_count = 'SELECT COUNT(*) as count FROM ('.$query.') t1';
-        $con = new \SYSTEM\DB\Connection(new \SQL\mangos_one_world_test());
+        $con = new \SYSTEM\DB\Connection(\SQL\mangos_one_world_test::connection());
         if(count($query_vars) > 0){
             $count = $con->prepare('count_npc_vendor_template',$query_count,$query_vars)->next()['count'];
             $res = $con->prepare('select_npc_vendor_template', $query, $query_vars);
@@ -133,7 +133,11 @@ class saimod_mojotrollz_npc_vendor_template extends \SYSTEM\SAI\sai_module {
         $vars = array_merge($vars,  \SYSTEM\PAGE\text::tag('basic'));
         return \SYSTEM\PAGE\replace::replaceFile((new \PSAI('saimod_mojotrollz_npc_vendor_template/tpl/npc_vendor_template.tpl'))->SERVERPATH(), $vars);
     }
-    public static function html_li_menu(){return '<li role="separator" class="nav-divider"></li><li><a data-toggle="tooltip" data-placement="left" title="test server: npc_vendor_template" href="#!mojotrollz_npc_vendor_template"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>&nbsp;&nbsp;Vendor Template</a></li>';}
+    public static function menu(){
+        return new \SYSTEM\SAI\sai_module_menu( 100,
+                                    \SYSTEM\SAI\sai_module_menu::POISITION_LEFT,
+                                    \SYSTEM\SAI\sai_module_menu::DIVIDER_LEFT,
+                                    \SYSTEM\PAGE\replace::replaceFile((new \PSAI('saimod_mojotrollz_npc_vendor_template/tpl/menu.tpl'))->SERVERPATH()));}
     public static function right_public(){return false;}    
     public static function right_right(){return \SYSTEM\SECURITY\security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
     public static function js(){return array(   \LIB\lib_handlebars::js(),
