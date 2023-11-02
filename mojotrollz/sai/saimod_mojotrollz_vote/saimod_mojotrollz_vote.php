@@ -15,7 +15,12 @@ class saimod_mojotrollz_vote extends \SYSTEM\SAI\sai_module {
             $vars['content'] .= \SYSTEM\PAGE\replace::replaceFile((new \PSAI('saimod_mojotrollz_vote/tpl/list_entry.tpl'))->SERVERPATH(), $r);}
         $vars = array_merge($vars, \SYSTEM\PAGE\text::tag(\SYSTEM\SQL\system_text::TAG_TIME),\SYSTEM\PAGE\text::tag(\SYSTEM\SQL\system_text::TAG_BASIC));
         return \SYSTEM\PAGE\replace::replaceFile((new \PSAI('saimod_mojotrollz_vote/tpl/saimod_mojotrollz_vote.tpl'))->SERVERPATH(),$vars);}
-    public static function html_li_menu(){return '<li><a id="menu_mojotrollz_vote" data-toggle="tooltip" data-placement="left" title="Vote Servers" href="#!mojotrollz_vote"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp;&nbsp;Vote Servers</a></li>';}
+    public static function menu(){
+        return new \SYSTEM\SAI\sai_module_menu( 100,
+                                    \SYSTEM\SAI\sai_module_menu::POISITION_LEFT,
+                                    \SYSTEM\SAI\sai_module_menu::DIVIDER_LEFT,
+                                    \SYSTEM\PAGE\replace::replaceFile((new \PSAI('saimod_mojotrollz_vote/tpl/menu.tpl'))->SERVERPATH()));}
+    
     public static function right_public(){return false;}    
     public static function right_right(){return \SYSTEM\SECURITY\security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
     

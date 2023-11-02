@@ -31,7 +31,7 @@ Cron Last Visit: ${last_visit}<br/>
             <td></td>
             <td></td>
             <td></td>
-            <td><button type="button" class="btn-sm btn btn-success" id="btn_server_save"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ${basic_save}</button></td>
+            <td><button type="button" class="btn-sm btn btn-success" id="btn_server_save"><span class="fa fa-plus" aria-hidden="true"></span> ${basic_save}</button></td>
         </tr> 
     </table>
 </div>
