@@ -23,7 +23,7 @@
             <td><input class="form-control" type="text" id="input_text" placeholder="text" style="width: 100%;"></td>
             <td><input class="form-control" type="text" id="input_subtext" placeholder="subtext" style="width: 100%;"></td>
             <td></td>
-            <td><button type="button" class="btn-sm btn btn-success" id="btn_download_save"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ${basic_save}</button></td>
+            <td><button type="button" class="btn-sm btn btn-success" id="btn_download_save"><span class="fa fa-plus" aria-hidden="true"></span> ${basic_save}</button></td>
         </tr> 
     </table>
 </div>
