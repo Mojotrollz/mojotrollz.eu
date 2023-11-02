@@ -136,12 +136,12 @@ class saimod_mojotrollz_server_classic extends \SYSTEM\SAI\sai_module {
     
     public static function sai_mod__SAI_saimod_mojotrollz_server_classic_action_compile_classic_live(){
         $log  = \htmlentities(self::shell_compile('classic', 'live'));
-        $log .= chmod('/home/mojotrollz/mojo/'.'classic/server/bin/bin/run-mangosd',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
+        //$log .= chmod('/home/mojotrollz/mojo/'.'classic/server/bin/bin/run-mangosd',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
         return $log;
     }
     public static function sai_mod__SAI_saimod_mojotrollz_server_classic_action_compile_classic_test(){
         $log  = \htmlentities(self::shell_compile('classic', 'test'));
-        $log .= chmod('/home/mojotrollz/mojo/'.'classic/server/bin_test/bin/run-mangosd',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
+        //$log .= chmod('/home/mojotrollz/mojo/'.'classic/server/bin_test/bin/run-mangosd',0755) ? "rights apply: yes\r\n" : "rights apply: no\r\n";
         return $log;
     }
         
