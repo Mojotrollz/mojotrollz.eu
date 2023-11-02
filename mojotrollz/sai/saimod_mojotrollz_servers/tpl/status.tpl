@@ -1,6 +1,6 @@
-<div class="panel panel-default">
-    <div class="panel-heading"><h4>Mojotrollz WoW-Servers</h4></div>
-    <div class="panel-body">
+<div class="card card-default">
+    <div class="card-header"><h4>Mojotrollz WoW-Servers</h4></div>
+    <div class="card-body">
         <div class="row">
             <div class="col-md-6">
                 <div id="vis_classic_player"></div>
@@ -80,10 +80,10 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-6">
-        <div class="panel panel-default">
-            <div class="panel-heading"><h4>Classic - Status</h4></div>
-            <div class="panel-body">
+    <div class="col-md-6 mt-3">
+        <div class="card card-default">
+            <div class="card-header"><h4>Classic - Status</h4></div>
+            <div class="card-body">
                 <table class="table">
                     <tr>
                         <th>realm</th>
@@ -111,9 +111,9 @@
     </div>
                     
     <div class="col-md-6">
-        <div class="panel panel-default">
-            <div class="panel-heading"><h4>TBC - Status</h4></div>
-            <div class="panel-body">
+        <div class="card card-default mt-3">
+            <div class="card-header"><h4>TBC - Status</h4></div>
+            <div class="card-body">
                 <table class="table">
                     <tr>
                         <th>realm</th>

@@ -1,18 +1,18 @@
 function init_saimod_mojotrollz_servers(){
     {
         $('#tabs a').click(function () {
-            $('#tabs li').each(function(){
+            $('#tabs li a').each(function(){
                 $(this).removeClass('active');});
-            $(this).parent().addClass('active');
+            $(this).addClass('active');
         });
     }
 }
 
 function init_saimod_mojotrollz_servers_status() {
     {
-        $('#tabs li').each(function(){
+        $('#tabs li a').each(function(){
             $(this).removeClass('active');});
-        $('#menu_status').parent().addClass('active');
+        $('#menu_status').addClass('active');
     }
     
     {
@@ -40,9 +40,9 @@ function init_saimod_mojotrollz_servers_status() {
 
 function init_saimod_mojotrollz_servers_update() {
     {
-        $('#tabs li').each(function(){
+        $('#tabs li a').each(function(){
             $(this).removeClass('active');});
-        $('#menu_update').parent().addClass('active');
+        $('#menu_update').addClass('active');
     }
     
     {
