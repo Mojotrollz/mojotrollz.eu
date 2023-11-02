@@ -12,7 +12,11 @@ class saimod_mojotrollz_teamspeak extends \SYSTEM\SAI\sai_module {
                                     array('db' => str_replace('.','_',$file), 'active' => str_replace('.','_',$file) == $db ? 'active' : '' ));}
         }
         return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/main.tpl', $vars);}            
-    public static function html_li_menu(){return '<li class=""><a data-toggle="tooltip" data-placement="left" title="Mojotrollz Teamspeak" href="#!mojotrollz_teamspeak"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>&nbsp;&nbsp;Teamspeak</a></li>';}
+    public static function menu(){
+        return new \SYSTEM\SAI\sai_module_menu( 100,
+                                    \SYSTEM\SAI\sai_module_menu::POISITION_LEFT,
+                                    \SYSTEM\SAI\sai_module_menu::DIVIDER_NONE,
+                                    \SYSTEM\PAGE\replace::replaceFile((new \PSAI('saimod_mojotrollz_teamspeak/tpl/menu.tpl'))->SERVERPATH()));}
     public static function right_public(){return false;}    
     public static function right_right(){return \SYSTEM\SECURITY\security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
     public static function js(){return array(new \PSAI('saimod_mojotrollz_teamspeak/js/saimod_mojotrollz_teamspeak.js'));}
