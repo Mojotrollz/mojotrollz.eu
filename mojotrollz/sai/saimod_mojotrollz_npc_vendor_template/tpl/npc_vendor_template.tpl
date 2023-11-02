@@ -34,7 +34,7 @@
     </tr>
 </table>
 <ul class="pagination">
-    <li><a href="#!mojotrollz_npc_vendor_template;search.${search};page.0">&laquo;</a></li>
+    <li class="page-item"><a class="page-link" href="#!mojotrollz_npc_vendor_template;search.${search};page.0">&laquo;</a></li>
     ${pagination}
-    <li><a href="#!mojotrollz_npc_vendor_template;search.${search};page.${page_last}">&raquo;</a></li>
+    <li class="page-item"><a class="page-link" href="#!mojotrollz_npc_vendor_template;search.${search};page.${page_last}">&raquo;</a></li>
 </ul>

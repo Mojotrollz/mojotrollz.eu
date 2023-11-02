@@ -1,1 +1,1 @@
-<li class="${active}"><a href="#!mojotrollz_npc_vendor_template;search.${search};page.${page}">${page}</a></li>
+<li class="page-item ${active}"><a class="page-link" href="#!mojotrollz_npc_vendor_template;search.${search};page.${page}">${page}</a></li>
