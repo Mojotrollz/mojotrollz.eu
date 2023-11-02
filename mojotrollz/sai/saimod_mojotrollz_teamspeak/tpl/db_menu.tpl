@@ -1,1 +1,1 @@
-<a class="nav-link ${active}" data-toggle="pill" href="#!mojotrollz_teamspeak;db.${db}" role="tab" aria-controls="v-pills-settings" aria-selected="false">${db}</a>
+<a class="nav-link ${active}" href="#!mojotrollz_teamspeak;db.${db}" role="tab" aria-controls="v-pills-settings" aria-selected="false">${db}</a>

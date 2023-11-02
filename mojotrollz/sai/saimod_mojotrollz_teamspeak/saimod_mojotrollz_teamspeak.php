@@ -5,6 +5,7 @@ class saimod_mojotrollz_teamspeak extends \SYSTEM\SAI\sai_module {
         $vars = array();
         $vars['db'] = $db;
         $vars['db_nav'] = '';
+        $vars['cur_active'] = $db ? '' : 'active';
         if(file_exists((new \PLOG())->SERVERPATH())){
             $scanned_directory = array_diff(scandir((new \PLOG())->SERVERPATH()), array('..', '.'));
             foreach($scanned_directory as $file){

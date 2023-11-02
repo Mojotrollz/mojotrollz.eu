@@ -4,7 +4,7 @@
         <div class="tab-pane active" id="tab_ts_nav">    
             <div class="tabbable tabs-left subtabs row">
                 <ul class="nav flex-column nav-pills col-md-3">
-                    <a class="nav-link active" data-toggle="pill" href="#!mojotrollz_teamspeak" role="tab" aria-controls="v-pills-home" aria-selected="true">Current Month</a>
+                    <a class="nav-link ${cur_active}" href="#!mojotrollz_teamspeak" role="tab" aria-controls="v-pills-home" aria-selected="true">Current Month</a>
                     ${db_nav}
                 </ul>
                 <div class="tab-content col-md-9">
