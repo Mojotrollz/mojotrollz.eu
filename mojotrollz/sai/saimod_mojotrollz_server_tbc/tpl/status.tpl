@@ -1,6 +1,6 @@
-<div class="panel panel-default">
-    <div class="panel-heading"><h4>TBC - Status</h4></div>
-    <div class="panel-body">
+<div class="card card-default">
+    <div class="card-header"><h4>TBC - Status</h4></div>
+    <div class="card-body">
         <div class="row">
             <div class="col-md-6">
                 <div id="vis_tbc_player"></div>

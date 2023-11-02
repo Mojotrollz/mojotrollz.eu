@@ -1,6 +1,6 @@
-<div class="panel panel-default">
-    <div class="panel-heading"><h4>TBC - Character - <b>${name}</b></h4></div>
-    <div class="panel-body">
+<div class="card card-default">
+    <div class="card-header"><h4>TBC - Character - <b>${name}</b></h4></div>
+    <div class="card-body">
         <table class="table table-hover table-condensed sai_table tablesorter">
             <tr>
                 <th>GUID</th>

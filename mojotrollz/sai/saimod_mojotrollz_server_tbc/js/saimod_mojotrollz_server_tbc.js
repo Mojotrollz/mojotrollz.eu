@@ -1,9 +1,9 @@
 function init_saimod_mojotrollz_server_tbc(){
     {
         $('#tabs a').click(function () {
-            $('#tabs li').each(function(){
+            $('#tabs li a').each(function(){
                 $(this).removeClass('active');});
-            $(this).parent().addClass('active');
+            $(this).addClass('active');
         });
     }
 }
@@ -43,9 +43,9 @@ function init_saimod_mojotrollz_server_tbc_account(){
 
 function init_saimod_mojotrollz_server_tbc_account_show(){
     {
-        $('#tabs li').each(function(){
+        $('#tabs li a').each(function(){
             $(this).removeClass('active');});
-        $('#menu_account').parent().addClass('active');
+        $('#menu_account').addClass('active');
     }
     {
         $('.bot').click(function(){
@@ -93,9 +93,9 @@ function init_saimod_mojotrollz_server_tbc_account_show(){
 
 function init_saimod_mojotrollz_server_tbc_character(){
     {
-        $('#tabs li').each(function(){
+        $('#tabs li a').each(function(){
             $(this).removeClass('active');});
-        $('#menu_character').parent().addClass('active');
+        $('#menu_character').addClass('active');
         
         $('#btn_search').click(function(){
             system.load('mojotrollz_server_tbc(character);search.'+$('#input_search').val(),true);
@@ -105,9 +105,9 @@ function init_saimod_mojotrollz_server_tbc_character(){
 
 function init_saimod_mojotrollz_server_tbc_character_show(){
     {
-        $('#tabs li').each(function(){
+        $('#tabs li a').each(function(){
             $(this).removeClass('active');});
-        $('#menu_character').parent().addClass('active');
+        $('#menu_character').addClass('active');
     }
     {
         $('.bot').click(function(){
@@ -157,9 +157,9 @@ function init_saimod_mojotrollz_server_tbc_character_show(){
 
 function init_saimod_mojotrollz_server_tbc_control(){
     {
-        $('#tabs li').each(function(){
+        $('#tabs li a').each(function(){
             $(this).removeClass('active');});
-        $('#menu_control').parent().addClass('active');
+        $('#menu_control').addClass('active');
     }
     
     {
