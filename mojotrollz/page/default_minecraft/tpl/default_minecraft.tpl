@@ -4,4 +4,4 @@
     </div>
 </div>
 
-<iframe src="https://www.mojotrollz.eu/minecraft?zoom=4" style="width: 100%; height: 750px; border: 0;"></iframe>
+<iframe src="https://minecraft.mojotrollz.eu/?zoom=4" style="width: 100%; height: 750px; border: 0;"></iframe>
