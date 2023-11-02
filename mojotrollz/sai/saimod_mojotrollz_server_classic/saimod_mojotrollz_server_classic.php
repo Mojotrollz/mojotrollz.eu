@@ -9,7 +9,11 @@ class saimod_mojotrollz_server_classic extends \SYSTEM\SAI\sai_module {
         $vars['classic_players_online'] = self::online_classic();
         $vars['classic_test_players_online'] = self::online_classic_test();
         return \SYSTEM\PAGE\replace::replaceFile(dirname(__FILE__).'/tpl/main.tpl', $vars);}            
-    public static function html_li_menu(){return '<li class=""><a data-toggle="tooltip" data-placement="left" title="Mojotrollz Classic Server" href="#!mojotrollz_server_classic"><span class="glyphicon glyphicon-grain" aria-hidden="true"></span>&nbsp;&nbsp;Classic Server</a></li>';}
+    public static function menu(){
+        return new \SYSTEM\SAI\sai_module_menu( 100,
+                                    \SYSTEM\SAI\sai_module_menu::POISITION_LEFT,
+                                    \SYSTEM\SAI\sai_module_menu::DIVIDER_NONE,
+                                    \SYSTEM\PAGE\replace::replaceFile((new \PSAI('saimod_mojotrollz_server_classic/tpl/menu.tpl'))->SERVERPATH()));}
     public static function right_public(){return false;}    
     public static function right_right(){return \SYSTEM\SECURITY\security::check(\SYSTEM\SECURITY\RIGHTS::SYS_SAI);}
     public static function js(){return array(new \PSAI('saimod_mojotrollz_server_classic/js/saimod_mojotrollz_server_classic.js'));}
@@ -21,7 +25,7 @@ class saimod_mojotrollz_server_classic extends \SYSTEM\SAI\sai_module {
         return \SYSTEM\LOG\JsonResult::toString(\SQL\STATS_CLASSIC_SERVER::QA(array($filter)));}
                
     public static function online_classic(){
-        return \SQL\ONLINE_PLAYERS::Q1(new \SQL\mangos_zero_chars())['count'];}
+        return \SQL\ONLINE_PLAYERS::Q1(\SQL\mangos_zero_chars::connection())['count'];}
     public static function online_classic_test(){
         return 0;}//\SQL\ONLINE_PLAYERS::Q1(new \SQL\mangos_zero_chars_test())['count'];}
     
