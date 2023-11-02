@@ -22,3 +22,9 @@
 [submodule "mojotrollz/sai/saimod_webcraft_updates"]
 	path = mojotrollz/sai/saimod_webcraft_updates
 	url = ../../webcraftmedia/saimod_webcraft_updates.git
+[submodule "lib/bootstrap3"]
+	path = lib/bootstrap3
+	url = ../../webcraftmedia/lib_bootstrap.git
+[submodule "lib/font_awesome4"]
+	path = lib/font_awesome4
+	url = ../../webcraftmedia/lib_font_awesome.git
