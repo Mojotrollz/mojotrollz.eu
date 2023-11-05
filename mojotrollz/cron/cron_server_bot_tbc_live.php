@@ -13,6 +13,6 @@ class cron_server_bot_tbc_live implements \SYSTEM\CRON\cronjob{
                 mojotrollz_tbc_soap::bot_logout($bot['account_id']);
             }
         }
-        return cronstatus::CRON_STATUS_SUCCESFULLY;
+        return \SYSTEM\CRON\cronstatus::CRON_STATUS_SUCCESFULLY;
     }
 }
