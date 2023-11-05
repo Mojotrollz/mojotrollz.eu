@@ -7,5 +7,6 @@ class cron_players_online_ts implements \SYSTEM\CRON\cronjob{
             \SYSTEM\CONFIG\config::get(\config_ids::TEAMSPEAK_QUERY_PASSWORD).'@'.
             \SYSTEM\CONFIG\config::get(\config_ids::TEAMSPEAK_HOST).':10011/');
         new \LOG\PLAYER_COUNT_TS($ts3->serverGetByPort(9987)->clientCount());
+        return cronstatus::CRON_STATUS_SUCCESFULLY;
     }
 }

@@ -2,5 +2,6 @@
 class cron_players_online_classic_test implements \SYSTEM\CRON\cronjob{
     public static function run(){ 
         new \LOG\PLAYER_COUNT_CLASSIC_TEST(\SAI\saimod_mojotrollz_servers::online_classic_test());
+        return cronstatus::CRON_STATUS_SUCCESFULLY;
     }
 }
