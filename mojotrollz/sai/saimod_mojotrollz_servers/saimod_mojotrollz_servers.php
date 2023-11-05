@@ -159,7 +159,7 @@ class saimod_mojotrollz_servers extends \SYSTEM\SAI\sai_module {
         try {
             return self::shell_run('classic', 'realm','status');
         } catch(e){
-            return 0
+            return 0;
         }
     }
     public static function sai_mod__SAI_saimod_mojotrollz_servers_action_run_classic_world_status(){
