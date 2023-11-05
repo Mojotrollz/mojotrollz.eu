@@ -156,7 +156,12 @@ class saimod_mojotrollz_servers extends \SYSTEM\SAI\sai_module {
         return \str_replace("\n","\r\n",shell_exec('/home/mojotrollz/mojo/run '.$ver.' '.$prog.' '.$cmd.' 2>&1'));}
     
     public static function sai_mod__SAI_saimod_mojotrollz_servers_action_run_classic_realm_status(){
-        return self::shell_run('classic', 'realm','status');}
+        try {
+            return self::shell_run('classic', 'realm','status');
+        } catch(e){
+            return 0
+        }
+    }
     public static function sai_mod__SAI_saimod_mojotrollz_servers_action_run_classic_world_status(){
         return self::shell_run('classic', 'world','status');}
     public static function sai_mod__SAI_saimod_mojotrollz_servers_action_run_classic_world_test_status(){
